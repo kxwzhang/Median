@@ -20,7 +20,7 @@ class User < ApplicationRecord
     after_initialize :ensure_session_token
 
     # ASPIRE
-    def self.find_by_credentials(username, email, password)
+    def self.find_by_credentials(username, password)
         user = User.find_by(username, password)
         if user && user.is_password?(password)
             user
