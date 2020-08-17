@@ -7,9 +7,9 @@ class ApplicationController < ActionController::Base
         @current_user = User.find_by(session_token: session[:session_token])
     end
 
-    # def require_logged_in
-    #     redirect_to unless logged_in?
-    # end
+    def require_logged_in
+        render json: {session: ['Must be logged in before attemptinga action']} unless logged_in?
+    end
 
     def login!(user)
         current_user.session_token = user.reset_session_token!
