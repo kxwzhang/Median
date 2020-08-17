@@ -4,7 +4,7 @@
 #
 #  id              :bigint           not null, primary key
 #  username        :string           not null
-#  email           :string           not null
+#  email           :string
 #  password_digest :string           not null
 #  session_token   :string           not null
 #  created_at      :datetime         not null
@@ -21,7 +21,7 @@ class User < ApplicationRecord
 
     # ASPIRE
     def self.find_by_credentials(username, email, password)
-        user = User.find_by(username password)
+        user = User.find_by(username, password)
         if user && user.is_password?(password)
             user
         else
@@ -45,6 +45,6 @@ class User < ApplicationRecord
     end
 
     def ensure_session_token
-        self.session_token || = SecureRandom.urlsafe_base64
+        self.session_token ||= SecureRandom.urlsafe_base64
     end
 end
