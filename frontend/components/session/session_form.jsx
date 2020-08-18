@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -49,6 +50,10 @@ class SessionForm extends React.Component {
         const demoLoginButton = <button
             className='demo-login-btn'
             onClick={this.handleDemoLogin}>Demo Login</button>
+        const signupOption = 
+            <div>No account? <Link to='/signup'>Create one</Link></div>
+        const loginOption = 
+            <div>Already have an account? <Link to='/login'>Sign In</Link></div>
         return (
             <div className='session-form-container'>
                 <span className='session-form-type'>{formType} Form</span>
@@ -71,6 +76,7 @@ class SessionForm extends React.Component {
                     </label>
                     <button className='session-form-btn'>{formType}</button>
                     {formType === 'Login' ? demoLoginButton : ''}
+                    {formType === 'Login' ? signupOption : loginOption }
                 </form>
             </div>
         );
