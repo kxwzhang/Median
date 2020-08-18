@@ -19,7 +19,7 @@ const Greeting = ({ currentUser, logout }) => {
                 <button className='login-btn'>Login</button>
             </Link>
             <Link to='signup'>
-                <button className='signup-btn'>Sign Up</button>
+                <button className='signup-btn'>Get Started</button>
             </Link>
         </div>
     );
