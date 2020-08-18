@@ -10,6 +10,17 @@ class SessionForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemoLogin = this.handleDemoLogin.bind(this);
+    }
+
+    handleDemoLogin(e) {
+        e.preventDefault();
+        const demoUser = { 
+            username: 'kehwin', 
+            email: 'winnersonly@aa.io', 
+            password: '123456'
+        };
+        this.props.processForm(demoUser);
     }
 
     handleSubmit(e) {
@@ -56,6 +67,9 @@ class SessionForm extends React.Component {
                             onChange={this.update('password')}/>
                     </label>
                     <button className='session-form-btn'>{formType}</button>
+                    <button 
+                        className='demo-login-btn'
+                        onClick={this.handleDemoLogin}>Demo Login</button>
                 </form>
             </div>
         );
