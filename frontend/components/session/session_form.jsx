@@ -47,13 +47,22 @@ class SessionForm extends React.Component {
 
     render() {
         const { formType } = this.props;
-        const demoLoginButton = <button
-            className='demo-login-btn'
-            onClick={this.handleDemoLogin}>Demo Login</button>
-        const signupOption = 
-            <div>No account? <Link to='/signup'>Create one</Link></div>
-        const loginOption = 
-            <div>Already have an account? <Link to='/login'>Sign In</Link></div>
+        const demoLoginButton = (
+            <button
+                className='demo-login-btn'
+                onClick={this.handleDemoLogin}>Demo Login
+            </button>
+        );
+        const signupOption = (
+            <div className='signup-option-link'>No account? <Link 
+                to='/signup'>Create one</Link>
+            </div>
+        );
+        const loginOption = (
+            <div className='login-option-link'>Already have an account? <Link 
+                to='/login'>Sign In</Link>
+            </div>
+        );
         return (
             <div className='session-form-container'>
                 <span className='session-form-type'>{formType} Form</span>
