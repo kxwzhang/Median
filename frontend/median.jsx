@@ -8,8 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     ReactDOM.render(<h1>REACT IS LIVE</h1>, root);
 
     // Testing:
+    // Thunk action creators
     window.fetchUser = fetchUser;
     window.signup = signup;
     window.login = login;
     window.logout = logout;
+    // Other action creator testing
+    
 });
