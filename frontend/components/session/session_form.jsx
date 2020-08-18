@@ -15,7 +15,7 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = {...this.state};
-        this.props.processForm(this.state);
+        this.props.processForm(user);
     }
 
     update(field) {
@@ -37,7 +37,7 @@ class SessionForm extends React.Component {
         const { formType } = this.props;
         return (
             <div className='session-form-container'>
-                <span className='session-form-type'>{formType}</span>
+                <span className='session-form-type'>{formType} Form</span>
                 <form className='session-form'>
                     {this.renderErrors()}
                     <label className='username-form'>Username:
