@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Greeting = ({ currentUser, logout }) => {
+const Greeting = ({ currentUser, logout, openModal }) => {
     const greetingMessage = () => (
         <div className='greeting-container'>
             <h2 className='greeting-welcome'>
@@ -15,12 +15,14 @@ const Greeting = ({ currentUser, logout }) => {
 
     const sessionLinks = () => (
         <div className='session-links-container'>
-            <Link to='/login'>
-                <button className='login-btn'>Login</button>
-            </Link>
-            <Link to='signup'>
-                <button className='signup-btn'>Get Started</button>
-            </Link>
+            <button 
+                className='login-btn' 
+                onClick={() => openModal('login')}>Login
+            </button>
+            <button 
+                className='signup-btn' 
+                onClick={() => openModal('signup')}>Get Started
+            </button>
         </div>
     );
     return currentUser ? greetingMessage() : sessionLinks();

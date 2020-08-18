@@ -21,13 +21,13 @@ class SessionForm extends React.Component {
             email: 'winnersonly@aa.io', 
             password: '123456'
         };
-        this.props.processForm(demoUser);
+        this.props.processForm(demoUser).then(this.props.closeModal);
     }
 
     handleSubmit(e) {
         e.preventDefault();
         const user = {...this.state};
-        this.props.processForm(user);
+        this.props.processForm(user).then(this.props.closeModal);
     }
 
     update(field) {
@@ -58,20 +58,22 @@ class SessionForm extends React.Component {
                 onClick={this.handleDemoLogin}>Demo Login
             </button>
         );
+        const { otherForm } = this.props;
         const signupOption = (
-            <div className='signup-option-link'>No account? <Link 
-                to='/signup'>Create one</Link>
+            <div 
+                className='signup-option-link'>No account? {otherForm}
             </div>
         );
         const loginOption = (
-            <div className='login-option-link'>Already have an account? <Link 
-                to='/login'>Sign In</Link>
+            <div 
+                className='login-option-link'>Already have an account? {otherForm}
             </div>
         );
         return (
             <div className='session-form-container'>
                 <span className='session-form-type'>{formType} Form</span>
                 <form className='session-form' onSubmit={this.handleSubmit}>
+                    <div onClick={this.props.closeModal} className="close-x">X</div>
                     {this.renderErrors()}
                     <label className='username-form'>Username:
                         <input type="text"
