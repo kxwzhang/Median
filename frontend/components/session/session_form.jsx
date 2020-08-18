@@ -69,29 +69,56 @@ class SessionForm extends React.Component {
                 className='login-option-link'>Already have an account? {otherForm}
             </div>
         );
+        let sessionFormType;
+        let modalMessage;
+        if (formType === 'Login') {
+            sessionFormType = 'Welcome back.'
+            modalMessage = (
+                <span className='welcome-back-message'>
+                    Login to view your personalized homepage,
+                    and catch up on your stories from your favorite authors.
+                </span>
+            )
+        } else {
+            sessionFormType = 'Join Median.'
+            modalMessage = (
+                <span className='create-account-message'>
+                    Create an account to view great stories,
+                    personalize your homepage, follow authors,
+                    and like stories that you love.
+                </span>
+            )
+        }
         return (
             <div className='session-form-container'>
-                <span className='session-form-type'>{formType} Form</span>
+                <div onClick={this.props.closeModal} className="close-x">X</div>
+                <span className='session-form-type'>{sessionFormType}</span>
+                <br/>
+                {modalMessage}
                 <form className='session-form' onSubmit={this.handleSubmit}>
-                    <div onClick={this.props.closeModal} className="close-x">X</div>
                     {this.renderErrors()}
                     <label className='username-form'>Username:
                         <input type="text"
                             value={this.state.username}
                             onChange={this.update('username')}/>
                     </label>
+                    <br/>
                     <label className='email-form'>Email:
                         <input type="text"
                             value={this.state.email}
                             onChange={this.update('email')}/>
                     </label>
+                    <br/>
                     <label className='password-form'>Password:
                         <input type="password"
                             value={this.state.password}
                             onChange={this.update('password')}/>
                     </label>
+                    <br/>
                     <button className='session-form-btn'>{formType}</button>
+                    <br/>
                     {formType === 'Login' ? demoLoginButton : ''}
+                    <br/>
                     {formType === 'Login' ? signupOption : loginOption }
                 </form>
             </div>
