@@ -23,7 +23,7 @@ const Greeting = ({ currentUser, logout }) => {
             </Link>
         </div>
     );
-
+    console.log(currentUser);
     return currentUser ? greetingMessage() : sessionLinks();
 }
 

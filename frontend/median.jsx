@@ -4,8 +4,8 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 // Testing imports:
-import { fetchUser } from './actions/user_action';
-import { signup, login, logout } from './actions/session_action';
+// import { fetchUser } from './actions/user_action';
+// import { signup, login, logout } from './actions/session_action';
 // Testing imports
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,11 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Testing:
     // Add getState and dispatch to window
-    window.getState = store.getState;
-    window.dispatch = store.dispatch;
+    // window.getState = store.getState;
+    // window.dispatch = store.dispatch;
     // Thunk action creators
-    window.fetchUser = fetchUser;
-    window.signup = signup;
-    window.login = login;
-    window.logout = logout;
+    // window.fetchUser = fetchUser;
+    // window.signup = signup;
+    // window.login = login;
+    // window.logout = logout;
 });

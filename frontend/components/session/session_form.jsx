@@ -44,6 +44,11 @@ class SessionForm extends React.Component {
             </ul>
         );
     }
+    
+    componentWillUnmount() {
+        const { errors } = this.props;
+        if (errors) this.props.removeSessionErrors();
+    }
 
     render() {
         const { formType } = this.props;
