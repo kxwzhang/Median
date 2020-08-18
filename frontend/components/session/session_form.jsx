@@ -37,7 +37,7 @@ class SessionForm extends React.Component {
     renderErrors() {
         const { errors } = this.props;
         return (
-            <ul>
+            <ul className='session-form-errorsg'>
                 {errors.map((error, idx) => (
                     <li key={`error-${idx}`}>{error}</li>
                 ))}
@@ -58,6 +58,7 @@ class SessionForm extends React.Component {
                 onClick={this.handleDemoLogin}>Demo Login
             </button>
         );
+
         const { otherForm } = this.props;
         const signupOption = (
             <div 
@@ -69,6 +70,8 @@ class SessionForm extends React.Component {
                 className='login-option-link'>Already have an account? {otherForm}
             </div>
         );
+
+
         let sessionFormType;
         let modalMessage;
         if (formType === 'Login') {
@@ -89,6 +92,7 @@ class SessionForm extends React.Component {
                 </span>
             )
         }
+
         return (
             <div className='session-form-container'>
                 <div onClick={this.props.closeModal} className="close-x">X</div>
