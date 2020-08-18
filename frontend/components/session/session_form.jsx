@@ -61,14 +61,14 @@ class SessionForm extends React.Component {
 
         const { otherForm } = this.props;
         const signupOption = (
-            <div 
-                className='signup-option-link'>No account? {otherForm}
-            </div>
+            <span>No account? 
+                <div className='signup-option-link'>{otherForm}</div>
+            </span>
         );
         const loginOption = (
-            <div 
-                className='login-option-link'>Already have an account? {otherForm}
-            </div>
+            <span>Already have an account? 
+                <div className='login-option-link'>{otherForm}</div>
+            </span>
         );
 
 
