@@ -38,7 +38,7 @@ class SessionForm extends React.Component {
         return (
             <div className='session-form-container'>
                 <span className='session-form-type'>{formType} Form</span>
-                <form className='session-form'>
+                <form className='session-form' onSubmit={this.handleSubmit}>
                     {this.renderErrors()}
                     <label className='username-form'>Username:
                         <input type="text"
