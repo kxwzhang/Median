@@ -46,6 +46,9 @@ class SessionForm extends React.Component {
 
     render() {
         const { formType } = this.props;
+        const demoLoginButton = <button
+            className='demo-login-btn'
+            onClick={this.handleDemoLogin}>Demo Login</button>
         return (
             <div className='session-form-container'>
                 <span className='session-form-type'>{formType} Form</span>
@@ -67,9 +70,7 @@ class SessionForm extends React.Component {
                             onChange={this.update('password')}/>
                     </label>
                     <button className='session-form-btn'>{formType}</button>
-                    <button 
-                        className='demo-login-btn'
-                        onClick={this.handleDemoLogin}>Demo Login</button>
+                    {formType === 'Login' ? demoLoginButton : ''}
                 </form>
             </div>
         );
