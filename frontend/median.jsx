@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
     ReactDOM.render(<h1>REACT IS LIVE</h1>, root);
 
     // Testing:
+    // Add getState and dispatch to window
+    window.getState = store.getState;
+    window.dispatch = store.dispatch;
     // Thunk action creators
     window.fetchUser = fetchUser;
     window.signup = signup;
