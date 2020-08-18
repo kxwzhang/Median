@@ -5,7 +5,7 @@ import { signup, login } from '../../actions/session_action';
 
 const mSTP = ({ errors }) => ({
     errors: errors.session,
-    formType: 'signup'
+    formType: 'Signup'
 });
 
 const mDTP = dispatch => ({
