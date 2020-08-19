@@ -22,6 +22,15 @@ export default createStory = story => (
 
 export default updateStory = story => (
     $.ajax({
-        
+        url: `/api/stories/${story.id}`,
+        method: 'PATCH',
+        data: { story }
+    })
+);
+
+export default deleteStory = storyId => (
+    $.ajax({
+        url: `/api/stories/${storyId}`,
+        method: 'DELETE'
     })
 );
