@@ -24,7 +24,7 @@ export const fetchAllStories = () => dispatch => (
     StoryApiUtil.fetchAllStories()
         .then(stories => dispatch(receiveAllStories(stories)))
 );
-g
+
 export const fetchStory = storyId => dispatch => (
     StoryApiUtil.fetchStory(storyId)
         .then(story => dispatch(receiveStory(story)))
