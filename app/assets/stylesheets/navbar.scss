@@ -23,6 +23,7 @@
 .signup-btn, .login-btn {
     border: none;
     font-size: medium;
+    cursor: pointer;
 }
 
 .signup-btn {
@@ -30,9 +31,15 @@
     height: 36px;
     border-radius: 5%;
     color: white;
+    outline: none;
+}
+
+.signup-btn:hover {
+    background: #03b485;
 }
 
 .login-btn {
     height: 36px;
     background: white;
+    outline: none;
 }

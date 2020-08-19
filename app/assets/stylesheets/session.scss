@@ -8,6 +8,11 @@
     width: 45%;
 }
 
+.demo-login-btn, .session-form-btn, .signup-option-text > button, 
+.login-option-text > button, .close-x {
+    cursor: pointer;
+}
+
 .session-form-type {
     font-size: 30px;
     margin: 10px;
@@ -21,7 +26,6 @@
     position: absolute;
     top: 0;
     right: 0;
-    cursor: pointer;
     font-size: larger;
     margin: 10px;
 }
@@ -36,6 +40,10 @@
     margin: 10px;
 }
 
+.demo-login-btn:hover {
+    background: #03b485;
+}
+
 .signup-option-text, .login-option-text {
     font-size: medium;
 }
@@ -45,6 +53,7 @@
     border: none;
     background: white;
     font-size: medium;
+    outline: none;
 }
 
 // .create-account-message, .welcome-back-message {
@@ -59,4 +68,13 @@ input[type="text"], input[type="password"] {
     border: none;
     outline: none;
     border-bottom: 1px solid black;
+}
+
+.session-form-btn {
+    font-size: 20px;
+    background: black;
+    color: white;
+    border: none;
+    width: 86px;
+    padding: 1px;
 }

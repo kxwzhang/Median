@@ -101,21 +101,21 @@ class SessionForm extends React.Component {
                 {modalMessage}
                 <form className='session-form' onSubmit={this.handleSubmit}>
                     {this.renderErrors()}
-                    <label className='username-form'>Username:
+                    <label className='username-form'>Your username
                         <br/>
                         <input type="text"
                             value={this.state.username}
                             onChange={this.update('username')}/>
                     </label>
                     <br/>
-                    <label className='email-form'>Email:
+                    <label className='email-form'>Email
                         <br/>
                         <input type="text"
                             value={this.state.email}
                             onChange={this.update('email')}/>
                     </label>
                     <br/>
-                    <label className='password-form'>Password:
+                    <label className='password-form'>Password
                         <br/>
                         <input type="password"
                             value={this.state.password}
