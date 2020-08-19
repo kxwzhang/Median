@@ -53,6 +53,10 @@
     background: #03b485;
 }
 
+.session-form-btn:hover {
+    background: rgb(41, 40, 40);
+}
+
 .signup-option-text, .login-option-text {
     font-size: medium;
     margin-bottom: 50px;
@@ -76,6 +80,7 @@
     flex-direction: column;
     text-align: center;
     margin: 10px;
+    font-size: 14px;
 }
 
 input[type="text"], input[type="password"] {
