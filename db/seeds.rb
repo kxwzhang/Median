@@ -10,7 +10,7 @@
 User.destroy_all
 
 # Users 
-User.create(username: 'kehwin', email: 'winnersonly@aa.io', password: '123456')
+User.create(username: 'kehwin', email: 'kehwin@aa.io', password: '123456')
 User.create(username: 'winterfred', email: 'freddy@yahoo.com', password: '000000')
 User.create(username: 'bokchoy', email: 'bchoy@gmail.com', password: 'lettuceman')
 User.create(username: 'elonmusk', email: 'em@tesla.com', password: 'spacexmachine')
