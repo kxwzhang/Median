@@ -30,14 +30,24 @@
     margin: 10px;
 }
 
-.demo-login-btn {
-    background: #03A87C;
+.demo-login-btn, .session-form-btn {
+    font-size: 16px;
+    border: none;
+    width: 92px;
     height: 36px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     border-radius: 5%;
     color: white;
-    border: none;
-    font-size: medium;
     margin: 10px;
+}
+
+.demo-login-btn {
+    background: #03A87C;
+}
+
+.session-form-btn {
+    background: black;
 }
 
 .demo-login-btn:hover {
@@ -78,7 +88,7 @@ input[type="text"], input[type="password"] {
     color: white;
     border: none;
     width: 92px;
-    height: 34px;
+    height: 36px;
     padding-top: 1px;
     padding-bottom: 1px;
     border-radius: 5%;
