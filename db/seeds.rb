@@ -27,11 +27,14 @@ User.create!(username: 'notaname', email: 'notamail@nomail.com', password: 'supe
 
 # Stories
 Story.create!(title: 'I Drank A Gallon Of Water A Day For Better Skin', 
+    subtitle: 'Here is what happened...',
     body: Faker::Lorem.paragraph(sentence_count: 10, supplemental: false, random_sentences_to_add: 10),
     author_id: rand(1..10))
 Story.create!(title: '7 Things I Wish I Knew Before I Got a Tesla Model 3', 
+    subtitle: 'No one tells you about these!',
     body: Faker::Lorem.paragraph(sentence_count: 10, supplemental: false, random_sentences_to_add: 10),
     author_id: rand(1..10))
-Story.create!(title: 'How to Avoid a Deadly Mix of Covid-19 and the Flu', 
+Story.create!(title: 'How to Avoid a Deadly Mix of Covid-19 and the Flu',
+    subtitle: 'There’s some potentially good news for the United States',g
     body: Faker::Lorem.paragraph(sentence_count: 10, supplemental: false, random_sentences_to_add: 10),
     author_id: rand(1..10))
