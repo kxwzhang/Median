@@ -20,6 +20,7 @@
 
 .session-form-errors {
     color: red;
+    width: 200px;
 }
 
 .close-x {
@@ -54,6 +55,7 @@
 
 .signup-option-text, .login-option-text {
     font-size: medium;
+    margin-bottom: 50px;
 }
 
 .signup-option-text > button, .login-option-text > button {
@@ -62,7 +64,6 @@
     background: white;
     font-size: medium;
     outline: none;
-    margin: 10px;
 }
 
 .create-account-message, .welcome-back-message {
