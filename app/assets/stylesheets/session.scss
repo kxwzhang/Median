@@ -33,10 +33,8 @@
 .demo-login-btn, .session-form-btn {
     font-size: 16px;
     border: none;
-    width: 92px;
-    height: 36px;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    width: 100px;
+    height: 40px;
     border-radius: 5%;
     color: white;
     margin: 10px;
@@ -64,10 +62,12 @@
     background: white;
     font-size: medium;
     outline: none;
+    margin: 10px;
 }
 
 .create-account-message, .welcome-back-message {
     font-size: 20px; 
+    margin: 10px;
 }
 
 .username-form, .email-form, .password-form {
@@ -83,18 +83,4 @@ input[type="text"], input[type="password"] {
     border-bottom: 1px solid black;
     text-align: center;
     margin: 10px;
-}
-
-.session-form-btn {
-    font-size: 20px;
-    background: black;
-    color: white;
-    border: none;
-    width: 92px;
-    height: 36px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    border-radius: 5%;
-
-
 }
