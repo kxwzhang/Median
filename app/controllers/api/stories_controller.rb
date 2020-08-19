@@ -22,6 +22,10 @@ class Api::StoriesController < ApplicationController
     
     def update
         @story = current_user.stories.find_by(id: params[:id])
+        unless @story.author_id == current_user.id
+            render json: ['You can only edit your own stories!'], status: 422
+            return
+        end
         if @story.update(story_params)
             render :show
         else
@@ -31,6 +35,11 @@ class Api::StoriesController < ApplicationController
 
     def destroy
         @story = current_user.stories.find_by(id: params[:id])
+        if @story.author_id == current_user.id
+            @story.destroy
+        else
+            render json: ['You can only delete your own stories!'], status: 422
+        end
     end
 
     private
