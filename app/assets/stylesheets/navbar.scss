@@ -1,12 +1,12 @@
 .navbar-container .navbar, .navbar-profile-container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
 }
 
 .navbar {
+    justify-content: space-around;
     height: 70px;
-    box-shadow: 0px 3px 15px -3px;
+    box-shadow: 0px 3px 10px -3px;
 }
 
 .navbar-name {
