@@ -1,5 +1,5 @@
 class Api::StoriesController < ApplicationController
-    # before_action :require_logged_in, only: [:index, :show, :create, :update, :destroy]
+    before_action :require_logged_in, only: [:index, :show, :create, :update, :destroy]
 
     def index
         @stories = Story.all
@@ -13,6 +13,7 @@ class Api::StoriesController < ApplicationController
 
     def create
         @story = Story.new(story_params)
+        @story.author_id = current_user.id
         if @story.save 
             render :show
         else
@@ -22,7 +23,7 @@ class Api::StoriesController < ApplicationController
     
     def update
         @story = current_user.stories.find_by(id: params[:id])
-        unless @story.author_id == current_user.id
+        unless @story
             render json: ['You can only edit your own stories!'], status: 422
             return
         end
@@ -35,7 +36,7 @@ class Api::StoriesController < ApplicationController
 
     def destroy
         @story = current_user.stories.find_by(id: params[:id])
-        if @story.author_id == current_user.id
+        if @story
             @story.destroy
         else
             render json: ['You can only delete your own stories!'], status: 422
