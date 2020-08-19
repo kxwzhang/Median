@@ -5,10 +5,12 @@
     align-items: center;
     margin: auto;
     padding: 5px;
+    width: 45%;
 }
 
 .session-form-type {
-    font-size: large;
+    font-size: 30px;
+    margin: 10px;
 }
 
 .session-form-errors {
@@ -21,4 +23,40 @@
     right: 0;
     cursor: pointer;
     font-size: larger;
+    margin: 10px;
+}
+
+.demo-login-btn {
+    background: #03A87C;
+    height: 36px;
+    border-radius: 5%;
+    color: white;
+    border: none;
+    font-size: medium;
+    margin: 10px;
+}
+
+.signup-option-text, .login-option-text {
+    font-size: medium;
+}
+
+.signup-option-text > button, .login-option-text > button {
+    color: #03A87C;
+    border: none;
+    background: white;
+    font-size: medium;
+}
+
+// .create-account-message, .welcome-back-message {
+//     width: 60%; 
+// }
+
+.username-form, .email-form, .password-form {
+    margin: 10px;
+}
+
+input[type="text"], input[type="password"] {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
 }

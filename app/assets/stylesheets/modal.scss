@@ -6,6 +6,7 @@
   left: 0;
   background: #000000b3;
   z-index: 10;
+  display: flex;
 }
 
 .modal-child {
@@ -14,4 +15,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
+  box-shadow: 50px;
+  border-radius: 2%;
 }
