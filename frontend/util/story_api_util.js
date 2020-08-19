@@ -1,18 +1,18 @@
-export default fetchAllStories = () => (
+export const fetchAllStories = () => (
     $.ajax({
         url: '/api/stories',
         method: 'GET'
     })
 );
 
-export default fetchStory = storyId => (
+export const fetchStory = storyId => (
     $.ajax({
         url: `/api/stories/${storyId}`,
         method: 'GET'
     })
 );
 
-export default createStory = story => (
+export const createStory = story => (
     $.ajax({
         url: '/api/stories',
         method: 'POST',
@@ -20,7 +20,7 @@ export default createStory = story => (
     })
 );
 
-export default updateStory = story => (
+export const updateStory = story => (
     $.ajax({
         url: `/api/stories/${story.id}`,
         method: 'PATCH',
@@ -28,7 +28,7 @@ export default updateStory = story => (
     })
 );
 
-export default deleteStory = storyId => (
+export const deleteStory = storyId => (
     $.ajax({
         url: `/api/stories/${storyId}`,
         method: 'DELETE'
