@@ -33,4 +33,4 @@ export const deleteStory = storyId => (
         url: `/api/stories/${storyId}`,
         method: 'DELETE'
     })
-);g
+);
