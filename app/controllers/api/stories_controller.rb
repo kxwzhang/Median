@@ -2,7 +2,7 @@ class Api::StoriesController < ApplicationController
     before_action :require_logged_in, only: [:index, :show, :create, :update, :destroy]
 
     def index
-
+        
     end
 
     def show
@@ -23,6 +23,6 @@ class Api::StoriesController < ApplicationController
 
     private
     def story_params
-        
+
     end
 end
