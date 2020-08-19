@@ -3,11 +3,12 @@ class Api::StoriesController < ApplicationController
 
     def index
         @stories = Story.all
-        
+        render :index
     end
 
     def show
-
+        @story = Story.find_by(id: params[:id])
+        render :show
     end
 
     def create
