@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Greeting = ({ currentUser, logout, openModal }) => {
     const greetingMessage = () => (
-        <div className='greeting-container'>
-            <h2 className='greeting-welcome'>
-                Welcome Back, {currentUser.username}
+        <div className='navbar-profile-container'>
+            <h2 className='navbar-username'>
+                {currentUser.username}
             </h2>
             <Link to='/'>
                 <button className='logout-btn' onClick={logout}>Log Out</button>
