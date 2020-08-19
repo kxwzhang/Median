@@ -20,3 +20,16 @@ const removeStory = storyId => ({
     storyId
 });
 
+export const fetchAllStories = () => dispatch => (
+    StoryApiUtil.fetchAllStories()
+        .then(stories => dispatch(receiveAllStories(stories)))
+);
+
+export const fetchStory = storyId => dispatch => (
+    StoryApiUtil.fetchStory(storyId)
+        .then(story => dispatch(receiveStory(story)))
+);
+
+export const createStory = story => dispatch => (
+
+);
