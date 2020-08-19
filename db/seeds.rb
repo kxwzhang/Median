@@ -35,6 +35,6 @@ Story.create!(title: '7 Things I Wish I Knew Before I Got a Tesla Model 3',
     body: Faker::Lorem.paragraph(sentence_count: 10, supplemental: false, random_sentences_to_add: 10),
     author_id: rand(1..10))
 Story.create!(title: 'How to Avoid a Deadly Mix of Covid-19 and the Flu',
-    subtitle: 'There’s some potentially good news for the United States',g
+    subtitle: 'There’s some potentially good news for the United States',
     body: Faker::Lorem.paragraph(sentence_count: 10, supplemental: false, random_sentences_to_add: 10),
     author_id: rand(1..10))
