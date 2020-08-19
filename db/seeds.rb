@@ -28,13 +28,61 @@ User.create!(username: 'notaname', email: 'notamail@nomail.com', password: 'supe
 # Stories
 Story.create!(title: 'I Drank A Gallon Of Water A Day For Better Skin', 
     subtitle: 'Here is what happened...',
-    body: Faker::Lorem.paragraph(sentence_count: 10, supplemental: false, random_sentences_to_add: 10),
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
     author_id: rand(1..10))
-Story.create!(title: '7 Things I Wish I Knew Before I Got a Tesla Model 3', 
+Story.create!(title: '9 Things I Wish I Knew Before I Got a Tesla Model 3', 
     subtitle: 'No one tells you about these!',
-    body: Faker::Lorem.paragraph(sentence_count: 10, supplemental: false, random_sentences_to_add: 10),
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
     author_id: rand(1..10))
-Story.create!(title: 'How to Avoid a Deadly Mix of Covid-19 and the Flu',
+Story.create!(title: 'How to Avoid a Deadly Mix of Coronavirus and the Flu',
     subtitle: 'There’s some potentially good news for the United States',
-    body: Faker::Lorem.paragraph(sentence_count: 10, supplemental: false, random_sentences_to_add: 10),
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: 'Understanding Javascript Selectors With and Without Reselect',
+    subtitle: 'These tricks can save you hours',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: '8 Life Lessons I’ve Learned at 50-Something That I Wish I’d Known at 20-Something',
+    subtitle: 'These tricks can save you hours',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: 'My Summer Internship in Silicon Valley',
+    subtitle: 'The Valley is here to stay',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: 'Mastering data structures for interviews — Doubly linked lists',
+    subtitle: 'Impress recruiters with this one computer science concept',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: 'How to Identify a Smart Person in 3 Minutes',
+    subtitle: 'These two-question combo can help you look past the validation-seekers',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: 'To Become Extremely Productive, Be like Elon Musk',
+    subtitle: 'If you want to work more efficiently, here’s what you need to do.',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: 'Understanding Currying in JavaScript',
+    subtitle: 'Short Guide to Currying',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: 'How Arcades Have Evolved To Survive',
+    subtitle: 'You’d be forgiven for thinking arcades went the way of payphones.',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: 'Eliminating Superfluous Elements in Worldbuilding',
+    subtitle: 'Or, How to Ensure Your Setting is as Focused as it is Awesome',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: 'Do All Things with Joy',
+    subtitle: 'I just felt like writing about guitarist today, so what the heck. Let’s do this.',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: 'Hamilton Saved Me From My Grief',
+    subtitle: 'More than just a musical, Hamilton helped me to emerge from the darkness of my life.',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: 'This Is Your Brain On Music',
+    subtitle: 'Music is an emotive language that moves us through time and space',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
     author_id: rand(1..10))
