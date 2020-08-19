@@ -1,5 +1,21 @@
-.session-form-container {
+.session-form-container, .session-form-errors {
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    margin: auto;
+    padding: 5px;
+}
+
+.session-form-type {
+    font-size: large;
+}
+
+.session-form-errors {
+    color: red;
+}
+
+.close-x {
+    position: absolute;
+    togrsor: pointer;
 }
