@@ -31,5 +31,22 @@ export const fetchStory = storyId => dispatch => (
 );
 
 export const createStory = story => dispatch => (
+    StoryApiUtil.createStory(story)
+        .then(
+            story => dispatch(receiveStory(story)),
+            errors => dispatch(receiveErrors(errors.responseJSON)))
+);
 
+export const updateStory = story => dispatch => (
+    StoryApiUtil.updateStory(story)
+        .then(
+            story => dispatch(receiveStory(story)),
+            errors => dispatch(receiveErrors(errors.responseJSON)))
+);
+
+export const deleteStory = storyId => dispatch => (
+    StoryApiUtil.deleteStory(storyId)
+        .then(
+            () => dispatch(removeStory(storyId)),
+            errors => dispatch(receiveErrors(errors.responseJSON)))
 );
