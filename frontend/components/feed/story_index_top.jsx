@@ -3,7 +3,6 @@ import React from 'react';
 const StoryIndexTop = ({ stories }) => (
     <div className='story-index-top'>
         <div className='left-top'>
-            THIS IS TOP
             <h1>{stories[0].title}</h1>
             <h2>{stories[0].subtitle}</h2>
             <h3>By {stories[0].author}</h3>
