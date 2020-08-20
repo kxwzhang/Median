@@ -7,22 +7,27 @@ const StoryIndexPopular = ({ stories }) => (
             Popular on Median
         </h1>
         <div className='popular-divider'></div>
-
         <ul>
             <li className='popular-story'>
                 <div className='popular-num'>01</div>
                 <h2 className='popular-story-title'>{stories[0].title}</h2>
-                <h3 className='popular-story-author'>{stories[0].author}</h3>
+                <div>
+                    <h3 className='popular-story-author'>{stories[0].author}</h3>
+                </div>
             </li>
             <li className='popular-story'>
                 <div className='popular-num'>02</div>
                 <h2 className='popular-story-title'>{stories[1].title}</h2>
-                <h3 className='popular-story-author'>{stories[1].author}</h3>
+                <div>
+                    <h3 className='popular-story-author'>{stories[1].author}</h3>
+                </div>
             </li>
             <li className='popular-story'>
                 <div className='popular-num'>03</div>
                 <h2 className='popular-story-title'>{stories[2].title}</h2>
-                <h3 className='popular-story-author'>{stories[2].author}</h3>
+                <div>
+                    <h3 className='popular-story-author'>{stories[2].author}</h3>
+                </div>
             </li>
             <li className='popular-story'>
                 <div className='popular-num'>04</div>
