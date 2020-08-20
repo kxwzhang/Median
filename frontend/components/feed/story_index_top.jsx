@@ -3,7 +3,7 @@ import React from 'react';
 const StoryIndexTop = ({ stories }) => (
     <div className='story-index-top'>
         <div className='left-top'>
-            DUUUUUUDE
+            THIS IS TOP
             <h1>{stories[0].title}</h1>
             <h1>{stories[0].subtitle}</h1>
             <h1>{stories[0].author}</h1>
@@ -31,6 +31,9 @@ const StoryIndexTop = ({ stories }) => (
             <h1>{stories[4].title}</h1>
             <h1>{stories[4].subtitle}</h1>
             <h1>{stories[4].author}</h1>
+            <div className='editors-picks'>
+                SEE EDITOR'S PICKS 
+            </div>
         </div>
     </div>
 );

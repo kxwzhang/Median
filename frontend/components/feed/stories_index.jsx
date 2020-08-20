@@ -27,7 +27,7 @@ class StoriesIndex extends React.Component {
 
             const shuffledStories = shuffleStories(stories);
             let storyIndexTop = <StoryIndexTop stories={shuffledStories.slice(0, 5)} />
-            let storyIndexPopular = <StoryIndexPopular stories={shuffleStories.slice(5,9)} /> 
+            let storyIndexPopular = <StoryIndexPopular stories={shuffledStories.slice(5,9)} /> 
             let storyIndexItem = shuffledStories.slice(9).map(story => <StoryIndexItem key={story.id} story={story} />)
 
             return (
@@ -38,6 +38,7 @@ class StoriesIndex extends React.Component {
                         <div className='stories-index-items'>
                             {storyIndexItem}
                         </div>
+                        {storyIndexPopular}
                     </div>
                 </div>
             );
