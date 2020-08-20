@@ -7,7 +7,7 @@ const mSTP = state => ({
 });
 
 const mDTP = dispatch => ({
-    fetchAllStories: dispatch(fetchAllStories())
+    fetchAllStories: () => dispatch(fetchAllStories())
 });
 
 export default connect(mSTP, mDTP)(StoriesIndex);
