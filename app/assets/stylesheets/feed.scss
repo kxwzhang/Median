@@ -24,23 +24,24 @@
 }
 
 .left-top > h1, .center-top h1, .right-top > h1 {
-    display: flex;
     font: bold;
     font-size: 24px;
     margin: 5px;
 }
 
 .left-top > h2, .center-top h2, .right-top > h2 {
-    display: flex;
     font-size: 16px;
     color: #0000008A;
     margin: 5px;
 }
 
 .left-top > h3, .center-top h3, .right-top > h3 {
-    display: flex;
     font-size: 14px;
     margin: 5px;
+}
+
+.center-top {
+    overflow: hidden;
 }
 
 .story-index-title {
@@ -55,4 +56,9 @@
 
 .story-index-author {
     font-size: 14px;
+}
+
+.popular-title {
+    color: #000000D6;
+    font-size: 24px;
 }

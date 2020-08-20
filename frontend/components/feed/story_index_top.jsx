@@ -11,19 +11,25 @@ const StoryIndexTop = ({ stories }) => (
 
         <div className='center-top'>
             <span>
-                <h1>{stories[1].title}</h1>
-                <h2>{stories[1].subtitle}</h2>
-                <h3>{stories[1].author}</h3>
+                <div className="top-details">
+                    <h1>{stories[1].title}</h1>
+                    <h2>{stories[1].subtitle}</h2>
+                    <h3>{stories[1].author}</h3>
+                </div>
             </span>
             <span>
-                <h1>{stories[2].title}</h1>
-                <h2>{stories[2].subtitle}</h2>
-                <h3>{stories[2].author}</h3>
+                <div className='top-details'>
+                    <h1>{stories[2].title}</h1>
+                    <h2>{stories[2].subtitle}</h2>
+                    <h3>{stories[2].author}</h3>
+                </div>
             </span>
             <span>
-                <h1>{stories[3].title}</h1>
-                <h2>{stories[3].subtitle}</h2>
-                <h3>{stories[3].author}</h3>
+                <div className='top-details'>
+                    <h1>{stories[3].title}</h1>
+                    <h2>{stories[3].subtitle}</h2>
+                    <h3>{stories[3].author}</h3>
+                </div>
             </span>
         </div>
 
