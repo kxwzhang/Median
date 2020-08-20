@@ -86,3 +86,43 @@ Story.create!(title: 'This Is Your Brain On Music',
     subtitle: 'Music is an emotive language that moves us through time and space',
     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
     author_id: rand(1..10))
+Story.create!(title: 'How a Buddhist Monk Taught Me to Stop Overthinking',
+    subtitle: 'It all comes down to a simple two-word question',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: 'How Three College Students Made $600,000 in 24 Hours',
+    subtitle: 'A simple pricing trick led to thousands of orders',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: 'Dark Side Of a Reddit Confession',
+    subtitle: 'A Reddit Confession Nearly Solved a 50-year-old Cold Case',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: 'From Programmer to Billionaire at Age 20',
+    subtitle: 'The story of Dio Diva, Indonesia’s youngest tech billionaire',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: 'Stop Using If-Else Statements',
+    subtitle: 'Write code without them',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: 'Why You Should Never Send Your CV via Gmail',
+    subtitle: 'You could be getting your identity stolen.',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: 'New iPhone 24 Leaks',
+    subtitle: 'Some details to hold you over until September!',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: 'Fanstagram Turned a User’s Chirp Into a Feature Overnight',
+    subtitle: 'It moved fast and didn’t break anything',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: '5 VS Code Extensions That Make You Want To Keep Coding Forever',
+    subtitle: 'Coding made simple.',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
+Story.create!(title: 'How To Respond To Recruiters On Linkedin',
+    subtitle: 'A how-to guide that will ensure you will be attending the next interview session.',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: rand(1..10))
