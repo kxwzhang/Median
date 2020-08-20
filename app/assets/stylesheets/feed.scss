@@ -59,11 +59,13 @@
     width: 80%;
 }
 
-.popular-story  {
+.popular-story {
     display: flex;
-    justify-content: space-between;
 }
 
+.popular-num {
+    margin: 10px;
+}
 
 .story-index-subtitle {
     font-size: 16px;

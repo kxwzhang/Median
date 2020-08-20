@@ -10,29 +10,39 @@ const StoryIndexPopular = ({ stories }) => (
         <ul>
             <li className='popular-story'>
                 <div className='popular-num'>01</div>
-                <h2 className='popular-story-title'>{stories[0].title}</h2>
-                <div>
-                    <h3 className='popular-story-author'>{stories[0].author}</h3>
-                </div>
+                <span>
+                    <h2 className='popular-story-title'>{stories[0].title}</h2>
+                    <div>
+                        <h3 className='popular-story-author'>{stories[0].author}</h3>
+                    </div>
+                </span>
             </li>
             <li className='popular-story'>
                 <div className='popular-num'>02</div>
-                <h2 className='popular-story-title'>{stories[1].title}</h2>
-                <div>
-                    <h3 className='popular-story-author'>{stories[1].author}</h3>
-                </div>
+                <span>
+                    <h2 className='popular-story-title'>{stories[1].title}</h2>
+                    <div>
+                        <h3 className='popular-story-author'>{stories[1].author}</h3>
+                    </div>
+                </span>
             </li>
             <li className='popular-story'>
                 <div className='popular-num'>03</div>
-                <h2 className='popular-story-title'>{stories[2].title}</h2>
-                <div>
-                    <h3 className='popular-story-author'>{stories[2].author}</h3>
-                </div>
+                <span>
+                    <h2 className='popular-story-title'>{stories[2].title}</h2>
+                    <div>
+                        <h3 className='popular-story-author'>{stories[2].author}</h3>
+                    </div>
+                </span>
             </li>
             <li className='popular-story'>
                 <div className='popular-num'>04</div>
-                <h2 className='popular-story-title'>{stories[3].title}</h2>
-                <h3 className='popular-story-author'>{stories[3].author}</h3>
+                <span>
+                    <h2 className='popular-story-title'>{stories[3].title}</h2>
+                    <div>
+                        <h3 className='popular-story-author'>{stories[3].author}</h3>
+                    </div>
+                </span>
             </li>
         </ul>
     </div>
