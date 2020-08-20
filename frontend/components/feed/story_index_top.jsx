@@ -5,32 +5,32 @@ const StoryIndexTop = ({ stories }) => (
         <div className='left-top'>
             THIS IS TOP
             <h1>{stories[0].title}</h1>
-            <h1>{stories[0].subtitle}</h1>
-            <h1>{stories[0].author}</h1>
+            <h2>{stories[0].subtitle}</h2>
+            <h3>{stories[0].author}</h3>
         </div>
 
         <div className='center-top'>
             <span>
                 <h1>{stories[1].title}</h1>
-                <h1>{stories[1].subtitle}</h1>
-                <h1>{stories[1].author}</h1>
+                <h2>{stories[1].subtitle}</h2>
+                <h3>{stories[1].author}</h3>
             </span>
             <span>
                 <h1>{stories[2].title}</h1>
-                <h1>{stories[2].subtitle}</h1>
-                <h1>{stories[2].author}</h1>
+                <h2>{stories[2].subtitle}</h2>
+                <h3>{stories[2].author}</h3>
             </span>
             <span>
                 <h1>{stories[3].title}</h1>
-                <h1>{stories[3].subtitle}</h1>
-                <h1>{stories[3].author}</h1>
+                <h2>{stories[3].subtitle}</h2>
+                <h3>{stories[3].author}</h3>
             </span>
         </div>
 
         <div className='right-top'>
             <h1>{stories[4].title}</h1>
-            <h1>{stories[4].subtitle}</h1>
-            <h1>{stories[4].author}</h1>
+            <h2>{stories[4].subtitle}</h2>
+            <h3>{stories[4].author}</h3>
             <div className='editors-picks'>
                 SEE EDITOR'S PICKS 
             </div>
