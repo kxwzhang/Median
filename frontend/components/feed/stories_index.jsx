@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import StoryIndexItem from './story_index_item';
+import StoryIndexTop from './story_index_top';
 
 class StoriesIndex extends React.Component {
     componentDidMount() {
@@ -9,6 +10,7 @@ class StoriesIndex extends React.Component {
 
     render() {
         const { stories } = this.props;
+
         // Use shuffledStories to generate random stories
         const shuffleStories = stories => {
             let i = stories.length - 1;
@@ -19,8 +21,10 @@ class StoriesIndex extends React.Component {
             return stories;
         }
         const shuffledStories = shuffleStories(stories);
-        let storyIndexItem = shuffledStories.map(story => <StoryIndexItem key={story.id} story={story} />)
 
+
+        let storyIndexTop = shuffledStories.slice(0,4).map(story => <StoryIndexTop key={story.id} story={story} />)
+        let storyIndexItem = shuffledStories.slice(4).map(story => <StoryIndexItem key={story.id} story={story} />)
 
 
 
