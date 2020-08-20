@@ -8,13 +8,18 @@ class StoriesIndex extends React.Component {
     }
 
     render() {
-        // Use getRandomInt to generate random stories
-        const getRandomInt = (max) => {
-            return Math.floor(Math.random() * Math.floor(max));
-        };
         const { stories } = this.props;
-        let storyIndexItem = stories.map(story => <StoryIndexItem key={story.id} story={story} />)
-
+        // Use shuffledStories to generate random stories
+        const shuffleStories = stories => {
+            let i = stories.length - 1;
+            for (; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [stories[i], stories[j]] = [stories[j], stories[i]];
+            }
+            return stories;
+        }
+        const shuffledStories = shuffleStories(stories);
+        let storyIndexItem = shuffledStories.map(story => <StoryIndexItem key={story.id} story={story} />)
 
 
 
