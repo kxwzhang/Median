@@ -14,8 +14,9 @@ const App = () => (
         </header>
 
         <Switch>
-            <Route path='/' component={StoriesIndexContainer} />
+            <ProtectedRoute exact path='/' component={StoriesIndexContainer} />
         </Switch>
+        <Route exact path='splash' component={SplashContainer} />
     </div>
 );
 
