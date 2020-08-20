@@ -38,7 +38,9 @@ class StoriesIndex extends React.Component {
                         <div className='stories-index-items'>
                             {storyIndexItem}
                         </div>
-                        {storyIndexPopular}
+                        <div className='popular-aside'>
+                            {storyIndexPopular}
+                        </div>
                     </div>
                 </div>
             );
