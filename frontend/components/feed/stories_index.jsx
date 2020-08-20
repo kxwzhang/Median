@@ -25,7 +25,7 @@ class StoriesIndex extends React.Component {
                    {storyIndexTop}
                     <div className='feed-divider'></div>
                     <div className='feed-main'>
-                        <div className='stories-index-items'>
+                        <div className='feed-main-items'>
                             {storyIndexItem}
                         </div>
                         <div className='popular-aside'>
