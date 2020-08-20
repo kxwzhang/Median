@@ -6,7 +6,7 @@ const StoryIndexTop = ({ stories }) => (
             THIS IS TOP
             <h1>{stories[0].title}</h1>
             <h2>{stories[0].subtitle}</h2>
-            <h3>{stories[0].author}</h3>
+            <h3>By {stories[0].author}</h3>
         </div>
 
         <div className='center-top'>
