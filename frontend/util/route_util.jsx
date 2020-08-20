@@ -12,10 +12,11 @@ import { Route, Redirect, withRouter } from 'react-router-dom';
 // );
 
 const Protected = ({ component: Component, path, loggedIn, exact }) => (
-    <Route 
-        path={path} 
-        exact={exact} 
-        render={(props) => loggedIn ? <Component {...props} /> : <Redirect to="/splash" />} />
+    <Route
+        path={path}
+        exact={exact}
+        render={(props) => loggedIn ? <Component {...props} /> : <Redirect to="/welcome" />}
+    />
 );
 
 const mSTP = state => ({

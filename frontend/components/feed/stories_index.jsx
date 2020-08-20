@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom';
 import StoryIndexItem from './story_index_item';
 
 class StoriesIndex extends React.Component {
-    componentDidMount() {
-        this.props.fetchAllStories();
-    }
 
     render() {
         const { stories } = this.props;
