@@ -11,34 +11,34 @@ class StoriesIndex extends React.Component {
     render() {
         const { stories } = this.props;
 
-        // Use shuffledStories to generate random stories
-        const shuffleStories = stories => {
-            let i = stories.length - 1;
-            for (; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [stories[i], stories[j]] = [stories[j], stories[i]];
+        if (!stories.length) {
+            return null;
+        } else {
+            // Use shuffledStories to generate random stories
+            const shuffleStories = stories => {
+                let i = stories.length - 1;
+                for (; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [stories[i], stories[j]] = [stories[j], stories[i]];
+                }
+                return stories;
             }
-            return stories;
-        }
-        const shuffledStories = shuffleStories(stories);
 
-
-        let storyIndexTop = shuffledStories.slice(0,5).map(story => <StoryIndexTop key={story.id} story={story} />)
-        let storyIndexItem = shuffledStories.slice(5).map(story => <StoryIndexItem key={story.id} story={story} />)
-
-
-
-        return (
-            <div className='feed-container'>
-                {storyIndexTop}
-                <div className='feed-divider'></div>
-                <div className='feed-main'>
-                    <div className='stories-index-items'>
-                        {storyIndexItem}
+            const shuffledStories = shuffleStories(stories);
+            let storyIndexTop = <StoryIndexTop stories={shuffledStories.slice(0, 5)} />
+            let storyIndexItem = shuffledStories.slice(5).map(story => <StoryIndexItem key={story.id} story={story} />)
+            return (
+                <div className='feed-container'>
+                   {storyIndexTop}
+                    <div className='feed-divider'></div>
+                    <div className='feed-main'>
+                        <div className='stories-index-items'>
+                            {storyIndexItem}
+                        </div>
                     </div>
                 </div>
-            </div>
-        );
+            );
+        }
     }
 }
 
