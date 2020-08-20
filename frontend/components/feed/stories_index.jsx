@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import StoryIndexItem from './story_index_item';
 import StoryIndexTop from './story_index_top';
+import StoryIndexPopular from './stories_index_popular';
 
 class StoriesIndex extends React.Component {
     componentDidMount() {
@@ -26,7 +27,9 @@ class StoriesIndex extends React.Component {
 
             const shuffledStories = shuffleStories(stories);
             let storyIndexTop = <StoryIndexTop stories={shuffledStories.slice(0, 5)} />
-            let storyIndexItem = shuffledStories.slice(5).map(story => <StoryIndexItem key={story.id} story={story} />)
+            let storyIndexPopular = <StoryIndexPopular stories={shuffleStories.slice(5,9)} /> 
+            let storyIndexItem = shuffledStories.slice(9).map(story => <StoryIndexItem key={story.id} story={story} />)
+
             return (
                 <div className='feed-container'>
                    {storyIndexTop}
