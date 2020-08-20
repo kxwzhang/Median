@@ -40,7 +40,7 @@
 }
 
 .center-top {
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .story-index-title {
@@ -50,21 +50,35 @@
 
 .story-index-popular {
     margin: 20px;
-    top: auto;
+    align-items: flex-start;
+    top: 0;
     position: sticky;
 }
 
 .popular-divider {
     border-bottom: 1px solid rgba(0,0,0,.15);
+    margin: 20px 0;
     width: 80%;
 }
 
 .popular-story {
     display: flex;
+    width: 70%;
+    margin-bottom: 15px;
 }
 
 .popular-num {
-    margin: 10px;
+    margin-right: 10px;
+    font-size: 34px;
+}
+
+.popular-story-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.popular-story-author {
+    font-size: 14px;
 }
 
 .story-index-subtitle {
