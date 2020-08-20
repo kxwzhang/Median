@@ -23,13 +23,14 @@ class StoriesIndex extends React.Component {
         const shuffledStories = shuffleStories(stories);
 
 
-        let storyIndexTop = shuffledStories.slice(0,4).map(story => <StoryIndexTop key={story.id} story={story} />)
-        let storyIndexItem = shuffledStories.slice(4).map(story => <StoryIndexItem key={story.id} story={story} />)
+        let storyIndexTop = shuffledStories.slice(0,5).map(story => <StoryIndexTop key={story.id} story={story} />)
+        let storyIndexItem = shuffledStories.slice(5).map(story => <StoryIndexItem key={story.id} story={story} />)
 
 
 
         return (
             <div className='feed-container'>
+                {storyIndexTop}
                 <div className='feed-divider'></div>
                 <div className='feed-main'>
                     <div className='stories-index-items'>
