@@ -10,21 +10,11 @@ class StoriesIndex extends React.Component {
     }
 
     render() {
-        const { stories } = this.props;
+        const { stories, shuffleStories } = this.props;
 
         if (!stories.length) {
             return null;
         } else {
-            // Use shuffledStories to generate random stories
-            const shuffleStories = stories => {
-                let i = stories.length - 1;
-                for (; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [stories[i], stories[j]] = [stories[j], stories[i]];
-                }
-                return stories;
-            }
-
             const shuffledStories = shuffleStories(stories);
             let storyIndexTop = <StoryIndexTop stories={shuffledStories.slice(0, 5)} />
             let storyIndexPopular = <StoryIndexPopular stories={shuffledStories.slice(5,9)} /> 
