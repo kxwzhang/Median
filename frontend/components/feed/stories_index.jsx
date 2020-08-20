@@ -19,7 +19,7 @@ class StoriesIndex extends React.Component {
             let storyIndexTop = <StoryIndexTop stories={shuffledStories.slice(0, 5)} />
             let storyIndexPopular = <StoryIndexPopular stories={shuffledStories.slice(5,9)} /> 
             let storyIndexItem = shuffledStories.slice(9).map(story => <StoryIndexItem key={story.id} story={story} />)
-
+            console.log(stories);
             return (
                 <div className='feed-container'>
                    {storyIndexTop}
