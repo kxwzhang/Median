@@ -4,6 +4,7 @@ import { ProtectedRoute } from '../util/route_util';
 import Modal from './modal/modal';
 import Navbar from './navbar/navbar';
 import StoriesIndexContainer from './feed/stories_index_container';
+import StoryShowContainer from './story/story_show_container';
 import SplashContainer from './splash/splash_container';
 
 // switch to app
@@ -15,9 +16,10 @@ const App = () => (
         </header>
      
         <Switch>
-            <ProtectedRoute exact path='/' component={StoriesIndexContainer} />
+            <ProtectedRoute exact path='/stories/:storyId' component={StoryShowContainer} />
+            <ProtectedRoute exact path='/feed' component={StoriesIndexContainer} />
         </Switch>
-        <Route exact path='/splash' component={SplashContainer} />
+        <Route path='/' component={SplashContainer} />
     </div>
 );
 

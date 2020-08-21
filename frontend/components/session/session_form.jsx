@@ -23,7 +23,7 @@ class SessionForm extends React.Component {
         };
         this.props.processForm(demoUser)
             .then(this.props.closeModal)
-            .then(() => this.props.history.push('/'));
+            .then(() => this.props.history.push('/feed'));
     }
 
     handleSubmit(e) {
@@ -31,7 +31,7 @@ class SessionForm extends React.Component {
         const user = {...this.state};
         this.props.processForm(user)
             .then(this.props.closeModal)
-            .then(() => this.props.history.push('/'));
+            .then(() => this.props.history.push('/feed'));
     }
 
     update(field) {
