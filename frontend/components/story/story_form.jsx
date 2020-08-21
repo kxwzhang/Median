@@ -9,7 +9,7 @@ class StoryForm extends React.Component {
         this.state['imageFile'] = null;
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleImagePreview = this.handleImagePreview.bind(this);g
+        this.handleImagePreview = this.handleImagePreview.bind(this);
     }
 
     handleSubmit(e) {
@@ -61,6 +61,11 @@ class StoryForm extends React.Component {
                             onChange={this.update('body')} 
                             value={this.state.body}
                             placeholder='Tell your story...'/>
+                    </label>
+                    <label>Add Image
+                        <input 
+                            onChange={this.handleImagePreview}
+                            type="file"/>
                     </label>
                 </form>
             </div>
