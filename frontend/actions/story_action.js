@@ -31,7 +31,6 @@ export const fetchStory = storyId => dispatch => (
 );
 
 export const createStory = story => dispatch => {
-    // debugger
     return (
         StoryApiUtil.createStory(story)
             .then(

@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class StoryForm extends React.Component {
     constructor(props) {
@@ -49,4 +50,4 @@ class StoryForm extends React.Component {
     }
 }
 
-export default StoryForm;
+export default withRouter(StoryForm);
