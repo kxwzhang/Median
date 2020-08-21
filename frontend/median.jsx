@@ -29,11 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
     ReactDOM.render(<Root store={store} />, root);
 
     // Testing:
-    window.getState = store.getState;
-    window.dispatch = store.dispatch;
-    window.fetchAllStories = fetchAllStories;
-    window.fetchStory = fetchStory;
-    window.createStory = createStory;
-    window.updateStory = updateStory;
-    window.deleteStory = deleteStory;
+    // window.getState = store.getState;
+    // window.dispatch = store.dispatch;
+    // window.fetchAllStories = fetchAllStories;
+    // window.fetchStory = fetchStory;
+    // window.createStory = createStory;
+    // window.updateStory = updateStory;
+    // window.deleteStory = deleteStory;
 });

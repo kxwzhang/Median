@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from 'react-router-dom';
-import { ProtectedRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal/modal';
 import Navbar from './navbar/navbar';
 import StoriesIndexContainer from './feed/stories_index_container';
@@ -19,7 +19,7 @@ const App = () => (
             <ProtectedRoute exact path='/stories/:storyId' component={StoryShowContainer} />
             <ProtectedRoute exact path='/feed' component={StoriesIndexContainer} />
         </Switch>
-        <Route path='/' component={SplashContainer} />
+        <AuthRoute exact path='/' component={SplashContainer} />
     </div>
 );
 
