@@ -15,7 +15,7 @@ const StoryIndexPopular = ({ stories }) => (
                         <h2 className='popular-story-title'>{stories[0].title}</h2>
                         <div>
                             <h3 className='popular-story-author'>{stories[0].author}</h3>
-                            <h4 className='index-min-read'>{stories[0].id + 2} min read</h4>
+                            <h4 className='index-min-read'>{stories[0].id % 7 + 4} min read</h4>
                         </div>
                     </span>
                 </Link>
@@ -27,7 +27,7 @@ const StoryIndexPopular = ({ stories }) => (
                         <h2 className='popular-story-title'>{stories[1].title}</h2>
                         <div>
                             <h3 className='popular-story-author'>{stories[1].author}</h3>
-                            <h4 className='index-min-read'>{stories[1].id + 2} min read</h4>
+                            <h4 className='index-min-read'>{stories[1].id % 7 + 4} min read</h4>
                         </div>
                     </span>
                 </Link>
@@ -39,7 +39,7 @@ const StoryIndexPopular = ({ stories }) => (
                         <h2 className='popular-story-title'>{stories[2].title}</h2>
                         <div>
                             <h3 className='popular-story-author'>{stories[2].author}</h3>
-                            <h4 className='index-min-read'>{stories[2].id + 2} min read</h4>
+                            <h4 className='index-min-read'>{stories[2].id % 7 + 4} min read</h4>
                         </div>
                     </span>
                 </Link>
@@ -51,7 +51,7 @@ const StoryIndexPopular = ({ stories }) => (
                         <h2 className='popular-story-title'>{stories[3].title}</h2>
                         <div>
                             <h3 className='popular-story-author'>{stories[3].author}</h3>
-                            <h4 className='index-min-read'>{stories[3].id + 2} min read</h4>
+                            <h4 className='index-min-read'>{stories[3].id % 7 + 4} min read</h4>
                         </div>
                     </span>
                 </Link>

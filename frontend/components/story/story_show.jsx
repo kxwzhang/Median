@@ -28,7 +28,7 @@ class StoryShow extends React.Component {
                             <h2 className='show-subtitle'>{story.subtitle}</h2>
                             <span className='show-author'>
                                 <div className='show-author-name'>{story.author}</div>
-                                <div className='show-read-time'>{story.id + 2} min read</div>
+                                <div className='show-read-time'>{story.id % 7 + 4} min read</div>
                                 {editStoryLink}
                             </span>
                             <img className='show-image' src={story.photoUrl} />

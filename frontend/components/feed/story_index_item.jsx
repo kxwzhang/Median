@@ -9,7 +9,7 @@ const StoryIndexItem = ({ story }) => (
                 <h1 className='story-index-title'>{story.title}</h1>
                 <h2 className='story-index-subtitle'>{story.subtitle}</h2>
                 <h3 className='story-index-author'>{story.author}</h3>
-                <h4 className='item-min-read'>{story.id + 2} min read</h4> 
+                <h4 className='item-min-read'>{story.id % 7 + 4} min read</h4> 
             </Link>
         </div>
     </div>

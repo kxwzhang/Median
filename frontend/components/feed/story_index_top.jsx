@@ -12,7 +12,7 @@ const StoryIndexTop = ({ stories }) => (
                 <h1 className='story-top-title'>{stories[0].title}</h1>
                 <h2 className='story-top-subtitle'>{stories[0].subtitle}</h2>
                 <h3 className='story-top-author'>By {stories[0].author}</h3>
-                <h4 className='top-min-read'>{stories[0].id + 2} min read</h4>
+                <h4 className='top-min-read'>{stories[0].id % 7 + 4} min read</h4>
             </Link>
         </div>
 
@@ -27,7 +27,7 @@ const StoryIndexTop = ({ stories }) => (
                                 <h1 className='center-top-title'>{stories[1].title}</h1>
                                 <h2 className='story-top-subtitle'>{stories[1].subtitle}</h2>
                                 <h3 className='story-top-author'>{stories[1].author}</h3>
-                                <h4 className='top-min-read'>{stories[1].id + 2} min read</h4>
+                                <h4 className='top-min-read'>{stories[1].id % 7 + 4} min read</h4>
                             </div>
                         </Link>
                 </div>
@@ -42,7 +42,7 @@ const StoryIndexTop = ({ stories }) => (
                                 <h1 className='center-top-title'>{stories[2].title}</h1>
                                 <h2 className='story-top-subtitle'>{stories[2].subtitle}</h2>
                                 <h3 className='story-top-author'>{stories[2].author}</h3>
-                                <h4 className='top-min-read'>{stories[2].id + 2} min read</h4>
+                                <h4 className='top-min-read'>{stories[2].id % 7 + 4} min read</h4>
                             </div>
                         </Link>
                 </div>
@@ -57,7 +57,7 @@ const StoryIndexTop = ({ stories }) => (
                                 <h1 className='center-top-title'>{stories[3].title}</h1>
                                 <h2 className='story-top-subtitle'>{stories[3].subtitle}</h2>
                                 <h3 className='story-top-author'>{stories[3].author}</h3>
-                                <h4 className='top-min-read'>{stories[3].id + 2} min read</h4>
+                                <h4 className='top-min-read'>{stories[3].id % 7 + 4} min read</h4>
                             </div>
                         </Link>
                 </div>
@@ -73,7 +73,7 @@ const StoryIndexTop = ({ stories }) => (
                     <h1 className='story-top-title'>{stories[4].title}</h1>
                     <h2 className='story-top-subtitle'>{stories[4].subtitle}</h2>
                     <h3 className='story-top-author'>{stories[4].author}</h3>
-                    <h4 className='top-min-read'>{stories[4].id + 2} min read</h4>
+                    <h4 className='top-min-read'>{stories[4].id % 7 + 4} min read</h4>
                 </Link>
         </div>    
     </div>
