@@ -5,6 +5,7 @@ const StoryIndexItem = ({ story }) => (
     <div className='story-index-item'>
         <div className='story-index-details'>
             <Link to={`/stories/${story.id}`}>
+                <div className='reading-history'>BASED ON YOUR READING HISTORY</div>
                 <h1 className='story-index-title'>{story.title}</h1>
                 <h2 className='story-index-subtitle'>{story.subtitle}</h2>
                 <h3 className='story-index-author'>{story.author}</h3>

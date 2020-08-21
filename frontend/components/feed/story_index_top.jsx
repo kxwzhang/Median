@@ -23,7 +23,7 @@ const StoryIndexTop = ({ stories }) => (
                             <img className='center-top-image' src={stories[1].photoUrl} />
                         </Link>
                         <Link to={`/stories/${stories[1].id}`}>
-                            <div>
+                            <div className='top-details-section'>
                                 <h1 className='center-top-title'>{stories[1].title}</h1>
                                 <h2 className='story-top-subtitle'>{stories[1].subtitle}</h2>
                                 <h3 className='story-top-author'>{stories[1].author}</h3>
@@ -38,7 +38,7 @@ const StoryIndexTop = ({ stories }) => (
                             <img className='center-top-image' src={stories[2].photoUrl} />
                         </Link>
                         <Link to={`/stories/${stories[2].id}`}>
-                            <div>
+                            <div className='top-details-section'>
                                 <h1 className='center-top-title'>{stories[2].title}</h1>
                                 <h2 className='story-top-subtitle'>{stories[2].subtitle}</h2>
                                 <h3 className='story-top-author'>{stories[2].author}</h3>
@@ -53,7 +53,7 @@ const StoryIndexTop = ({ stories }) => (
                             <img className='center-top-image' src={stories[3].photoUrl} />
                         </Link>
                         <Link to={`/stories/${stories[3].id}`}>
-                            <div>
+                            <div className='top-details-section'>
                                 <h1 className='center-top-title'>{stories[3].title}</h1>
                                 <h2 className='story-top-subtitle'>{stories[3].subtitle}</h2>
                                 <h3 className='story-top-author'>{stories[3].author}</h3>
