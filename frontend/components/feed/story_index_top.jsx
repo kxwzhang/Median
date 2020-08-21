@@ -4,56 +4,72 @@ import { Link } from 'react-router-dom';
 const StoryIndexTop = ({ stories }) => (
     <div className='story-index-top'>
         <div className='left-top'>
-            <div>
-                <img src={stories[0].photoUrl}/>
-            </div>
-      
-            <h1>{stories[0].title}</h1>
-            <h2>{stories[0].subtitle}</h2>
-            <h3>By {stories[0].author}</h3>
+            <Link to={`/stories/${stories[0].id}`}>
+                <div>
+                    <img src={stories[0].photoUrl}/>
+                </div>
+
+                <h1 className='story-top-title'>{stories[0].title}</h1>
+                <h2 className='story-top-subtitle'>{stories[0].subtitle}</h2>
+                <h3 className='story-top-author'>By {stories[0].author}</h3>
+            </Link>
         </div>
 
         <div className='center-top'>
             <span>
                 <div className="top-details">
-                    <img src={stories[1].photoUrl} />
-                    <div>
-                        <h1>{stories[1].title}</h1>
-                        <h2>{stories[1].subtitle}</h2>
-                        <h3>{stories[1].author}</h3>
-                    </div>
+                        <Link to={`/stories/${stories[1].id}`}>
+                            <img className='center-top-image' src={stories[1].photoUrl} />
+                        </Link>
+                        <Link to={`/stories/${stories[1].id}`}>
+                            <div>
+                                <h1 className='center-top-title'>{stories[1].title}</h1>
+                                <h2 className='story-top-subtitle'>{stories[1].subtitle}</h2>
+                                <h3 className='story-top-author'>{stories[1].author}</h3>
+                            </div>
+                        </Link>
                 </div>
             </span>
             <span>
                 <div className='top-details'>
-                    <img src={stories[2].photoUrl} />
-                    <div>
-                        <h1>{stories[2].title}</h1>
-                        <h2>{stories[2].subtitle}</h2>
-                        <h3>{stories[2].author}</h3>
-                    </div>
+                        <Link to={`/stories/${stories[2].id}`}>
+                            <img className='center-top-image' src={stories[2].photoUrl} />
+                        </Link>
+                        <Link to={`/stories/${stories[2].id}`}>
+                            <div>
+                                <h1 className='center-top-title'>{stories[2].title}</h1>
+                                <h2 className='story-top-subtitle'>{stories[2].subtitle}</h2>
+                                <h3 className='story-top-author'>{stories[2].author}</h3>
+                            </div>
+                        </Link>
                 </div>
             </span>
             <span>
                 <div className='top-details'>
-                    <img src={stories[3].photoUrl} />
-                    <div>
-                        <h1>{stories[3].title}</h1>
-                        <h2>{stories[3].subtitle}</h2>
-                        <h3>{stories[3].author}</h3>
-                    </div>
+                        <Link to={`/stories/${stories[3].id}`}>
+                            <img className='center-top-image' src={stories[3].photoUrl} />
+                        </Link>
+                        <Link to={`/stories/${stories[3].id}`}>
+                            <div>
+                                <h1 className='center-top-title'>{stories[3].title}</h1>
+                                <h2 className='story-top-subtitle'>{stories[3].subtitle}</h2>
+                                <h3 className='story-top-author'>{stories[3].author}</h3>
+                            </div>
+                        </Link>
                 </div>
             </span>
         </div>
 
         <div className='right-top'>
-            <div>
-                <img src={stories[4].photoUrl} />
-            </div>
-     
-            <h1>{stories[4].title}</h1>
-            <h2>{stories[4].subtitle}</h2>
-            <h3>{stories[4].author}</h3>
+                <Link to={`/stories/${stories[4].id}`}>
+                    <div>
+                        <img src={stories[4].photoUrl} />
+                    </div>
+            
+                    <h1 className='story-top-title'>{stories[4].title}</h1>
+                    <h2 className='story-top-subtitle'>{stories[4].subtitle}</h2>
+                    <h3 className='story-top-author'>{stories[4].author}</h3>
+                </Link>
             <div className='editors-picks'>
                 SEE EDITOR'S PICKS 
             </div>

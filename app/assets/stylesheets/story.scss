@@ -11,16 +11,20 @@
 .show-image {
     width: 700px;
     height: 500px;
+    margin: 30px auto;
 }
 
 .show-title {
     font: bolder;
     font-size: 40px;
+    margin-top: 30px;
 }
 
 .show-subtitle {
     font-size: 24px;
     color: rgba(117, 117, 117, 1);
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .show-body {
