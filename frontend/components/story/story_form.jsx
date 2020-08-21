@@ -10,8 +10,10 @@ class StoryForm extends React.Component {
     }
 
     handleSubmit(e) {
+        const { history, currentUserId } = this.props;
         e.preventDefault();
-        this.props.processForm(this.state);
+        this.props.processForm(this.state)
+            .then(history.push(`/stories/${currentUserId}`));
     }
 
     update(field) {

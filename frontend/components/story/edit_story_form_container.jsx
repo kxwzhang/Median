@@ -32,4 +32,4 @@ const mDTP = dispatch => ({
     processForm: story => dispatch(updateStory(story))
 });
 
-export default connect(mSTP, mDTP)(EditStoryFormContainer)
+export default connect(mSTP, mDTP)(EditStoryForm);
