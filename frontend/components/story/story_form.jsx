@@ -37,7 +37,6 @@ class StoryForm extends React.Component {
         const file = e.currentTarget.files[0];
         reader.onloadend = () =>
             this.setState({ photoUrl: reader.result, photoFile: file });
-
         if (file) {
             reader.readAsDataURL(file);
         } else {
