@@ -1,0 +1,28 @@
+.story-show-page {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.story-show-container {
+    width: 700px;
+}
+
+.show-image {
+    width: 700px;
+    height: 500px;
+}
+
+.show-title {
+    font: bolder;
+    font-size: 40px;
+}
+
+.show-subtitle {
+    font-size: 24px;
+    color: rgba(117, 117, 117, 1);
+}
+
+.show-body {
+    display: block;
+}
