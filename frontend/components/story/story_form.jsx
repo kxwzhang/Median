@@ -5,30 +5,45 @@ class StoryForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = this.props.story;
-        this.state['imageUrl'] = '';
-        this.state['imageFile'] = null;
+        this.state['photoFile'] = null;
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleImagePreview = this.handleImagePreview.bind(this);
+        this.handleFile = this.handleFile.bind(this);
     }
 
     handleSubmit(e) {
         const { history, currentUserId } = this.props;
         e.preventDefault();
-        this.props.processForm(this.state)
-            .then(history.push(`/stories/${currentUserId}`));
+        const formData = new FormData();
+        formData.append('story[title]', this.state.title);
+        formData.append('story[subtitle]', this.state.subtitle);
+        formData.append('story[body]', this.state.body);
+        if (this.state.photoFile) {
+            formData.append('story[photo]', this.state.photoFile);
+        }
+        $.ajax({
+            url: '/api/stories',
+            method: 'POST',
+            data: formData,
+            contentType: false,
+            processData: false
+        }).then(history.push(`/feed`));
+
+        // don't need?
+        // this.props.processForm(this.state)
+        //     .then(history.push(`/feed`));
     }
 
-    handleImagePreview(e) {
+    handleFile(e) {
         const reader = new FileReader();
         const file = e.currentTarget.files[0];
         reader.onloadend = () =>
-            this.setState({ imageUrl: reader.result, imageFile: file });
+            this.setState({ photoUrl: reader.result, photoFile: file });
 
         if (file) {
             reader.readAsDataURL(file);
         } else {
-            this.setState({ imageUrl: "", imageFile: null });
+            this.setState({ photoUrl: "", photoFile: null });
         }
     }
 
@@ -64,7 +79,7 @@ class StoryForm extends React.Component {
                     </label>
                     <label>Add Image
                         <input 
-                            onChange={this.handleImagePreview}
+                            onChange={this.handleFile}
                             type="file"/>
                     </label>
                 </form>
