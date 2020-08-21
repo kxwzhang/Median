@@ -22,6 +22,34 @@
     height: 350px;
 }
 
+.left-top img, .right-top img {
+    height: 150px;
+    object-fit: cover;
+}
+
+.center-top img {
+    display: flex;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.top-details {
+    display: flex;
+}
+
+// .left-top {
+//     width: 33%;
+// }
+
+// .center-top {
+//     width: 33%;
+// }
+
+// .right-top {
+//     width: 33%;
+// }
+
 .left-top > h1, .center-top h1, .right-top > h1 {
     font: bold;
     font-size: 24px;
@@ -40,7 +68,7 @@
 }
 
 .center-top {
-    // overflow: hidden;
+    overflow: hidden;
 }
 
 .story-index-title {
