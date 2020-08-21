@@ -19,7 +19,7 @@ class EditStoryForm extends React.Component {
                     processForm={processForm}
                     formType={formType}
                     story={story}
-                    currentUserId/>
+                    currentUserId={currentUserId}/>
             );
         }
     }
