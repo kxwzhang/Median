@@ -12,7 +12,9 @@ class StoryForm extends React.Component {
     }
 
     handleSubmit(e) {
-        const { history, currentUserId } = this.props;
+        const { match, history, formType, currentUserId } = this.props;
+        const ajaxMethod = formType === 'Publish' ? 'POST' : 'PATCH'
+        const ajaxUrl = formType === 'Publish' ? '/api/stories' : `/api/stories/${match.params.storyId}`
         e.preventDefault();
         const formData = new FormData();
         formData.append('story[title]', this.state.title);
@@ -22,16 +24,12 @@ class StoryForm extends React.Component {
             formData.append('story[photo]', this.state.photoFile);
         }
         $.ajax({
-            url: '/api/stories',
-            method: 'POST',
+            url: ajaxUrl,
+            method: ajaxMethod,
             data: formData,
             contentType: false,
             processData: false
-        }).then(history.push(`/feed`));
-
-        // don't need?
-        // this.props.processForm(this.state)
-        //     .then(history.push(`/feed`));
+        }).then(story => history.push(`/stories/${story.id}`));
     }
 
     handleFile(e) {
@@ -43,7 +41,7 @@ class StoryForm extends React.Component {
         if (file) {
             reader.readAsDataURL(file);
         } else {
-            this.setState({ photoUrl: "", photoFile: null });
+            this.setState({ photoUrl: '', photoFile: null });
         }
     }
 
