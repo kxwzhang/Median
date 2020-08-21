@@ -5,8 +5,11 @@ class StoryForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = this.props.story;
+        this.state['imageUrl'] = '';
+        this.state['imageFile'] = null;
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleImagePreview = this.handleImagePreview.bind(this);g
     }
 
     handleSubmit(e) {
@@ -14,6 +17,19 @@ class StoryForm extends React.Component {
         e.preventDefault();
         this.props.processForm(this.state)
             .then(history.push(`/stories/${currentUserId}`));
+    }
+
+    handleImagePreview(e) {
+        const reader = new FileReader();
+        const file = e.currentTarget.files[0];
+        reader.onloadend = () =>
+            this.setState({ imageUrl: reader.result, imageFile: file });
+
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            this.setState({ imageUrl: "", imageFile: null });
+        }
     }
 
     update(field) {
