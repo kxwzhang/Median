@@ -59,25 +59,29 @@ class StoryForm extends React.Component {
                             onChange={this.update('title')} 
                             type="text"
                             value={this.state.title}
-                            placeholder='Title'/>
+                            placeholder='Title'
+                            className='story-form-title-input'/>
                     </label>
                     <label className='story-form-subtitle'>Subtitle
                         <input 
                             onChange={this.update('subtitle')} 
                             type="text"
                             value={this.state.subtitle}
-                            placeholder='Subtitle'/>
+                            placeholder='Subtitle'
+                            className='story-form-subtitle-input'/>
                     </label>
                     <label className='story-form-body'>Body
                         <textarea 
                             onChange={this.update('body')} 
                             value={this.state.body}
-                            placeholder='Tell your story...'/>
+                            placeholder='Tell your story...'
+                            className='story-form-body-input'/>
                     </label>
                     <label className='story-form-image'>Add Image
                         <input 
                             onChange={this.handleFile}
-                            type="file"/>
+                            type="file"
+                            className='story-form-image-input'/>
                     </label>
                 </form>
             </div>
