@@ -7,7 +7,7 @@ const mSTP = (state, ownProps) => ({
 });
 
 const mDTP = dispatch => ({
-
+    processForm: story => dispatch(createStory(story))
 });
 
 export default connect(mSTP, mDTP)(StoryForm);
