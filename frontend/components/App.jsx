@@ -16,7 +16,7 @@ const App = () => (
         <header>
             <Navbar />
         </header>
-     
+        
         <Switch>
             <ProtectedRoute exact path='/stories/new' component={CreateStoryFormContainer} />
             <ProtectedRoute exact path='/stories/:storyId/edit' component={EditStoryFormContainer} />

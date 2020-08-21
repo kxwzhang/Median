@@ -53,7 +53,7 @@ class StoryForm extends React.Component {
         return (
             <div className='story-form-container'>
                 <form onSubmit={this.handleSubmit}>
-                    <button>{formType}</button>
+                    <button className='story-form-button'>{formType}</button>
                     <label className='story-form-title'>Title
                         <input 
                             onChange={this.update('title')} 

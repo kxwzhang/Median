@@ -6,8 +6,23 @@
 .navbar {
     justify-content: space-around;
     height: 70px;
-    box-shadow: 0px 1px 10px -1px;
-    position: sticky; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    z-index: 100;
+}
+
+.feed-container {
+    transform: translate(0%, 3%);
+}
+
+.story-form-container {
+    transform: translate(0%, 150%);
+}
+
+.splash-container {
+    transform: translate(0%, 250%);
 }
 
 .navbar-name {
