@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class StoryShow extends React.Component {
     componentDidMount() {
@@ -20,6 +21,9 @@ class StoryShow extends React.Component {
                             <span className='show-author'>
                                 <div className='show-author-name'>{story.author}</div>
                                 <div className='show-read-time'>{story.id + 2} min read</div>
+                                <Link to={`/stories/${story.id}/edit`}>
+                                    <button className='edit-story-btn'>Edit story</button>
+                                </Link>
                             </span>
                             <img className='show-image' src={story.photoUrl} />
                             <p className='show-body'>

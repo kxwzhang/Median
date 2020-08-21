@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { fetchStory } from '../../actions/story_action';
+import StoryForm from './story_form';
 
 class EditStoryForm extends React.Component {
     componentDidMount() {
@@ -7,7 +9,7 @@ class EditStoryForm extends React.Component {
     }
 
     render() {
-        const { processForm, formType, story } = this.props;
+        const { processForm, formType, story, currentUserId } = this.props;
         
         if (!story) {
             return null;
@@ -16,15 +18,17 @@ class EditStoryForm extends React.Component {
                 <StoryForm 
                     processForm={processForm}
                     formType={formType}
-                    story={story}/>
+                    story={story}
+                    currentUserId/>
             );
         }
     }
 }
 
 const mSTP = (state, ownProps) => ({
-    story: state.stories[ownProps.match.params.storyId],
-    formType: 'Edit story'
+    story: state.entities.stories[ownProps.match.params.storyId],
+    formType: 'Edit story',
+    currentUserId: state.session.id
 });
 
 const mDTP = dispatch => ({
