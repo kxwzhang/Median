@@ -1,6 +1,10 @@
 import React from 'react';
 
 class StoryShow extends React.Component {
+    // componentDidMount() {
+    //     this.props.fetchStory(this.props.match.params.storyId);
+    // }
+
     render() {
         const { story } = this.props;
         return (
