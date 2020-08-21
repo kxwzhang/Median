@@ -1,5 +1,5 @@
 import React from 'react';
-import StoryIndexTop from './story_index_top';
+import { Link } from 'react-router-dom';
 
 const StoryIndexPopular = ({ stories }) => (
     <div className='story-index-popular'>
