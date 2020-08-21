@@ -95,7 +95,7 @@
     font-size: 14px;
 }
 
-input[type="text"], input[type="password"] {
+.username-form-input, .email-form-input, .password-form-input {
     border: none;
     outline: none;
     border-bottom: 1px solid black;

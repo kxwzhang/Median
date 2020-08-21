@@ -54,27 +54,27 @@ class StoryForm extends React.Component {
             <div className='story-form-container'>
                 <form onSubmit={this.handleSubmit}>
                     <button>{formType}</button>
-                    <label>Title
+                    <label className='story-form-title'>Title
                         <input 
                             onChange={this.update('title')} 
                             type="text"
                             value={this.state.title}
                             placeholder='Title'/>
                     </label>
-                    <label>Subtitle
+                    <label className='story-form-subtitle'>Subtitle
                         <input 
                             onChange={this.update('subtitle')} 
                             type="text"
                             value={this.state.subtitle}
                             placeholder='Subtitle'/>
                     </label>
-                    <label>Body
+                    <label className='story-form-body'>Body
                         <textarea 
                             onChange={this.update('body')} 
                             value={this.state.body}
                             placeholder='Tell your story...'/>
                     </label>
-                    <label>Add Image
+                    <label className='story-form-image'>Add Image
                         <input 
                             onChange={this.handleFile}
                             type="file"/>
