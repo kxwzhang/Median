@@ -3,7 +3,8 @@ import StoryShow from './story_show';
 import { fetchStory } from '../../actions/story_action';
 
 const mSTP = (state, ownProps) => ({
-    story: state.entities.stories[ownProps.match.params.storyId]
+    story: state.entities.stories[ownProps.match.params.storyId],
+    currentUserId: state.session.id
 });
 
 const mDTP = dispatch => ({
