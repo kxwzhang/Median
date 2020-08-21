@@ -6,6 +6,7 @@ const StoryIndexTop = ({ stories }) => (
             <div>
                 <img src={stories[0].photoUrl}/>
             </div>
+      
             <h1>{stories[0].title}</h1>
             <h2>{stories[0].subtitle}</h2>
             <h3>By {stories[0].author}</h3>
@@ -48,6 +49,7 @@ const StoryIndexTop = ({ stories }) => (
             <div>
                 <img src={stories[4].photoUrl} />
             </div>
+     
             <h1>{stories[4].title}</h1>
             <h2>{stories[4].subtitle}</h2>
             <h3>{stories[4].author}</h3>
