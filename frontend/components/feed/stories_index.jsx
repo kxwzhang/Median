@@ -23,6 +23,11 @@ class StoriesIndex extends React.Component {
             return (
                 <div className='feed-container'>
                    {storyIndexTop}
+                    <Link to={`/stories/${shuffledStories[15].id}`}>
+                        <div className='editors-picks'>
+                            SEE EDITOR'S PICK
+                        </div>
+                    </Link>
                     <div className='feed-divider'></div>
                     <div className='feed-main'>
                         <div className='feed-main-items'>
