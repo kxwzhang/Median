@@ -13,7 +13,7 @@ const App = () => (
         <header>
             <Navbar />
         </header>
-
+     
         <Switch>
             <ProtectedRoute exact path='/' component={StoriesIndexContainer} />
         </Switch>
