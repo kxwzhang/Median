@@ -5,12 +5,12 @@ class StoryForm extends React.Component {
         super(props);
         this.state = this.props.story;
 
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
         this.props.processForm(this.state);
-            // .then(() => this.props.history.push(`/stories/${}`));
     }
 
     update(field) {
@@ -27,18 +27,21 @@ class StoryForm extends React.Component {
                         <input 
                             onChange={this.update('title')} 
                             type="text"
-                            value={this.state.title}/>
+                            value={this.state.title}
+                            placeholder='Title'/>
                     </label>
                     <label>Subtitle
                         <input 
                             onChange={this.update('subtitle')} 
                             type="text"
-                            value={this.state.subtitle}/>
+                            value={this.state.subtitle}
+                            placeholder='Subtitle'/>
                     </label>
                     <label>Body
                         <textarea 
                             onChange={this.update('body')} 
-                            value={this.state.body}/>
+                            value={this.state.body}
+                            placeholder='Tell your story...'/>
                     </label>
                 </form>
             </div>

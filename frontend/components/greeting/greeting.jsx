@@ -7,6 +7,9 @@ const Greeting = ({ currentUser, logout, openModal }) => {
             <h2 className='navbar-username'>
                 {currentUser.username}
             </h2>
+            <Link to='stories/new'>
+                <button className='greeting-new-story'>New story</button>
+            </Link>
             <Link to='/'>
                 <button className='logout-btn' onClick={logout}>Log Out</button>
             </Link>

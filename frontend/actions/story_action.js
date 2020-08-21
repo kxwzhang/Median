@@ -30,12 +30,15 @@ export const fetchStory = storyId => dispatch => (
         .then(story => dispatch(receiveStory(story)))
 );
 
-export const createStory = story => dispatch => (
-    StoryApiUtil.createStory(story)
-        .then(
-            story => dispatch(receiveStory(story)),
-            errors => dispatch(receiveErrors(errors.responseJSON)))
-);
+export const createStory = story => dispatch => {
+    // debugger
+    return (
+        StoryApiUtil.createStory(story)
+            .then(
+                story => dispatch(receiveStory(story)),
+                errors => dispatch(receiveErrors(errors.responseJSON)))
+    )
+};
 
 export const updateStory = story => dispatch => (
     StoryApiUtil.updateStory(story)
