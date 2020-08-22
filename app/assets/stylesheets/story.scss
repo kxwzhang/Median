@@ -32,14 +32,6 @@
     margin-bottom: 30px;
 }
 
-// .story-form-button {
-//     display: block;
-//     position: fixed;
-//     top: -30px;
-//     right: 400px;
-//     z-index: 1000;
-// }
-
 .story-show-container {
     display: flex;
 }
@@ -88,6 +80,7 @@
     text-align: right;
     position: sticky;
     top: 0px;
+    z-index: 20;
 }
 
 .story-form-btn {
