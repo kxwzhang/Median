@@ -4,27 +4,29 @@ import { withRouter, Link } from 'react-router-dom';
 class Greeting extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            dropdownState: false
-        };
     }
 
     greetingMessage() {
         const { currentUser, logout } = this.props;
         return (
-            <div className='navbar-profile-container'>
-                <div>
-                    <h2 className='navbar-username'>
-                        {currentUser.username}
-                    </h2>
-                </div>
-                <div className='navbar-links'>
-                    <Link to='/stories/new'>
-                        <button className='greeting-new-story'>New story</button>
-                    </Link>
-                    <Link to='/'>
-                        <button className='logout-btn' onClick={logout}>Log Out</button>
-                    </Link>
+            <div className='dropdown'>
+                <button className='dropbtn'><i className="fas fa-user-circle"></i></button>
+                <div className='dropdown-content'>
+                    <a className='dd-list-item'>
+                        <h2 className='navbar-username'>
+                            {currentUser.username}
+                        </h2>
+                    </a>
+                    <a className='dd-list-item'>
+                        <Link to='/stories/new'>
+                            <div className='greeting-new-story'>New story</div>
+                        </Link>
+                    </a>
+                    <a className='dd-list-item'>
+                        <Link to='/'>
+                            <div className='logout-btn' onClick={logout}>Log Out</div>
+                        </Link>
+                    </a>
                 </div>
             </div>
         );
