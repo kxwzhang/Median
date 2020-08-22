@@ -70,7 +70,7 @@
 }
 
 .story-form-body-input {
-    height: 700px;
+    height: 900px;
     align-self: start;
 }
 
@@ -81,9 +81,23 @@
 
 .story-form-btn-container {
     width: 800px;
-    display: flex;
+    display: block;
     text-align: right;
+    position: sticky;
+    top: 0px;
+    z-index: 300;
 }
 
 .story-form-btn {
+}
+
+.story-form-image {
+    display: flex;
+    position: relative;
+    top: 35px;
+    right: 100px;
+}
+
+.story-form-image-input {
+    // display: none;
 }

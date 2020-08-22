@@ -70,18 +70,18 @@ class StoryForm extends React.Component {
                             placeholder='Subtitle'
                             className='story-form-subtitle-input'/>
                     </label>
+                    <label className='story-form-image'>
+                        <input
+                            onChange={this.handleFile}
+                            type="file"
+                            className='story-form-image-input' />
+                    </label>
                     <label className='story-form-body'>
                         <textarea 
                             onChange={this.update('body')} 
                             value={this.state.body}
                             placeholder='Tell your story...'
                             className='story-form-body-input'/>
-                    </label>
-                    <label className='story-form-image'>
-                        <input 
-                            onChange={this.handleFile}
-                            type="file"
-                            className='story-form-image-input'/>
                     </label>
                 </form>
             </div>
