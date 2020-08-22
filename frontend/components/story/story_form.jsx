@@ -6,6 +6,7 @@ class StoryForm extends React.Component {
         super(props);
         this.state = this.props.story;
         this.state['photoFile'] = null;
+        this.state['photoUrl'] = null;
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
@@ -50,6 +51,7 @@ class StoryForm extends React.Component {
 
     render() {
         const { formType } = this.props;
+        const preview = this.state.photoUrl ? <img src={this.state.photoUrl} className='image-preview'/> : null;
         return (
             <div className='story-form-container'>
                 <form className='story-form' onSubmit={this.handleSubmit}>
@@ -76,6 +78,7 @@ class StoryForm extends React.Component {
                             type="file"
                             className='story-form-image-input' />
                     </label>
+                    {preview}
                     <label className='story-form-body'>
                         <textarea 
                             onChange={this.update('body')} 
