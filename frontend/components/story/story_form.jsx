@@ -73,6 +73,7 @@ class StoryForm extends React.Component {
                             className='story-form-subtitle-input'/>
                     </label>
                     <label className='story-form-image'>
+                        <i className="fas fa-plus"></i>
                         <input
                             onChange={this.handleFile}
                             type="file"

@@ -63,15 +63,18 @@
     height: 50px;
 }
 
-.story-form-title-input::placeholder, .story-form-title-input::placeholder {
+.story-form-title-input::placeholder, .story-form-subtitle-input::placeholder {
     color: gray;
-    font-size: 20px;
+    font-size: 30px;
     display: block;
 }
 
 .story-form-body-input {
     height: 900px;
     align-self: start;
+    position: relative;
+    top: -50px;
+    margin-top: 20px;
 }
 
 .story-form-body-input::placeholder {
@@ -94,10 +97,18 @@
 .story-form-image {
     display: flex;
     position: relative;
-    top: 35px;
-    right: 100px;
+    top: 5px;
+    right: 60px;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 .story-form-image-input {
-    // display: none;
+    display: none;
+}
+
+.image-preview {
+    width: 700px;
+    height: 500px;
+    margin-bottom: 70px;
 }
