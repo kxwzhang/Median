@@ -7,6 +7,7 @@ import StoryIndexPopular from './stories_index_popular';
 class StoriesIndex extends React.Component {
     componentDidMount() {
         this.props.fetchAllStories();
+        window.scrollTo(0, 0);
     }
 
     render() {

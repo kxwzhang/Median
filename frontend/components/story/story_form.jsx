@@ -12,6 +12,10 @@ class StoryForm extends React.Component {
         this.handleFile = this.handleFile.bind(this);
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
     handleSubmit(e) {
         const { match, history, formType, currentUserId } = this.props;
         const ajaxMethod = formType === 'Publish' ? 'POST' : 'PATCH'
