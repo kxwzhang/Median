@@ -13,15 +13,18 @@ class Greeting extends React.Component {
                 <button className='dropbtn'><i className="fas fa-user-circle"></i></button>
                 <div className='dropdown-content'>
                     <div className='dd-list-item'>
-                        <div>
-                            {currentUser.username}
+                        <div className='dropdown-header'>
+                            <i className="fas fa-user-circle"></i>
+                            <h2 className='dropdown-name'>{currentUser.username}</h2>
                         </div>
                     </div>
+                    <div className='dropdown-divider'></div>
                     <div className='dd-list-item'>
                         <Link to='/stories/new'>
                             <div className='greeting-new-story'>New story</div>
                         </Link>
                     </div>
+                    <div className='dropdown-divider'></div>
                     <div className='dd-list-item'>
                         <Link to='/'>
                             <div className='logout-btn' onClick={logout}>Log Out</div>

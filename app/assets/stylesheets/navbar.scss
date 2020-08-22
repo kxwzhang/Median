@@ -32,20 +32,21 @@
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: 230px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 50;
+  right: 40px;
 }
 
 .dropdown-content .dd-list-item {
   color: black;
-  padding: 12px 16px;
+  padding: 22px 20px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
 
-.dropdown-content .dd-list-item:hover {background-color: #f1f1f1}
+// .dropdown-content .dd-list-item:hover {background-color: #f1f1f1}
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -53,6 +54,22 @@
 
 .fa-user-circle {
     font-size: 30px;
+}
+
+.dropdown-header {
+    display: flex;
+}
+
+.dropdown-name {
+    margin-left: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.dropdown-divider {
+    border-bottom: 1px solid lightgray;
+    // margin-top: 5px;
+    // margin-bottom: 5px;
 }
 
 // .dropdown:hover .dropbtn {
