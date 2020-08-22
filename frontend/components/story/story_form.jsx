@@ -52,32 +52,32 @@ class StoryForm extends React.Component {
         const { formType } = this.props;
         return (
             <div className='story-form-container'>
-                <form onSubmit={this.handleSubmit}>
-                    <button className='story-form-button'>{formType}</button>
-                    <label className='story-form-title'>Title
-                        <input 
+                <form className='story-form' onSubmit={this.handleSubmit}>
+                    <div className='story-form-btn-container'>
+                        <button className='story-form-btn'>{formType}</button>
+                    </div>
+                    <label className='story-form-title'>
+                        <textarea 
                             onChange={this.update('title')} 
-                            type="text"
                             value={this.state.title}
                             placeholder='Title'
                             className='story-form-title-input'/>
                     </label>
-                    <label className='story-form-subtitle'>Subtitle
-                        <input 
+                    <label className='story-form-subtitle'>
+                        <textarea 
                             onChange={this.update('subtitle')} 
-                            type="text"
                             value={this.state.subtitle}
                             placeholder='Subtitle'
                             className='story-form-subtitle-input'/>
                     </label>
-                    <label className='story-form-body'>Body
+                    <label className='story-form-body'>
                         <textarea 
                             onChange={this.update('body')} 
                             value={this.state.body}
                             placeholder='Tell your story...'
                             className='story-form-body-input'/>
                     </label>
-                    <label className='story-form-image'>Add Image
+                    <label className='story-form-image'>
                         <input 
                             onChange={this.handleFile}
                             type="file"

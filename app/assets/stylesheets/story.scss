@@ -29,8 +29,59 @@
 
 .show-body {
     display: block;
+    margin-bottom: 30px;
 }
 
-.story-form-button {
-    position: absolute;
+// .story-form-button {
+//     display: block;
+//     position: fixed;
+//     top: -30px;
+//     right: 400px;
+//     z-index: 1000;
+// }
+
+.story-show-container {
+    display: flex;
+}
+
+.story-form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: flex-start;
+    margin-left: 250px;
+}
+
+.story-form-title-input, .story-form-subtitle-input, .story-form-body-input {
+    border: none;
+    width: 800px;
+    outline: none;
+    resize: none;
+}
+
+.story-form-title-input, .story-form-subtitle-input {
+    height: 50px;
+}
+
+.story-form-title-input::placeholder, .story-form-title-input::placeholder {
+    color: gray;
+    font-size: 20px;
+    display: block;
+}
+
+.story-form-body-input {
+}
+
+.story-form-body-input::placeholder {
+    color: gray;
+    font-size: 30px;
+}
+
+.story-form-btn-container {
+    width: 800px;
+    display: flex;
+    text-align: right;
+}
+
+.story-form-btn {
 }
