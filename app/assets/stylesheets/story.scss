@@ -92,6 +92,15 @@
 }
 
 .story-form-btn {
+    background: #03A87C;
+    color: white;
+    border-radius: 5%;
+    border: none;
+    outline: none;
+}
+
+.story-form-btn:hover {
+    background: #03b485;
 }
 
 .story-form-image {
