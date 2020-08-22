@@ -16,14 +16,16 @@ const App = () => (
         <header>
             <Navbar />
         </header>
-        
-        <Switch>
-            <ProtectedRoute exact path='/stories/new' component={CreateStoryFormContainer} />
-            <ProtectedRoute exact path='/stories/:storyId/edit' component={EditStoryFormContainer} />
-            <ProtectedRoute exact path='/stories/:storyId' component={StoryShowContainer} />
-            <ProtectedRoute exact path='/feed' component={StoriesIndexContainer} />
-        </Switch>
-        <AuthRoute exact path='/' component={SplashContainer} />
+
+        <div className='main-content'>
+            <Switch>
+                <ProtectedRoute exact path='/stories/new' component={CreateStoryFormContainer} />
+                <ProtectedRoute exact path='/stories/:storyId/edit' component={EditStoryFormContainer} />
+                <ProtectedRoute exact path='/stories/:storyId' component={StoryShowContainer} />
+                <ProtectedRoute exact path='/feed' component={StoriesIndexContainer} />
+            </Switch>
+            <AuthRoute exact path='/' component={SplashContainer} />
+        </div>
     </div>
 );
 
