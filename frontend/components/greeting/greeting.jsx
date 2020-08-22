@@ -12,21 +12,21 @@ class Greeting extends React.Component {
             <div className='dropdown'>
                 <button className='dropbtn'><i className="fas fa-user-circle"></i></button>
                 <div className='dropdown-content'>
-                    <a className='dd-list-item'>
-                        <h2 className='navbar-username'>
+                    <div className='dd-list-item'>
+                        <div>
                             {currentUser.username}
-                        </h2>
-                    </a>
-                    <a className='dd-list-item'>
+                        </div>
+                    </div>
+                    <div className='dd-list-item'>
                         <Link to='/stories/new'>
                             <div className='greeting-new-story'>New story</div>
                         </Link>
-                    </a>
-                    <a className='dd-list-item'>
+                    </div>
+                    <div className='dd-list-item'>
                         <Link to='/'>
                             <div className='logout-btn' onClick={logout}>Log Out</div>
                         </Link>
-                    </a>
+                    </div>
                 </div>
             </div>
         );
