@@ -1,3 +1,4 @@
+import { connect } from 'react-redux';
 import UserStory from './user_story';
 import { fetchUser } from '../../util/user_api_util';
 
