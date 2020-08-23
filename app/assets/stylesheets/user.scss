@@ -1,8 +1,21 @@
 .user-story-container {
     transform: translate(0%, 15%);
+    margin-left: 120px;
 }
 
 .your-stories-container {
     display: flex;
     justify-content: space-between;
+}
+
+.user-story-item-container {
+    display: flex;
+}
+
+.usre-story-divider {
+    border-bottom: 1px solid lightgray;
+}
+
+.write-a-story-btn {
+    margin-right: 120px;
 }
