@@ -5,7 +5,11 @@ import UserStoryItem from './user_story_item';
 class UserStory extends React.Component {
     componentDidMount() {
         this.props.fetchUser(this.props.match.params.userId);
-        console.log(this.props.currentUser);
+        window.scrollTo(0,0);
+    }
+
+    componentDidUpdate() {
+        this.props.fetchUser(this.props.match.params.userId);
     }
 
     render() {
