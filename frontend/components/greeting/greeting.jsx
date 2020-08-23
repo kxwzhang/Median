@@ -26,6 +26,12 @@ class Greeting extends React.Component {
                     </div>
                     <div className='dropdown-divider'></div>
                     <div className='dd-list-item'>
+                        <Link to={`/users/${currentUser.id}`}>
+                            <div className='greeting-stories'>Stories</div>
+                        </Link>
+                    </div>
+                    <div className='dropdown-divider'></div>
+                    <div className='dd-list-item'>
                         <Link to='/'>
                             <div className='logout-btn' onClick={logout}>Log Out</div>
                         </Link>
