@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class UserStoryItem extends React.Component {
     constructor(props) {
@@ -8,10 +8,7 @@ class UserStoryItem extends React.Component {
 
     handleDelete() {
         const { story, deleteStory } = this.props;
-        return e => {
-            e.preventDefault();
-            deleteStory(story.id)
-        }
+        return e => deleteStory(story.id);
     }
     
     render() {
@@ -36,4 +33,4 @@ class UserStoryItem extends React.Component {
     }
 }
 
-export default UserStoryItem;
+export default withRouter(UserStoryItem);

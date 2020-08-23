@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import UserStory from './user_story';
 import { fetchUser } from '../../actions/user_action';
-import { deleteStory } from '../../actions/story_action';
+import { fetchStory, deleteStory } from '../../actions/story_action';
 
 const mSTP = ({ session, entities: { users } }) => ({
     currentUser: users[session.id]
@@ -9,6 +9,7 @@ const mSTP = ({ session, entities: { users } }) => ({
 
 const mDTP = dispatch => ({
     fetchUser: userId => dispatch(fetchUser(userId)),
+    fetchStory: storyId => dispatch(fetchStory(storyId)),
     deleteStory: storyId => dispatch(deleteStory(storyId))
 
 });

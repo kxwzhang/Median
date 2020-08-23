@@ -8,8 +8,11 @@ class UserStory extends React.Component {
         window.scrollTo(0,0);
     }
 
-    componentDidUpdate() {
-        this.props.fetchUser(this.props.match.params.userId);
+    componentDidUpdate(prevProps) {
+        const { currentUser, fetchStory } = this.props;
+        if (currentUser.stories.length !== prevProps.currentUser.stories.length) {
+            currentUser.stories.forEach(story => fetchStory(story.id));
+        }
     }
 
     render() {
@@ -27,7 +30,7 @@ class UserStory extends React.Component {
                         </Link>
                     </div>
                     <div className='user-story-stories-container'>
-                        {currentUser.stories.map(story => <UserStoryItem key={story.id} story={story} deleteStory={deleteStory} />)}
+                        {currentUser.stories.map(story => <UserStoryItem key={story.id} currentUser={currentUser} story={story} deleteStory={deleteStory} />)}
                     </div>
                 </div>
             );
