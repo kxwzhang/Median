@@ -17,8 +17,10 @@ class UserStoryItem extends React.Component {
         return (
             <ul className='user-story-item-container'>
                 <li>
-                    <div>{story.title}</div>
-                    <div>{story.subtitle}</div>
+                    <Link to={`/stories/${story.id}`}>
+                        <div>{story.title}</div>
+                        <div>{story.subtitle}</div>
+                    </Link>
                 </li>
                 <li>
                     <Link to={`/stories/${story.id}/edit`}>
