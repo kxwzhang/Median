@@ -12,23 +12,25 @@ class Splash extends React.Component {
                 <h1 className='splash-head-title'>Dive deeper on stories that matter to you.</h1>
                 <h2 className='splash-head-subtitle'>We'll help you find great things to read.</h2>
                 <div className='splash-categories-container'>
-                    <span className='splash-catories-sub'>
-                        <div>1</div>
-                        <div>2</div>
-                        <div>3</div>
-                        <div>4</div>
+                    <span className='splash-categories-sub'>
+                        <div className='splash-categories-item'>Future</div>
+                        <div className='splash-categories-item'>Technology</div>
+                        <div className='splash-categories-item'>Business</div>
+                        <div className='splash-categories-item'>Work</div>
                     </span>
-                    <span className='splash-catories-sub'>
-                        <div>5</div>
-                        <div>6</div>
-                        <div>7</div>
-                        <div>8</div>
+                    <span className='splash-categories-sub'>
+                        <div className='splash-categories-item'>Culture</div>
+                        <div className='splash-categories-item'>Design</div>
+                        <div className='splash-categories-item'>Programming</div>
+                        <div className='splash-categories-item'>
+                            <i class="fas fa-car"></i>
+                            Cars</div>
                     </span>
-                    <span className='splash-catories-sub'>
-                        <div>9</div>
-                        <div>10</div>
-                        <div>11</div>
-                        <div>12</div>
+                    <span className='splash-categories-sub'>
+                        <div className='splash-categories-item'>Relationships</div>
+                        <div className='splash-categories-item'>Advice</div>
+                        <div className='splash-categories-item'>Health</div>
+                        <div className='splash-categories-item'>Comedy</div>
                     </span>
                 </div>
                 <div className='splash-signup-login-container'>

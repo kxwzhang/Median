@@ -28,7 +28,7 @@
     display: block;
 }
 
-.splash-catories-sub {
+.splash-categories-sub {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -63,4 +63,17 @@
 .splash-context-list {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.splash-categories-item {
+    display: block;
+    margin: 20px;
+    padding: 10px 20px;
+    background: lightgray;
+    border-radius: 30px;
+}
+
+.fa-car {
+    color: blue;
 }
