@@ -36,8 +36,6 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 50;
   right: 40px;
-  border-width: 1px;
-  border-color: gray;
 }
 
 .dropdown-content .dd-list-item {
@@ -122,22 +120,6 @@
     background: white;
     outline: none;
 }
-
-// .logout-btn {
-//     font-size: 16px;
-//     background: white;
-//     color: #03b485;
-//     border: 2px solid #03A87C;
-//     width: 100px;
-//     height: 40px;
-//     border-radius: 5%;
-//     margin-left: 25px;
-// }
-
-// .logout-btn:hover {
-//     background: lightgrey;
-//     cursor: pointer;
-// }
 
 .navbar-username {
     display: inline-block;
