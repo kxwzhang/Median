@@ -6,6 +6,7 @@ class Splash extends React.Component {
     }
 
     render() {
+        const { openModal, otherForm } = this.props;
         return (
             <div className='splash-container'>
                 <h1 className='splash-head-title'>Dive deeper on stories that matter to you.</h1>
@@ -34,6 +35,15 @@ class Splash extends React.Component {
                         <div>14</div>
                         <div>15</div>
                         <div>16</div>
+                    </span>
+                </div>
+                <div className='splash-signup-login-container'>
+                    <button
+                        className='splash-signup-btn'
+                        onClick={() => openModal('signup')}>Get Started
+                    </button>
+                    <span
+                        className='login-option-text'>Already have an account?{otherForm}
                     </span>
                 </div>
             </div>

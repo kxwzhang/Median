@@ -33,3 +33,29 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.splash-signup-login-container {
+    align-content: center;    
+}
+
+.splash-signup-btn {
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    background: #03A87C;
+    height: 60px;
+    width: 340px;
+    border-radius: 3px;
+    color: white;
+    outline: none;
+    margin: auto;
+    padding: 8px 16px;
+}
+
+.splash-signup-btn:hover {
+    background: #03b485;
+}
+
+.login-option-text {
+    text-align: center;
+}
