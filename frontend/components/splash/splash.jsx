@@ -46,6 +46,15 @@ class Splash extends React.Component {
                         className='login-option-text'>Already have an account?{otherForm}
                     </span>
                 </div>
+                <div>
+                    <ul>
+                        <li>World class publications</li>
+                        <li>Undiscovered voices</li>
+                        <li>Stories you love</li>
+                        <li>All on Median, all for you.</li>
+                    </ul>
+                    
+                </div>
             </div>
         );
     }
