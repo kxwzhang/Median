@@ -5,16 +5,39 @@
 .your-stories-container {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 40px;
 }
 
 .user-story-item-container {
     display: flex;
+    flex-direction: column;
 }
 
-.usre-story-divider {
+.user-story-divider {
     border-bottom: 1px solid lightgray;
+    margin-right: 120px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .write-a-story-btn {
     margin-right: 120px;
+    border-color: #029E74;
+    color: #029E74;
+    padding: 8px 16px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: white;
+    border-width: 1px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.your-stories {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 44px;
+}
+
+.user-story-btn-container {
+    display: flex;
 }

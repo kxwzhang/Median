@@ -28,6 +28,7 @@ class UserStory extends React.Component {
                             <button className='write-a-story-btn'>Write a story</button>
                         </Link>
                     </div>
+                    <div className='user-story-divider'></div>
                     <div className='user-story-stories-container'>
                         {currentUser.stories.map(story => <UserStoryItem key={story.id} currentUser={currentUser} story={story} deleteStory={deleteStory} />)}
                     </div>

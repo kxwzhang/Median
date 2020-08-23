@@ -22,14 +22,16 @@ class UserStoryItem extends React.Component {
                         <div>{story.subtitle}</div>
                     </Link>
                 </li>
-                <li>
-                    <Link to={`/stories/${story.id}/edit`}>
-                        <button className='edit-story-btn'>Edit Story</button>
-                    </Link>
-                </li>
-                <li>
-                    <button className='delete-story-btn' onClick={this.handleDelete()}>Delete story</button>
-                </li>
+                <div className='user-story-btn-container'>
+                    <li>
+                        <Link to={`/stories/${story.id}/edit`}>
+                            <button className='edit-story-btn'>Edit Story</button>
+                        </Link>
+                    </li>
+                    <li>
+                        <button className='delete-story-btn' onClick={this.handleDelete()}>Delete story</button>
+                    </li>
+                </div>
                 <div className='user-story-divider'></div>
             </ul>
         );
