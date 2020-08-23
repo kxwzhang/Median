@@ -36,11 +36,7 @@ class Api::StoriesController < ApplicationController
 
     def destroy
         @story = current_user.stories.find_by(id: params[:id])
-        if @story
-            @story.destroy
-        else
-            render json: ['You can only delete your own stories!'], status: 422
-        end
+        @story.destroy
     end
 
     private
