@@ -2,8 +2,8 @@ import React from 'react';
 
 const UserStoryItem = ({ story, deleteStory }) => (
     <ul>
-        <li>{story.tile}</li>
-        <li>{story.subttile}</li>
+        <li>{story.title}</li>
+        <li>{story.subtitle}</li>
     </ul>
 );
 
