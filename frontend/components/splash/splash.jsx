@@ -30,12 +30,6 @@ class Splash extends React.Component {
                         <div>11</div>
                         <div>12</div>
                     </span>
-                    <span className='splash-catories-sub'>
-                        <div>13</div>
-                        <div>14</div>
-                        <div>15</div>
-                        <div>16</div>
-                    </span>
                 </div>
                 <div className='splash-signup-login-container'>
                     <button
@@ -46,8 +40,8 @@ class Splash extends React.Component {
                         className='login-option-text'>Already have an account?{otherForm}
                     </span>
                 </div>
-                <div>
-                    <ul>
+                <div className='splash-context-container'>
+                    <ul className='splash-context-list'>
                         <li>World class publications</li>
                         <li>Undiscovered voices</li>
                         <li>Stories you love</li>
