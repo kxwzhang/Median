@@ -35,9 +35,51 @@
 
 .your-stories {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 44px;
+    font-size: 36px;
 }
 
 .user-story-btn-container {
     display: flex;
+}
+
+.user-story-title {
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px 0;
+}
+
+.user-story-subtitle {
+    font-size: 16px;
+    color: gray;
+    margin: 10px 0;
+}
+
+.edit-story-btn {
+    margin-right: 10px;
+    border-color: #029E74;
+    color: #029E74;
+    padding: 2px 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: white;
+    border-width: 1px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.delete-story-btn {
+    margin-right: 10px;
+    border-color: black;
+    color: black;
+    padding: 2px 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: white;
+    border-width: 1px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.delete-story-btn:hover {
+    background: red;
 }
