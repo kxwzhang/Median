@@ -9,15 +9,14 @@ class UserStory extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        const { currentUser, fetchStory } = this.props;
+        const { currentUser, fetchUser, fetchStory } = this.props;
         if (currentUser.stories.length !== prevProps.currentUser.stories.length) {
-            currentUser.stories.forEach(story => fetchStory(story.id));
+            fetchUser(this.props.match.params.userId);
         }
     }
 
     render() {
         const { currentUser, deleteStory } = this.props;
-        console.log(currentUser.stories);
         if (!currentUser) {
             return null;
         } else {
