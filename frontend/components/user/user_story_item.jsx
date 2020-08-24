@@ -8,15 +8,10 @@ class UserStoryItem extends React.Component {
     }
     
     render() {
-        const { story, deleteStory } = this.props
-        return (
-            <ul className='user-story-item-container'>
-                <li>
-                    <Link to={`/stories/${story.id}`}>
-                        <div className='user-story-title'>{story.title}</div>
-                        <div className='user-story-subtitle'>{story.subtitle}</div>
-                    </Link>
-                </li>
+        const { user, currentUser, story, deleteStory } = this.props
+        let editAndDeleteButtons;
+        if (user.id == currentUser.id) {
+            editAndDeleteButtons = (
                 <div className='user-story-btn-container'>
                     <li>
                         <Link to={`/stories/${story.id}/edit`}>
@@ -27,6 +22,17 @@ class UserStoryItem extends React.Component {
                         <button className='delete-story-btn' onClick={() => deleteStory(story.id)}>Delete story</button>
                     </li>
                 </div>
+            );
+        }
+        return (
+            <ul className='user-story-item-container'>
+                <li>
+                    <Link to={`/stories/${story.id}`}>
+                        <div className='user-story-title'>{story.title}</div>
+                        <div className='user-story-subtitle'>{story.subtitle}</div>
+                    </Link>
+                </li>
+                {editAndDeleteButtons}
                 <div className='user-story-divider'></div>
             </ul>
         );

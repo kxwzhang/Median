@@ -8,16 +8,35 @@ class UserStory extends React.Component {
     }
 
     componentDidMount() {
-        const { currentUser, fetchUser, fetchAllStories } = this.props;
+        const { fetchAllStories, fetchUser } = this.props;
+        fetchAllStories();
         fetchUser(this.props.match.params.userId);
         window.scrollTo(0,0);
     }
 
     render() {
-        const { stories, currentUser, deleteStory } = this.props;
-        if (!currentUser.storyIds) {
+        const { stories, user, currentUser, deleteStory } = this.props;
+        if (!currentUser) {
             return null;
         } else {
+            // console.log(currentUser.storyIds);
+            // let myStories;
+            // myStories = currentUser.storyIds.map(storyId => {
+            //     console.log(stories.storyId);
+            //     return stories[storyId];
+            // });
+
+
+            const myStories = [];
+            user.storyIds.forEach(storyId => {
+                stories.forEach(story => {
+                    if (story.id === storyId) {
+                        myStories.push(story);
+                    }
+                })
+            }) 
+            console.log(myStories);
+
             return (
                 <div className='user-story-container'>
                     <div className='your-stories-container'>
@@ -28,7 +47,7 @@ class UserStory extends React.Component {
                     </div>
                     <div className='user-story-divider'></div>
                     <div className='user-story-stories-container'>
-                        {currentUser.storyIds.map(storyId => <UserStoryItem key={storyId} currentUser={currentUser} story={stories[storyId]} deleteStory={deleteStory} />)}
+                        {myStories.map(story => <UserStoryItem key={story.id} user={user} currentUser={currentUser} story={story} deleteStory={deleteStory} />)}
                     </div>
                 </div>
             );
