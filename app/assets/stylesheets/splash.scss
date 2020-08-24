@@ -73,7 +73,16 @@
     background: rgba(242, 242, 242, 1);
     border-radius: 30px;
     font-size: 24px;
-    color: rgba(117, 117, 117, 1);;
+    color: rgba(117, 117, 117, 1);
+}
+
+.splash-categories-item:focus {
+    outline: none;
+    background: rgba(12, 242, 143, .2);
+}
+
+.splash-categories-item:hover {
+    background: rgb(236, 234, 234);
 }
 
 .fa-car {
