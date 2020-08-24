@@ -66,6 +66,20 @@
     margin-bottom: 40px;
 }
 
+.splash-context-item {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.splash-context-list li:last-child {
+    font-weight: bold;
+}
+
+.fa-check {
+    color: green;
+    margin-right: 3px;
+}
+
 .splash-categories-item {
     display: block;
     margin: 20px;

@@ -44,10 +44,16 @@ class Splash extends React.Component {
                 </div>
                 <div className='splash-context-container'>
                     <ul className='splash-context-list'>
-                        <li>World class publications</li>
-                        <li>Undiscovered voices</li>
-                        <li>Stories you love</li>
-                        <li>All on Median, all for you.</li>
+                        <li className='splash-context-item'>
+                            <i class="fas fa-check"></i>
+                            World class publications</li>
+                        <li className='splash-context-item'>
+                            <i class="fas fa-check"></i>
+                            Undiscovered voices</li>
+                        <li className='splash-context-item'>
+                            <i class="fas fa-check"></i>
+                            Stories you love</li>
+                        <li className='splash-context-item'>All on Median, all for you.</li>
                     </ul>
                     
                 </div>
