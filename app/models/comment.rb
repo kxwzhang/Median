@@ -25,6 +25,15 @@ class Comment < ApplicationRecord
         class_name: :User,
         inverse_of: :comments
 
+    belongs_to :parent_comment,
+        foreign_key: :parent_comment_id,
+        class_name: :Comment,
+        optional: true
+
+    has_many :child_comments,
+        foreign_key: :parent_comment_id,
+        class_name: :Comment,
+
     private
     def ensure_story_id
         self.story_id ||= self.parent_comment.story_id if parent_comment
