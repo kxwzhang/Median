@@ -14,27 +14,25 @@ class UserStory extends React.Component {
         window.scrollTo(0,0);
     }
 
+    componentDidUpdate(prevProps) {
+        if (prevProps.match.params.userId !== this.props.match.params.userId) {
+            this.props.fetchAllStories();
+        }
+    }
+
     render() {
         const { stories, user, currentUser, deleteStory } = this.props;
         if (!currentUser) {
             return null;
         } else {
-            // console.log(currentUser.storyIds);
-            // let myStories;
-            // myStories = currentUser.storyIds.map(storyId => {
-            //     console.log(stories.storyId);
-            //     return stories[storyId];
-            // });
-
-
             const myStories = [];
-            user.storyIds.forEach(storyId => {
-                stories.forEach(story => {
-                    if (story.id === storyId) {
-                        myStories.push(story);
-                    }
-                })
-            }) 
+            stories.forEach(story => {
+                if (story.author_id === user.id) {
+                    myStories.push(story);
+                }
+            })
+            
+            // console.log(stories);
             console.log(myStories);
 
             return (
