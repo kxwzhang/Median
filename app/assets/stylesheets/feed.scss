@@ -14,7 +14,7 @@
 
 .feed-main-items {
     display: block;
-    width: 90%;
+    width: 95%;
 }
 
 .index-min-read {
@@ -130,7 +130,7 @@
 
 .popular-story {
     display: flex;
-    width: 70%;
+    width: 85%;
     margin-bottom: 15px;
 }
 
@@ -173,4 +173,16 @@
 .popular-title {
     color: #000000D6;
     font-size: 24px;
+}
+
+.footer a {
+    color: gray;
+    font-size: 14px;
+}
+
+.footer-divider {
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    margin-top: 60px;
+    margin-bottom: 15px;
+    width: 80%;
 }

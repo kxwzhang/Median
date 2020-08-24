@@ -57,6 +57,10 @@ const StoryIndexPopular = ({ stories }) => (
                 </Link>
             </li>
         </ul>
+        <div className='footer'>
+            <div className='footer-divider'></div>
+            <a href='https://github.com/kxwzhang/Median'>About this site</a>
+        </div>
     </div>
 );
 
