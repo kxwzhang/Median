@@ -5,26 +5,17 @@ import UserStoryItem from './user_story_item';
 class UserStory extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { updated: false }
     }
 
     componentDidMount() {
-        this.props.fetchUser(this.props.match.params.userId);
-        this.props.fetchAllStories();
+        const { currentUser, fetchUser, fetchAllStories } = this.props;
+        fetchUser(this.props.match.params.userId);
         window.scrollTo(0,0);
     }
 
-    componentDidUpdate(prevProps) {
-        const { currentUser, fetchUser, fetchStory } = this.props;
-        if (currentUser.stories.length !== prevProps.currentUser.stories.length) {
-            fetchUser(this.props.match.params.userId);
-            this.setState({ update: !this.state.updated });
-        }
-    }
-
     render() {
-        const { currentUser, deleteStory } = this.props;
-        if (!currentUser) {
+        const { stories, currentUser, deleteStory } = this.props;
+        if (!currentUser.storyIds) {
             return null;
         } else {
             return (
@@ -37,7 +28,7 @@ class UserStory extends React.Component {
                     </div>
                     <div className='user-story-divider'></div>
                     <div className='user-story-stories-container'>
-                        {currentUser.stories.map(story => <UserStoryItem key={story.id} currentUser={currentUser} story={story} deleteStory={deleteStory} />)}
+                        {currentUser.storyIds.map(storyId => <UserStoryItem key={storyId} currentUser={currentUser} story={stories[storyId]} deleteStory={deleteStory} />)}
                     </div>
                 </div>
             );

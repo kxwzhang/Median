@@ -1,2 +1,1 @@
-json.extract! user, :id, :username, :email
-json.stories user.stories
+json.extract! user, :id, :username, :email, :story_ids
