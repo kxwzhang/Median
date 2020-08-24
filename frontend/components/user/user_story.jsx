@@ -31,10 +31,6 @@ class UserStory extends React.Component {
                     myStories.push(story);
                 }
             })
-            
-            // console.log(stories);
-            console.log(myStories);
-
             return (
                 <div className='user-story-container'>
                     <div className='your-stories-container'>
