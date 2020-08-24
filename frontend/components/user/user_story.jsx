@@ -9,8 +9,8 @@ class UserStory extends React.Component {
 
     componentDidMount() {
         const { fetchAllStories, fetchUser } = this.props;
-        fetchAllStories();
         fetchUser(this.props.match.params.userId);
+        fetchAllStories();
         window.scrollTo(0,0);
     }
 
@@ -47,7 +47,12 @@ class UserStory extends React.Component {
                     </div>
                     <div className='user-story-divider'></div>
                     <div className='user-story-stories-container'>
-                        {myStories.map(story => <UserStoryItem key={story.id} user={user} currentUser={currentUser} story={story} deleteStory={deleteStory} />)}
+                        {myStories.map(story => <UserStoryItem 
+                                                    key={story.id} 
+                                                    user={user} 
+                                                    currentUser={currentUser} 
+                                                    story={story} 
+                                                    deleteStory={deleteStory} />)}
                     </div>
                 </div>
             );

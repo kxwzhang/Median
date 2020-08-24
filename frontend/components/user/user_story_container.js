@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import UserStory from './user_story';
 import { fetchUser } from '../../actions/user_action';
-import { fetchAllStories, fetchStory, deleteStory } from '../../actions/story_action';
+import { fetchAllStories, deleteStory } from '../../actions/story_action';
 import { openModal } from '../../actions/modal_action';
 
 const mSTP = ({ session, entities: { stories, users } }, ownProps) => ({
