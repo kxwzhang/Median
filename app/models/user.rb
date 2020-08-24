@@ -24,6 +24,11 @@ class User < ApplicationRecord
         class_name: :Story,
         dependent: :destroy
 
+    has_many :comments,
+        foreign_key: :commenter_id,
+        class_name: :Comment,
+        dependent: :destroy
+
     # ASPIRE
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
