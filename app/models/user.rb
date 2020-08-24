@@ -27,7 +27,7 @@ class User < ApplicationRecord
     has_many :comments,
         foreign_key: :commenter_id,
         class_name: :Comment,
-        inverse_of: :author
+        inverse_of: :commenter
 
     # ASPIRE
     def self.find_by_credentials(username, password)

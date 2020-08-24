@@ -20,7 +20,7 @@ class Comment < ApplicationRecord
         class_name: :Story,
         inverse_of: :comments
 
-    belongs_to :author,
+    belongs_to :commenter,
         foreign_key: :commenter_id,
         class_name: :User,
         inverse_of: :comments
@@ -35,7 +35,7 @@ class Comment < ApplicationRecord
         class_name: :Comment
 
     private
-    def ensure_story_id
+    def ensure_story_id!
         self.story_id ||= self.parent_comment.story_id if parent_comment
     end
 end
