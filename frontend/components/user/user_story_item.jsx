@@ -6,14 +6,9 @@ class UserStoryItem extends React.Component {
     constructor(props) {
         super(props);
     }
-
-    handleDelete() {
-        const { story, deleteStory } = this.props;
-        return e => deleteStory(story.id);
-    }
     
     render() {
-        const { story } = this.props
+        const { story, deleteStory } = this.props
         return (
             <ul className='user-story-item-container'>
                 <li>
@@ -29,7 +24,7 @@ class UserStoryItem extends React.Component {
                         </Link>
                     </li>
                     <li>
-                        <button className='delete-story-btn' onClick={this.handleDelete()}>Delete story</button>
+                        <button className='delete-story-btn' onClick={() => deleteStory(story.id)}>Delete story</button>
                     </li>
                 </div>
                 <div className='user-story-divider'></div>

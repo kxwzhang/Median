@@ -3,8 +3,14 @@ import { withRouter, Link } from 'react-router-dom';
 import UserStoryItem from './user_story_item';
 
 class UserStory extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { updated: false }
+    }
+
     componentDidMount() {
         this.props.fetchUser(this.props.match.params.userId);
+        this.props.fetchAllStories();
         window.scrollTo(0,0);
     }
 
@@ -12,6 +18,7 @@ class UserStory extends React.Component {
         const { currentUser, fetchUser, fetchStory } = this.props;
         if (currentUser.stories.length !== prevProps.currentUser.stories.length) {
             fetchUser(this.props.match.params.userId);
+            this.setState({ update: !this.state.updated });
         }
     }
 

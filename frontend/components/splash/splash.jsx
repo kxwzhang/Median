@@ -13,24 +13,24 @@ class Splash extends React.Component {
                 <h2 className='splash-head-subtitle'>We'll help you find great things to read.</h2>
                 <div className='splash-categories-container'>
                     <span className='splash-categories-sub'>
-                        <div className='splash-categories-item' tabindex='1'>Future</div>
-                        <div className='splash-categories-item' tabindex='2'>Technology</div>
-                        <div className='splash-categories-item' tabindex='3'>Business</div>
-                        <div className='splash-categories-item' tabindex='4'>Work</div>
+                        <div className='splash-categories-item' tabIndex='1'>Future</div>
+                        <div className='splash-categories-item' tabIndex='2'>Technology</div>
+                        <div className='splash-categories-item' tabIndex='3'>Business</div>
+                        <div className='splash-categories-item' tabIndex='4'>Work</div>
                     </span>
                     <span className='splash-categories-sub'>
-                        <div className='splash-categories-item' tabindex='5'>Culture</div>
-                        <div className='splash-categories-item' tabindex='6'>Design</div>
-                        <div className='splash-categories-item' tabindex='7'>Programming</div>
-                        <div className='splash-categories-item' tabindex='8'>
-                            <i class="fas fa-car"></i>
+                        <div className='splash-categories-item' tabIndex='5'>Culture</div>
+                        <div className='splash-categories-item' tabIndex='6'>Design</div>
+                        <div className='splash-categories-item' tabIndex='7'>Programming</div>
+                        <div className='splash-categories-item' tabIndex='8'>
+                            <i className="fas fa-car"></i>
                             Cars</div>
                     </span>
                     <span className='splash-categories-sub'>
-                        <div className='splash-categories-item' tabindex='9'>Relationships</div>
-                        <div className='splash-categories-item' tabindex='10'>Advice</div>
-                        <div className='splash-categories-item' tabindex='11'>Health</div>
-                        <div className='splash-categories-item' tabindex='12'>Comedy</div>
+                        <div className='splash-categories-item' tabIndex='9'>Relationships</div>
+                        <div className='splash-categories-item' tabIndex='10'>Advice</div>
+                        <div className='splash-categories-item' tabIndex='11'>Health</div>
+                        <div className='splash-categories-item' tabIndex='12'>Comedy</div>
                     </span>
                 </div>
                 <div className='splash-signup-login-container'>
@@ -45,13 +45,13 @@ class Splash extends React.Component {
                 <div className='splash-context-container'>
                     <ul className='splash-context-list'>
                         <li className='splash-context-item'>
-                            <i class="fas fa-check"></i>
+                            <i className="fas fa-check"></i>
                             World class publications</li>
                         <li className='splash-context-item'>
-                            <i class="fas fa-check"></i>
+                            <i className="fas fa-check"></i>
                             Undiscovered voices</li>
                         <li className='splash-context-item'>
-                            <i class="fas fa-check"></i>
+                            <i className="fas fa-check"></i>
                             Stories you love</li>
                         <li className='splash-context-item'>All on Median, all for you.</li>
                     </ul>
