@@ -19,4 +19,9 @@ class Story < ApplicationRecord
         foreign_key: :author_id,
         class_name: :User
 
+    has_many :comments, 
+        foreign_key: :story_id,
+        class_name: :Comment,
+        inverse_of: :story
+
 end
