@@ -12,13 +12,22 @@ class CommentShow extends React.Component {
 
     render() {
         const { story, comments } = this.props;
-        console.log(comments);
-        return (
-            <div className='comment-container'>
-                <div></div>
-                <ChildCommentShow />
-            </div>
-        );
+        if (!comments) {
+            return null;
+        } else {
+            const parentComments = [];
+            comments.forEach(comment => {
+                if (!comment.parent_comment_id) {
+                    parentComments.push(comment);
+                }
+            })
+            return (
+                <div className='comment-container'>
+                    <div>{parentComments.map(comment => comment.body)}</div>
+                    <ChildCommentShow />
+                </div>
+            );
+        }
     }
 }
 
