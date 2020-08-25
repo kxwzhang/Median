@@ -15,7 +15,6 @@ class CommentShow extends React.Component {
         // const { story } = this.props;
         // console.log(Object.values(story.commentsByParent));
         console.log(this.props);
-        // debugger
         return (
             <div className='comment-container'>
                 <div></div>

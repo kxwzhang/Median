@@ -50,21 +50,31 @@
     margin-left: 250px;
 }
 
-.story-form-title-input, .story-form-subtitle-input, .story-form-body-input {
+.story-form-title-input, .story-form-subtitle-input {
     border: none;
     width: 700px;
     outline: none;
     resize: none;
+    font-size: 40px;
 }
 
-.story-form-title-input, .story-form-subtitle-input {
-    height: 50px;
+.story-form-body-input{
+    border: none;
+    width: 700px;
+    outline: none;
+    resize: none;
+    font-size: 20px;
 }
 
 .story-form-title-input::placeholder, .story-form-subtitle-input::placeholder {
     color: gray;
-    font-size: 30px;
+    font-size: 40px;
     display: block;
+}
+
+.story-form-body-input::placeholder {
+    color: gray;
+    font-size: 20px;
 }
 
 .story-form-body-input {
@@ -75,10 +85,6 @@
     margin-top: 20px;
 }
 
-.story-form-body-input::placeholder {
-    color: gray;
-    font-size: 30px;
-}
 
 .story-form-btn-container {
     width: 800px;
@@ -117,7 +123,7 @@
 }
 
 .image-preview {
-    width: 700px;
-    height: 500px;
+    width: 600px;
+    height: 450px;
     margin-bottom: 70px;
 }
