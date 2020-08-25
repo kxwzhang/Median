@@ -10,7 +10,6 @@ class StoryShow extends React.Component {
 
     render() {
         const { story } = this.props;
-        console.log(this.props);
         if (!story) {
             return null;
         } else {
