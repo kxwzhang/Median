@@ -2,7 +2,8 @@ class Api::CommentsController < ApplicationController
     # before_action :require_logged_in, only: [:show, :create, :destroy]
 
     def show
-        
+        @comment = Comment.find_by(id: params[:id])
+        render :show
     end
 
     def create
