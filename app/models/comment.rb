@@ -3,12 +3,12 @@
 # Table name: comments
 #
 #  id                :bigint           not null, primary key
+#  body              :text             not null
 #  parent_comment_id :integer
 #  story_id          :integer          not null
 #  commenter_id      :integer          not null
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
-#  body              :text             not null
 #
 class Comment < ApplicationRecord
     validates :body, :story_id, :commenter_id, presence: true
