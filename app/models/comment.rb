@@ -11,7 +11,7 @@
 #  body              :text             not null
 #
 class Comment < ApplicationRecord
-    # validates :body, :story_id, :commenter_id, presence: true
+    validates :body, :story_id, :commenter_id, presence: true
 
     after_initialize :ensure_story_id!
 
