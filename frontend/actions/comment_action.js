@@ -13,3 +13,21 @@ const removeComment = commentId => ({
     type: REMOVE_COMMENT,
     commentId
 })
+
+export const fetchComment = commentId => dispatch => (
+    CommentApiUtil.fetchComment(commentId)
+        .then(comment => dispatch(receiveComment(comment)))
+);
+
+export const createComment = comment => dispatch => (
+    CommentApiUtil.createComment(comment)
+        .then(
+            comment => dispatch(receiveComment(comment)),
+            errors => dispatch(receiveErrors(errors))
+        )
+);
+
+export const deleteComment = commentId => dispatch => (
+    CommentApiUtil.deleteComment(commentId)
+        .then(() => dispatch(removeComment(commentId)))
+);
