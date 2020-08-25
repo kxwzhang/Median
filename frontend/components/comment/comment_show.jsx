@@ -3,15 +3,23 @@ import ChildCommentShow from './child_comment_show';
 
 class CommentShow extends React.Component {
     componentDidMount() {
-        // this.props.fetchComment(story)
+        const {story, fetchComment } = this.props;
+        Object.values(story.commentsByParent).forEach(array => {
+            array.forEach(comment => {
+                // fetchComment(comment.id)
+                console.log(comment.id);
+            })
+        })
     }
 
     render() {
-        const { story, fetchComment } = this.props;
-        console.log(story.comments);
+        const { story } = this.props;
+        console.log(Object.values(story.commentsByParent));
+        console.log(this.props);
+        // debugger
         return (
             <div className='comment-container'>
-                <div>{story.comments}</div>
+                <div></div>
                 <ChildCommentShow />
             </div>
         );
