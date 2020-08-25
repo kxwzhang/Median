@@ -10,6 +10,11 @@ import {
     updateStory,
     deleteStory
 } from './actions/story_action';
+import {
+    fetchComment,
+    createComment,
+    deleteComment
+} from './actions/comment_action';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
@@ -31,9 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Testing:
     window.getState = store.getState;
     window.dispatch = store.dispatch;
-    window.fetchAllStories = fetchAllStories;
-    window.fetchStory = fetchStory;
-    window.createStory = createStory;
-    window.updateStory = updateStory;
-    window.deleteStory = deleteStory;
+    // window.fetchAllStories = fetchAllStories;
+    // window.fetchStory = fetchStory;
+    // window.createStory = createStory;
+    // window.updateStory = updateStory;
+    // window.deleteStory = deleteStory;
+    window.fetchComment = fetchComment;
+    window.createComment = createComment;
+    window.deleteComment = deleteComment;
 });
