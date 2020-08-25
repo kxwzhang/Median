@@ -5,16 +5,15 @@ class CommentShow extends React.Component {
     componentDidMount() {
         const {story, fetchComment } = this.props;
         Object.values(story.commentsByParent).forEach(array => {
-            array.forEach(comment => {
-                // fetchComment(comment.id)
-                console.log(comment.id);
+            array.forEach(commentId => {
+                fetchComment(commentId)
             })
         })
     }
 
     render() {
-        const { story } = this.props;
-        console.log(Object.values(story.commentsByParent));
+        // const { story } = this.props;
+        // console.log(Object.values(story.commentsByParent));
         console.log(this.props);
         // debugger
         return (
