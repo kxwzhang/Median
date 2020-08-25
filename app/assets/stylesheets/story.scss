@@ -50,12 +50,21 @@
     margin-left: 250px;
 }
 
-.story-form-title-input, .story-form-subtitle-input {
+.story-form-title-input {
     border: none;
     width: 700px;
     outline: none;
     resize: none;
     font-size: 40px;
+}
+
+.story-form-subtitle-input {
+    border: none;
+    width: 700px;
+    outline: none;
+    resize: none;
+    font-size: 30px;
+    color: gray;
 }
 
 .story-form-body-input{
@@ -66,15 +75,22 @@
     font-size: 20px;
 }
 
-.story-form-title-input::placeholder, .story-form-subtitle-input::placeholder {
-    color: gray;
+.story-form-title-input::placeholder {
+    color: lightgray;
     font-size: 40px;
     display: block;
 }
 
+.story-form-subtitle-input::placeholder {
+    color: lightgray;
+    font-size: 30px;
+    display: block;
+}
+
 .story-form-body-input::placeholder {
-    color: gray;
+    color: lightgray;
     font-size: 20px;
+    display: block;
 }
 
 .story-form-body-input {
@@ -82,7 +98,7 @@
     align-self: start;
     position: relative;
     top: -50px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 
@@ -113,7 +129,7 @@
     display: flex;
     position: relative;
     top: 5px;
-    right: 60px;
+    right: 30px;
     font-size: 30px;
     cursor: pointer;
 }
@@ -126,4 +142,8 @@
     width: 600px;
     height: 450px;
     margin-bottom: 70px;
+}
+
+.fa-plus {
+    font-size: 20px;
 }

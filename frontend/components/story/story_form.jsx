@@ -63,14 +63,16 @@ class StoryForm extends React.Component {
                         <button className='story-form-btn'>{formType}</button>
                     </div>
                     <label className='story-form-title'>
-                        <textarea 
+                        <input
+                            type='text' 
                             onChange={this.update('title')} 
                             value={this.state.title}
                             placeholder='Title'
                             className='story-form-title-input'/>
                     </label>
                     <label className='story-form-subtitle'>
-                        <textarea 
+                        <input
+                            type='text' 
                             onChange={this.update('subtitle')} 
                             value={this.state.subtitle}
                             placeholder='Subtitle'
