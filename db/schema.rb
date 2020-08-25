@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_24_223838) do
+ActiveRecord::Schema.define(version: 2020_08_25_011327) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,13 +36,23 @@ ActiveRecord::Schema.define(version: 2020_08_24_223838) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "api_sessions", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "api_users", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "comments", force: :cascade do |t|
-    t.text "comment", null: false
     t.integer "parent_comment_id"
     t.integer "story_id", null: false
     t.integer "commenter_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "body", null: false
     t.index ["commenter_id"], name: "index_comments_on_commenter_id"
     t.index ["parent_comment_id"], name: "index_comments_on_parent_comment_id"
     t.index ["story_id"], name: "index_comments_on_story_id"

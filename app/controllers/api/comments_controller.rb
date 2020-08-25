@@ -17,11 +17,12 @@ class Api::CommentsController < ApplicationController
     end
 
     def destroy
-
+        @comment = current_user.comments.find_by(id: params[:id])
+        @comment.destroy
     end
 
     private
     def comment_params
-        params.require(:comment).permit(:comment, :story_id, :parent_comment_id)
+        params.require(:comment).permit(:body, :story_id, :parent_comment_id)
     end
 end
