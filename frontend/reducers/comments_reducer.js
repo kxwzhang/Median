@@ -5,9 +5,11 @@ const commentsReducer = (oldState = {}, action) => {
     let newState = {...oldState};
     switch (action.type) {
         case RECEIVE_COMMENT:
-            
+            newState[action.comment.id] = action.comment;
+            return newState
         case REMOVE_COMMENT:
-    
+            delete newState[action.commentId];
+            return newState;
         default:
             return oldState;
     }

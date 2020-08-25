@@ -23,7 +23,7 @@ export const createComment = comment => dispatch => (
     CommentApiUtil.createComment(comment)
         .then(
             comment => dispatch(receiveComment(comment)),
-            errors => dispatch(receiveErrors(errors))
+            errors => dispatch(receiveErrors(errors.responseJSON))
         )
 );
 
