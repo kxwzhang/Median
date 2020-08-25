@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CommentShow from '../comment/comment_show';
 
 class StoryShow extends React.Component {
     componentDidMount() {
@@ -27,7 +28,7 @@ class StoryShow extends React.Component {
                             <p className='show-body'>
                                 {story.body}
                             </p>
-
+                            <CommentShow story={story} />
                         </div>
                     </span>
                 </div>
