@@ -1,31 +1,35 @@
 import React from 'react';
-import ChildCommentShow from './child_comment_show';
+import CommentShowContainer from './comment_show_container';
 
 class CommentShow extends React.Component {
     componentDidMount() {
         const {story, fetchComment } = this.props;
-        Object.values(story.comments).forEach(comment => {
-            fetchComment(comment.id);
+        Object.values(story.commentsByParent).forEach(array => {
+            array.forEach(comment => {
+                fetchComment(comment.id);
+            })
         });
-        // fetch story again
     }
-
+    
     render() {
-        const { story, comments } = this.props;
-        if (!comments) {
+        const { story, comment, commentsByParent } = this.props;
+        if (!comment) {
             return null;
         } else {
-            const parentComments = [];
-            comments.forEach(comment => {
-                if (!comment.parent_comment_id) {
-                    parentComments.push(comment);
-                }
-            })
+            const nestedComments = (commentsByParent[comment.id] || []).map((comment) => {
+                return (
+                    <CommentShowContainer
+                        key={comment.id}
+                        story={story}
+                        comment={comment}
+                        commentsByParent={commentsByParent} />
+                );
+            });
             return (
                 <div className='comment-container'>
-                    <div>{parentComments.map(comment => comment.body)}</div>
-                    <ChildCommentShow />
-                </div>
+                    <div>{comment.body}</div>
+                    {nestedComments}
+               </div>
             );
         }
     }

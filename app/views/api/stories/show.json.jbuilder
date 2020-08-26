@@ -1,2 +1,2 @@
 json.partial! 'story', story: @story
-json.comments @story.comments
+# json.comments @story.comments

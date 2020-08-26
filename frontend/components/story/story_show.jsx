@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CommentShowContainer from '../comment/comment_show_container';
+import CommentShow from '../comment/comment_show';
 
 class StoryShow extends React.Component {
     componentDidMount() {
@@ -13,6 +14,25 @@ class StoryShow extends React.Component {
         if (!story) {
             return null;
         } else {
+            let displayComments;
+            if (story.commentsByParent) {
+                if (Object.keys(story.commentsByParent) !== null) {
+                    displayComments = story.commentsByParent[''].map(comment => {
+                        return (
+                            <CommentShowContainer
+                                key={comment.id}
+                                story={story}
+                                comment={comment}
+                                commentsByParent={story.commentsByParent} />
+                        );
+                    })
+                } else {
+                    displayComments = null;
+                }
+            } else {
+                displayComments = null;
+            }
+            
             return (
                 <div className='story-show-page'>
                     <span className='story-show-container'>
@@ -29,6 +49,9 @@ class StoryShow extends React.Component {
                             </p>
                             <CommentShowContainer story={story} />
                         </div>
+                    </span>
+                    <span className='story-show-comment-container'>
+                        {displayComments}
                     </span>
                 </div>
             );
