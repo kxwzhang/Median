@@ -1,6 +1,7 @@
 import React from 'react';
 import CommentShowContainer from './comment_show_container';
 import { Link } from 'react-router-dom';
+import CreateCommentFormContainer from './create_comment_form_container';
 
 class CommentShow extends React.Component {
     componentDidMount() {
@@ -36,9 +37,8 @@ class CommentShow extends React.Component {
                         <div className='comment-text'>
                             <div className='commenter-body'>{comment.body}</div>
                         </div>
-                        <Link to={`/stories/${story.id}/comments/new`}>
-                            <i class="far fa-comment"></i>
-                        </Link>
+                        <i class="far fa-comment"></i>
+                        <CreateCommentFormContainer story={story} comment={comment} />
                         <div className='nested-comments'>
                             {nestedComments}
                         </div>
