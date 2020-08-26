@@ -46,6 +46,9 @@ class StoryShow extends React.Component {
 
                             <span className='story-show-comment-container'>
                                 <div className='comments-head'>Comments</div>
+                                <Link to='comments/new'>
+                                    <div className='comment-filler'>What are your thoughts?</div>
+                                </Link>
                                 {commentList}
                             </span>
                         </div>

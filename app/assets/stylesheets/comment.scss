@@ -9,7 +9,7 @@
 }
 
 .comment-container {
-    border: 1px solid green;
+    border-top: 1px solid lightgray;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -33,5 +33,29 @@
 
 .nested-comments {
     margin-left: 20px;
-    margin-right: 20px;
+    // margin-right: 20px;
+}
+
+.fa-comment {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+.fa-comment:hover {
+    cursor: pointer;
+}
+
+.comment-filler {
+    text-align: center;
+    width: 500px;
+    font-size: 18px;
+    color: lightgray;
+    border: 1px solid lightgray;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+.comment-filler:hover {
+    background-color: rgb(233, 227, 227);
 }

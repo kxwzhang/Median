@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentShowContainer from './comment_show_container';
+import { Link } from 'react-router-dom';
 
 class CommentShow extends React.Component {
     componentDidMount() {
@@ -35,8 +36,8 @@ class CommentShow extends React.Component {
                         <div className='comment-text'>
                             <div className='commenter-body'>{comment.body}</div>
                         </div>
-                        <Link to>
-                            <button>Respond</button>
+                        <Link to='comments/new'>
+                            <i class="far fa-comment"></i>
                         </Link>
                         <div className='nested-comments'>
                             {nestedComments}
