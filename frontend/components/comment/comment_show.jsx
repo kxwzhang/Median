@@ -12,7 +12,7 @@ class CommentShow extends React.Component {
     }
     
     render() {
-        const { story, comment, comments, commentsByParent } = this.props;
+        const { story, comment, comments, commentsByParent, commenters } = this.props;
         if (!comment) {
             return null;
         } else {
@@ -22,16 +22,14 @@ class CommentShow extends React.Component {
                         key={comment.id}
                         story={story}
                         comment={comment}
+                        commenters={commenters}
                         commentsByParent={commentsByParent} />
                 );
             });
-
-            console.log(comments);
-            // commentsByParent
             return (
                 <div className='comment-container'>
+                    <div>{commenters[comment.commenter_id]}</div>
                     <div>{comment.body}</div>
-         
                     {nestedComments}
                </div>
             );

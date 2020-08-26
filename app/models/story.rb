@@ -28,10 +28,20 @@ class Story < ApplicationRecord
         comments_by_parent = Hash.new { |hash, key| hash[key] = [] }
 
         self.comments.includes(:parent_comment).each do |comment|
-        comments_by_parent[comment.parent_comment_id] << comment
+            comments_by_parent[comment.parent_comment_id] << comment
         end
 
         comments_by_parent
-  end
+    end
 
+    def comment_username
+        comment_username = {}
+
+        self.comments.includes(:commenter).each do |comment|
+            comment_username[comment.commenter.id] = comment.commenter.username
+        end
+
+        comment_username
+    end
+    
 end
