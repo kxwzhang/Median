@@ -14,7 +14,7 @@
 
 .feed-main-items {
     display: block;
-    width: 95%;
+    width: 90%;
 }
 
 .index-min-read {
@@ -65,14 +65,13 @@
 }
 
 .story-top-subtitle {
-    font-size: 16px;
+    font-size: 14px;
     color: #0000008A;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .story-top-author {
     font-size: 14px;
-    margin-bottom: 5px;
 }
 
 .center-top-title {
@@ -153,7 +152,7 @@
     margin-bottom: 50px;
     display: flex;
     justify-content: space-between;
-    width: 700px;
+    width: 650px;
 }
 
 .story-index-subtitle {
@@ -194,4 +193,5 @@
     height: 170px;
     width: 150px;
     object-fit: cover;
+    margin-right: 5px;
 }
