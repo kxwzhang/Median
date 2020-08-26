@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 
 class CreateCommentForm extends React.Component {
     constructor(props) {
@@ -36,4 +35,4 @@ class CreateCommentForm extends React.Component {
     }
 }
 
-export default withRouter(CreateCommentForm);
+export default CreateCommentForm;
