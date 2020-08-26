@@ -151,6 +151,9 @@
 
 .story-index-item {
     margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
 }
 
 .story-index-subtitle {
@@ -185,4 +188,10 @@
     margin-top: 60px;
     margin-bottom: 15px;
     width: 80%;
+}
+
+.story-index-image img {
+    height: 170px;
+    width: 150px;
+    object-fit: cover;
 }
