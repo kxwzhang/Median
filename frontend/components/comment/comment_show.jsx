@@ -11,6 +11,7 @@ class CommentShow extends React.Component {
                 fetchComment(comment.id);
             })
         });
+        
     }
     
     render() {
@@ -37,7 +38,7 @@ class CommentShow extends React.Component {
                         <div className='comment-text'>
                             <div className='commenter-body'>{comment.body}</div>
                         </div>
-                        <i class="far fa-comment"></i>
+                        <i className="far fa-comment"></i>
                         <CreateCommentFormContainer story={story} comment={comment} />
                         <div className='nested-comments'>
                             {nestedComments}

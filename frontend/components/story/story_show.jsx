@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CommentShowContainer from '../comment/comment_show_container';
+import CreateCommentFormContainer from '../comment/create_comment_form_container';
 
 class StoryShow extends React.Component {
     componentDidMount() {
@@ -27,7 +28,7 @@ class StoryShow extends React.Component {
                         );
                     })
                 } 
-            } 
+            }
             
             return (
                 <div className='story-show-page'>
@@ -46,9 +47,9 @@ class StoryShow extends React.Component {
 
                             <span className='story-show-comment-container'>
                                 <div className='comments-head'>Comments</div>
-                                <Link to={`/stories/${story.id}/comments/new`}>
-                                    <div className='comment-filler'>What are your thoughts?</div>
-                                </Link>
+                                    <div className='comment-filler'>What are your thoughts?
+                                        <CreateCommentFormContainer story={story} />
+                                    </div>
                                 {commentList}
                             </span>
                         </div>

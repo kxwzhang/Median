@@ -5,7 +5,7 @@ import { createComment } from '../../actions/comment_action';
 const mSTP = (state, ownProps) => ({
     comment: {body: ''},
     storyId: ownProps.story.id,
-    parentCommentId: ownProps.comment.id,
+    parentCommentId: (ownProps.comment ? ownProps.comment.id : null),
     currentUserId: state.session.id
 });
 

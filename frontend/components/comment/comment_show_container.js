@@ -1,12 +1,14 @@
 import { connect } from 'react-redux';
 import CommentShow from './comment_show';
 import { fetchComments, fetchComment } from '../../actions/comment_action';
+import { fetchStory } fro
 
 const mSTP = state => ({
     comments: Object.values(state.entities.comments)
 });
 
 const mDTP = dispatch => ({
+    fetchStory: 
     fetchComments: () => dispatch(fetchComments()),
     fetchComment: commentId => dispatch(fetchComment(commentId))
 });

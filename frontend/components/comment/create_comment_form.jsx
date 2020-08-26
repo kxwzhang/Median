@@ -5,11 +5,13 @@ class CreateCommentForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = this.props.comment;
+        this.state['story_id'] = this.props.storyId;
+        this.state['parent_comment_id'] = this.props.parentCommentId;
         
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleSubmit() {
+    handleSubmit(e) {
         e.preventDefault();
         this.props.processForm(this.state);
     }
