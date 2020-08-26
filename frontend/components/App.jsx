@@ -24,8 +24,8 @@ const App = () => (
                 <ProtectedRoute exact path='/users/:userId' component={UserStoryContainer} />
                 <ProtectedRoute exact path='/stories/new' component={CreateStoryFormContainer} />
                 <ProtectedRoute exact path='/stories/:storyId/edit' component={EditStoryFormContainer} />
+                <ProtectedRoute exact path='/stories/:storyId/comments/new' component={CreateCommentFormContainer} />
                 <ProtectedRoute exact path='/stories/:storyId' component={StoryShowContainer} />
-                <ProtectedRoute exact path='/comments/new' component={CreateCommentFormContainer} />
                 <ProtectedRoute exact path='/feed' component={StoriesIndexContainer} />
             </Switch>
             <AuthRoute exact path='/' component={SplashContainer} />

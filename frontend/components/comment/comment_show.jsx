@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 class CommentShow extends React.Component {
     componentDidMount() {
-        const {story, fetchComment, fetchComments } = this.props;
+        const {story, fetchComment } = this.props;
         Object.values(story.commentsByParent).forEach(array => {
             array.forEach(comment => {
                 fetchComment(comment.id);
@@ -36,7 +36,7 @@ class CommentShow extends React.Component {
                         <div className='comment-text'>
                             <div className='commenter-body'>{comment.body}</div>
                         </div>
-                        <Link to='comments/new'>
+                        <Link to={`/stories/${story.id}/comments/new`}>
                             <i class="far fa-comment"></i>
                         </Link>
                         <div className='nested-comments'>

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import CreateCommentForm from './create_comment_form';
-import { createStory } from '../../actions/comment_action';
+import { createComment } from '../../actions/comment_action';
 
 const mSTP = (state, ownProps) => ({
     comment: {body: ''},
