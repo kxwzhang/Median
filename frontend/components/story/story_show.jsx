@@ -15,7 +15,7 @@ class StoryShow extends React.Component {
         } else {
             let commentList = null;
             if (story.commentsByParent) {
-                if (Object.keys(story.commentsByParent) !== null) {
+                if (Object.values(story.commentsByParent) !== null) {
                     commentList = story.commentsByParent[""].map(comment => {
                         return (
                             <CommentShowContainer
