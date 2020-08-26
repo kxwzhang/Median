@@ -1,6 +1,7 @@
 import React from 'react';
 import CommentShowContainer from './comment_show_container';
 import CreateCommentFormContainer from './create_comment_form_container';
+import { deleteStory } from '../../util/story_api_util';
 
 class CommentShow extends React.Component {
     constructor(props) {
@@ -38,8 +39,21 @@ class CommentShow extends React.Component {
         }
     }
 
+    displayDeleteComment() {
+        const { currentUserId, story, comment, deleteComment, fetchStory } = this.props;
+        if (currentUserId === comment.commenter_id) {
+            return (
+                <div className='delete-comment-btn'>
+                    <i onClick={() => deleteComment(comment.id).then(() => fetchStory(story.id))} className="far fa-trash-alt"></i>
+                </div>
+            );
+        } else {
+            null;
+        }
+    }
+
     render() {
-        const { story, comment, commentsByParent, commenters } = this.props;
+        const { story, comment, commentsByParent, commenters, deleteComment, fetchStory } = this.props;
 
         if (!comment) {
             return null;
@@ -63,10 +77,13 @@ class CommentShow extends React.Component {
                         <div className='comment-text'>
                             <div className='commenter-body'>{comment.body}</div>
                         </div>
-                        <div>
+                        <div className='add-comment-btn'>
                             <i onClick={this.handleClick} className="far fa-comment"></i>
                         </div>
-                        {this.displayCommentBox()}
+                        <div className='comment-btns'>
+                            {this.displayCommentBox()}
+                            {this.displayDeleteComment()}
+                        </div>
                         <div className='nested-comments'>
                             {nestedComments}
                         </div>
