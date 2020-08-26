@@ -32,7 +32,7 @@ class CommentShow extends React.Component {
         const { story, comment } = this.props;
         if (this.state.toggled) {
             return (
-                <CreateCommentFormContainer story={story} comment={comment} />
+                <CreateCommentFormContainer story={story} comment={comment} handleClick={this.handleClick} />
             );
         } else {
             return null;
@@ -53,7 +53,7 @@ class CommentShow extends React.Component {
     }
 
     render() {
-        const { story, comment, commentsByParent, commenters, deleteComment, fetchStory } = this.props;
+        const { story, comment, commentsByParent, commenters } = this.props;
 
         if (!comment) {
             return null;
