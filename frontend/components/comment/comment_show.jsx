@@ -5,13 +5,13 @@ import CreateCommentFormContainer from './create_comment_form_container';
 
 class CommentShow extends React.Component {
     componentDidMount() {
-        const {story, fetchComment } = this.props;
+        const {story, fetchComment, fetchStory } = this.props;
         Object.values(story.commentsByParent).forEach(array => {
             array.forEach(comment => {
                 fetchComment(comment.id);
             })
         });
-        
+        fetchStory(story.id);
     }
     
     render() {
