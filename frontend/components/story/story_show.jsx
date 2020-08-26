@@ -13,10 +13,10 @@ class StoryShow extends React.Component {
         if (!story) {
             return null;
         } else {
-            let displayComments;
+            let commentList = null;
             if (story.commentsByParent) {
                 if (Object.keys(story.commentsByParent) !== null) {
-                    displayComments = story.commentsByParent[''].map(comment => {
+                    commentList = story.commentsByParent[''].map(comment => {
                         return (
                             <CommentShowContainer
                                 key={comment.id}
@@ -25,12 +25,8 @@ class StoryShow extends React.Component {
                                 commentsByParent={story.commentsByParent} />
                         );
                     })
-                } else {
-                    displayComments = null;
-                }
-            } else {
-                displayComments = null;
-            }
+                } 
+            } 
             
             return (
                 <div className='story-show-page'>
@@ -46,9 +42,9 @@ class StoryShow extends React.Component {
                             <p className='show-body'>
                                 {story.body}
                             </p>
-                            
+
                             <span className='story-show-comment-container'>
-                                {displayComments}
+                                {commentList}
                             </span>
                         </div>
                     </span>

@@ -12,12 +12,11 @@ class CommentShow extends React.Component {
     }
     
     render() {
-        const { story, comment, commentsByParent } = this.props;
+        const { story, comment, comments, commentsByParent } = this.props;
         if (!comment) {
             return null;
         } else {
-            
-            const nestedComments = (commentsByParent[comment.id] || []).map((comment) => {
+            const nestedComments = (commentsByParent[comment.id] || []).map(comment => {
                 return (
                     <CommentShowContainer
                         key={comment.id}
@@ -26,9 +25,13 @@ class CommentShow extends React.Component {
                         commentsByParent={commentsByParent} />
                 );
             });
+
+            console.log(comments);
+            // commentsByParent
             return (
                 <div className='comment-container'>
                     <div>{comment.body}</div>
+         
                     {nestedComments}
                </div>
             );
