@@ -77,13 +77,13 @@ class CommentShow extends React.Component {
                         <div className='comment-text'>
                             <div className='commenter-body'>{comment.body}</div>
                         </div>
-                        <div className='add-comment-btn'>
-                            <i onClick={this.handleClick} className="far fa-comment"></i>
-                        </div>
                         <div className='comment-btns'>
-                            {this.displayCommentBox()}
+                            <div className='add-comment-btn'>
+                                <i onClick={this.handleClick} className="far fa-comment"></i>
+                            </div>
                             {this.displayDeleteComment()}
                         </div>
+                        {this.displayCommentBox()}
                         <div className='nested-comments'>
                             {nestedComments}
                         </div>

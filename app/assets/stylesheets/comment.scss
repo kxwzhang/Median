@@ -59,3 +59,23 @@
 .comment-filler:hover {
     background-color: rgb(233, 227, 227);
 }
+
+.comment-btns {
+    display: flex;
+}
+
+.add-comment-btn, .delete-comment-btn {
+    font-size: 18px;
+}
+
+.add-comment-btn {
+    margin-right: 10px;
+}
+
+.add-comment-btn:hover {
+    color: gray;
+}
+
+.delete-comment-btn:hover {
+    color: red;
+}
