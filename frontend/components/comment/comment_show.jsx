@@ -3,7 +3,7 @@ import CommentShowContainer from './comment_show_container';
 
 class CommentShow extends React.Component {
     componentDidMount() {
-        const {story, fetchComment } = this.props;
+        const {story, fetchComment, fetchComments } = this.props;
         Object.values(story.commentsByParent).forEach(array => {
             array.forEach(comment => {
                 fetchComment(comment.id);
@@ -12,7 +12,7 @@ class CommentShow extends React.Component {
     }
     
     render() {
-        const { story, comment, comments, commentsByParent, commenters } = this.props;
+        const { story, comment, commentsByParent, commenters } = this.props;
         if (!comment) {
             return null;
         } else {
@@ -28,9 +28,17 @@ class CommentShow extends React.Component {
             });
             return (
                 <div className='comment-container'>
-                    <div>{commenters[comment.commenter_id]}</div>
-                    <div>{comment.body}</div>
-                    {nestedComments}
+                    <div>
+                        <div className='comment-head'>
+                            <div className='commenter-name'>{commenters[comment.commenter_id]}</div>
+                        </div>
+                        <div className='comment-text'>
+                            <div className='commenter-body'>{comment.body}</div>
+                        </div>
+                        <div className='nested-comments'>
+                            {nestedComments}
+                        </div>
+                    </div>
                </div>
             );
         }
