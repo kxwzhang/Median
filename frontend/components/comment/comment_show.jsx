@@ -35,6 +35,9 @@ class CommentShow extends React.Component {
                         <div className='comment-text'>
                             <div className='commenter-body'>{comment.body}</div>
                         </div>
+                        <Link to>
+                            <button>Respond</button>
+                        </Link>
                         <div className='nested-comments'>
                             {nestedComments}
                         </div>
