@@ -12,7 +12,8 @@ class CreateCommentForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.processForm(this.state);
+        this.props.processForm(this.state)
+            .then(() => this.props.fetchStory(this.props.storyId));
     }
 
     update(field) {

@@ -2,8 +2,18 @@ import React from 'react';
 import CommentShowContainer from './comment_show_container';
 import { Link } from 'react-router-dom';
 import CreateCommentFormContainer from './create_comment_form_container';
+import { fetchStory } from '../../util/story_api_util';
 
 class CommentShow extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            toggled: false
+        };
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
     componentDidMount() {
         const {story, fetchComment, fetchStory } = this.props;
         Object.values(story.commentsByParent).forEach(array => {
@@ -11,11 +21,29 @@ class CommentShow extends React.Component {
                 fetchComment(comment.id);
             })
         });
-        fetchStory(story.id);
+        // fetchStory(story.id);
     }
     
+    handleClick(e) {
+        const {story } = this.props;
+        e.preventDefault();
+        this.setState({ toggled: !this.state.toggled });
+    }
+
+    displayCommentBox() {
+        const { story, comment, fetchStory } = this.props;
+        if (this.state.toggled) {
+            return (
+                <CreateCommentFormContainer story={story} comment={comment} fetchStory={fetchStory} />
+            );
+        } else {
+            return null;
+        }
+    }
+
     render() {
         const { story, comment, commentsByParent, commenters } = this.props;
+
         if (!comment) {
             return null;
         } else {
@@ -38,8 +66,10 @@ class CommentShow extends React.Component {
                         <div className='comment-text'>
                             <div className='commenter-body'>{comment.body}</div>
                         </div>
-                        <i className="far fa-comment"></i>
-                        <CreateCommentFormContainer story={story} comment={comment} />
+                        <div>
+                            <i onClick={this.handleClick} className="far fa-comment"></i>
+                        </div>
+                        {this.displayCommentBox()}
                         <div className='nested-comments'>
                             {nestedComments}
                         </div>
