@@ -78,3 +78,19 @@
 .delete-comment-btn:hover {
     color: red;
 }
+
+.comment-form-btn {
+    border: none;
+    background: #029E74;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border-width: 1px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.comment-form-btn:hover {
+    background: #03b485;
+}

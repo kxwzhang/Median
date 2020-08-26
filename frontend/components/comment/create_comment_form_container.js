@@ -6,7 +6,8 @@ import { fetchStory } from '../../actions/story_action';
 const mSTP = (state, ownProps) => ({
     comment: {body: ''},
     storyId: ownProps.story.id,
-    parentCommentId: (ownProps.comment ? ownProps.comment.id : null)
+    parentCommentId: (ownProps.comment ? ownProps.comment.id : null),
+    currentUser: state.entities.users[state.session.id]
 });
 
 const mDTP = dispatch => ({

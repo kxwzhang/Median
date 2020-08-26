@@ -30,9 +30,10 @@ class CreateCommentForm extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
+                <div className='current-username-comment'>{this.props.currentUser.username}</div>
                 <label className='comment-form-body'>
-                    <input
-                        type="text"
+                    <textarea
+                        className='comment-form-textarea'
                         placeholder='What are your thoughts?'
                         value={this.state.body}
                         onChange={this.update('body')} />
