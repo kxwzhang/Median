@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CommentShowContainer from '../comment/comment_show_container';
-import CommentShow from '../comment/comment_show';
 
 class StoryShow extends React.Component {
     componentDidMount() {
@@ -47,11 +46,11 @@ class StoryShow extends React.Component {
                             <p className='show-body'>
                                 {story.body}
                             </p>
-                            <CommentShowContainer story={story} />
+                            
+                            <span className='story-show-comment-container'>
+                                {displayComments}
+                            </span>
                         </div>
-                    </span>
-                    <span className='story-show-comment-container'>
-                        {displayComments}
                     </span>
                 </div>
             );

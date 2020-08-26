@@ -16,6 +16,7 @@ class CommentShow extends React.Component {
         if (!comment) {
             return null;
         } else {
+            
             const nestedComments = (commentsByParent[comment.id] || []).map((comment) => {
                 return (
                     <CommentShowContainer
