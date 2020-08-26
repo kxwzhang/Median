@@ -16,18 +16,16 @@ class StoryShow extends React.Component {
         } else {
             let commentList = null;
             if (story.commentsByParent) {
-                if (Object.values(story.commentsByParent) !== null) {
-                    commentList = story.commentsByParent[''].map(comment => {
-                        return (
-                            <CommentShowContainer
-                                key={comment.id}
-                                story={story}
-                                comment={comment}
-                                commenters={story.commenters} 
-                                commentsByParent={story.commentsByParent} />
-                        );
-                    })
-                } 
+                commentList = story.commentsByParent[''].map(comment => {
+                    return (
+                        <CommentShowContainer
+                            key={comment.id}
+                            story={story}
+                            comment={comment}
+                            commenters={story.commenters} 
+                            commentsByParent={story.commentsByParent} />
+                    );
+                })
             }
             
             return (
@@ -47,7 +45,7 @@ class StoryShow extends React.Component {
 
                             <span className='story-show-comment-container'>
                                 <div className='comments-head'>Comments</div>
-                                    <div className='comment-filler'>What are your thoughts?
+                                    <div className='comment-filler'>
                                         <CreateCommentFormContainer story={story} />
                                     </div>
                                 {commentList}

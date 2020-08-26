@@ -26,7 +26,7 @@ class CreateCommentForm extends React.Component {
                 <label className='comment-form-body'>
                     <input
                         type="text"
-                        placeholder='What is on your mind?'
+                        placeholder='What are your thoughts?'
                         value={this.state.body}
                         onChange={this.update('body')} />
                         <button className='comment-form-btn'>Respond</button>

@@ -1,8 +1,6 @@
 import React from 'react';
 import CommentShowContainer from './comment_show_container';
-import { Link } from 'react-router-dom';
 import CreateCommentFormContainer from './create_comment_form_container';
-import { fetchStory } from '../../util/story_api_util';
 
 class CommentShow extends React.Component {
     constructor(props) {
@@ -21,20 +19,19 @@ class CommentShow extends React.Component {
                 fetchComment(comment.id);
             })
         });
-        // fetchStory(story.id);
+        fetchStory(story.id);
     }
     
     handleClick(e) {
-        const {story } = this.props;
         e.preventDefault();
         this.setState({ toggled: !this.state.toggled });
     }
 
     displayCommentBox() {
-        const { story, comment, fetchStory } = this.props;
+        const { story, comment } = this.props;
         if (this.state.toggled) {
             return (
-                <CreateCommentFormContainer story={story} comment={comment} fetchStory={fetchStory} />
+                <CreateCommentFormContainer story={story} comment={comment} />
             );
         } else {
             return null;
