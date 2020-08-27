@@ -7,16 +7,21 @@ export const fetchFollowers = userId => (
 
 export const fetchFollowees = userId => (
     $.ajax({
-        url: `/api/users/${userId}/followers`
+        url: `/api/users/${userId}/followees`,
+        method: 'GET'
     })
 );
 
-export const createFollow = userId => ({
-    url: `/api/users/${userId}/follow`,
-    method: 'POST'
-});
+export const createFollow = userId => (
+    $.ajax({
+        url: `/api/users/${userId}/follow`,
+        method: 'POST'
+    })
+);
 
-export const deleteFollow = userId => ({
-    url: `/api/users/${userId}/follow`,
-    method : 'DELETE'
-});
+export const deleteFollow = userId => (
+    $.ajax({
+        url: `/api/users/${userId}/follow`,
+        method: 'DELETE'
+    })
+);

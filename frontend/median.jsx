@@ -3,18 +3,12 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 // Testing imports:
-// import { 
-//     fetchAllStories,
-//     fetchStory,
-//     createStory,
-//     updateStory,
-//     deleteStory
-// } from './actions/story_action';
 import {
-    fetchComment,
-    createComment,
-    deleteComment
-} from './actions/comment_action';
+    fetchFollowers,
+    fetchFollowees,
+    createFollow,
+    deleteFollow
+} from './actions/follow_action';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
@@ -36,12 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Testing:
     window.getState = store.getState;
     window.dispatch = store.dispatch;
-    // window.fetchAllStories = fetchAllStories;
-    // window.fetchStory = fetchStory;
-    // window.createStory = createStory;
-    // window.updateStory = updateStory;
-    // window.deleteStory = deleteStory;
-    window.fetchComment = fetchComment;
-    window.createComment = createComment;
-    window.deleteComment = deleteComment;
+    window.fetchFollowers = fetchFollowers;
+    window.fetchFollowees = fetchFollowees;
+    window.createFollow = createFollow;
+    window.deleteFollow = deleteFollow;
 });

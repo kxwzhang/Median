@@ -3,7 +3,6 @@ class Api::FollowsController < ApplicationController
 
     def create
         @follow = current_user.out_follows.create!(followee_id: params[:user_id])
-        @follower = @follower.follower
         render :show
     end
 
