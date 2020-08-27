@@ -18,12 +18,14 @@ class Api::UsersController < ApplicationController
 
     def followers
          @user = User.find_by(id: params[:id])
-         @followers = @user.followers
+         @follows = @user.followers
          render :follows
     end
 
     def followees
         @user = User.find_by(id: params[:id])
+        @follows = @user.followees
+        render :follows
     end
 
     # Future functionality to edit user info (need to also add update to routes file)
