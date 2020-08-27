@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: follows
+# Table name: relationships
 #
 #  id          :bigint           not null, primary key
 #  followed_id :integer          not null
@@ -8,7 +8,7 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
-class Follow < ApplicationRecord
+class Relationship < ApplicationRecord
     validates :follower_id, :followed_id, presence: true
 
     belongs_to :follower,

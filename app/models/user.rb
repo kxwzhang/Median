@@ -39,7 +39,7 @@ class User < ApplicationRecord
         
     has_many :reverse_relationships, 
         foreign_key: :followed_id,
-        class_name:  :Follow,
+        class_name:  :Relationship,
         dependent: :destroy
 
     has_many :followers, 
