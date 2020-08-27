@@ -13,6 +13,8 @@ require 'open-uri'
 # Clear seeded data upon initialize
 User.destroy_all
 Story.destroy_all
+Comment.destroy_all
+Relationship.destroy_all
 
 # Users 
 user1 =User.create!(username: 'kehwin', email: 'kehwin@aa.io', password: '123456')
@@ -201,12 +203,52 @@ comment18 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: 
 comment19 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user5.id, story_id: story16.id, parent_comment_id: nil)
 comment20 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user6.id, story_id: story16.id, parent_comment_id: comment19.id)
 
-
-def make_relationships
-    users = User.all
-    user  = users.first
-    followed_users = users[2..8]
-    followers = users[3..8]
-    followed_users.each { |followed| user.follow!(followed) }
-    followers.each { |follower| follower.follow!(user) }
-end
+# Relationships
+Relationship.create!(follower_id: user1.id, followed_id: user2.id)
+Relationship.create!(follower_id: user1.id, followed_id: user3.id
+Relationship.create!(follower_id: user1.id, followed_id: user4.id)
+Relationship.create!(follower_id: user1.id, followed_id: user5.id)
+Relationship.create!(follower_id: user1.id, followed_id: user6.id)
+Relationship.create!(follower_id: user1.id, followed_id: user7.id)
+Relationship.create!(follower_id: user1.id, followed_id: user8.id)
+Relationship.create!(follower_id: user1.id, followed_id: user9.id)
+Relationship.create!(follower_id: user1.id, followed_id: user10.id)
+Relationship.create!(follower_id: user2.id, followed_id: user1.id)
+Relationship.create!(follower_id: user2.id, followed_id: user3.id)
+Relationship.create!(follower_id: user2.id, followed_id: user4.id)
+Relationship.create!(follower_id: user2.id, followed_id: user5.id)
+Relationship.create!(follower_id: user2.id, followed_id: user6.id)
+Relationship.create!(follower_id: user3.id, followed_id: user1.id)
+Relationship.create!(follower_id: user3.id, followed_id: user2.id)
+Relationship.create!(follower_id: user3.id, followed_id: user4.id)
+Relationship.create!(follower_id: user4.id, followed_id: user2.id)
+Relationship.create!(follower_id: user4.id, followed_id: user3.id)
+Relationship.create!(follower_id: user4.id, followed_id: user5.id)
+Relationship.create!(follower_id: user4.id, followed_id: user6.id)
+Relationship.create!(follower_id: user4.id, followed_id: user7.id)
+Relationship.create!(follower_id: user4.id, followed_id: user8.id)
+Relationship.create!(follower_id: user4.id, followed_id: user9.id)
+Relationship.create!(follower_id: user4.id, followed_id: user10.id)
+Relationship.create!(follower_id: user5.id, followed_id: user1.id)
+Relationship.create!(follower_id: user5.id, followed_id: user2.id)
+Relationship.create!(follower_id: user5.id, followed_id: user3.id)
+Relationship.create!(follower_id: user5.id, followed_id: user4.id)
+Relationship.create!(follower_id: user5.id, followed_id: user6.id)
+Relationship.create!(follower_id: user6.id, followed_id: user7.id)
+Relationship.create!(follower_id: user6.id, followed_id: user8.id)
+Relationship.create!(follower_id: user6.id, followed_id: user9.id)
+Relationship.create!(follower_id: user6.id, followed_id: user10.id)
+Relationship.create!(follower_id: user7.id, followed_id: user1.id)
+Relationship.create!(follower_id: user7.id, followed_id: user2.id)
+Relationship.create!(follower_id: user7.id, followed_id: user3.id)
+Relationship.create!(follower_id: user7.id, followed_id: user4.id)
+Relationship.create!(follower_id: user7.id, followed_id: user5.id)
+Relationship.create!(follower_id: user8.id, followed_id: user1.id)
+Relationship.create!(follower_id: user8.id, followed_id: user2.id)
+Relationship.create!(follower_id: user8.id, followed_id: user3.id)
+Relationship.create!(follower_id: user8.id, followed_id: user4.id)
+Relationship.create!(follower_id: user8.id, followed_id: user5.id)
+Relationship.create!(follower_id: user8.id, followed_id: user6.id)
+Relationship.create!(follower_id: user8.id, followed_id: user7.id)
+Relationship.create!(follower_id: user9.id, followed_id: user7.id)
+Relationship.create!(follower_id: user10.id, followed_id: user7.id)
