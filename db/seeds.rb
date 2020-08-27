@@ -205,7 +205,7 @@ comment20 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: 
 
 # Relationships
 Relationship.create!(follower_id: user1.id, followed_id: user2.id)
-Relationship.create!(follower_id: user1.id, followed_id: user3.id
+Relationship.create!(follower_id: user1.id, followed_id: user3.id)
 Relationship.create!(follower_id: user1.id, followed_id: user4.id)
 Relationship.create!(follower_id: user1.id, followed_id: user5.id)
 Relationship.create!(follower_id: user1.id, followed_id: user6.id)
