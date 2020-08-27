@@ -47,15 +47,13 @@
   text-align: left;
 }
 
-// .dropdown-content .dd-list-item:hover {background-color: #f1f1f1}
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
 .fa-user-circle {
     font-size: 30px;
-    color: lightgray;
+    color: gray;
 }
 
 .dropdown-header {
@@ -70,13 +68,10 @@
 
 .dropdown-divider {
     border-bottom: 1px solid lightgray;
-    // margin-top: 5px;
-    // margin-bottom: 5px;
 }
 
 
 .main-content {
-    // transform: translate(0%, 5%);
     margin-top: 90px;
 }
 
