@@ -29,6 +29,8 @@ class User < ApplicationRecord
         class_name: :Comment,
         inverse_of: :commenter
 
+    has_many :
+
     # ASPIRE
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
