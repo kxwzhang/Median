@@ -47,6 +47,10 @@ class User < ApplicationRecord
         relationships.create!(followed_id: other_user.id)
     end
 
+    def unfollow!(other_user)
+        relationships.find_by_followed_id(other_user.id).destroy
+    end
+
     # ASPIRE
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
