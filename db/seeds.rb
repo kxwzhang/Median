@@ -17,7 +17,7 @@ Comment.destroy_all
 Follow.destroy_all
 
 # Users 
-user1 =User.create!(username: 'kehwin', email: 'kehwin@aa.io', password: '123456')
+user1 =User.create!(username: 'demo', email: 'demo@aa.io', password: '123456')
 user2 =User.create!(username: 'winterfred', email: 'freddy@yahoo.com', password: '000000')
 user3 =User.create!(username: 'bokchoy', email: 'bchoy@gmail.com', password: 'lettuceman')
 user4 =User.create!(username: 'elonmusk', email: 'em@tesla.com', password: 'spacexmachine')
@@ -25,7 +25,7 @@ user5 =User.create!(username: 'ash', email: 'pokemongo@pk.co', password: 'pikach
 user6 =User.create!(username: 'cereaously', email: 'rushhour@needspeed.com', password: 'slowturtle1')
 user7 =User.create!(username: 'teemo', email: 'devilyordle@lol.com', password: '1v9player')
 user8 =User.create!(username: 'baam', email: 'viole@tog.com', password: 'climbthetower')
-user9 =User.create!(username: 'zero2', email: 'mmm@gmail.com', password: '101010')
+user9 =User.create!(username: 'kehwin', email: 'kehwin@gmail.com', password: '101010')
 user10 =User.create!(username: 'notaname', email: 'notamail@nomail.com', password: 'superlongpassword')
 
 file1 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/1.jpg')
