@@ -4,9 +4,33 @@ import CommentShowContainer from '../comment/comment_show_container';
 import CreateCommentFormContainer from '../comment/create_comment_form_container';
 
 class StoryShow extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { toggled: false };
+
+        this.handleClick = this.handleClick.bind(this);
+    }
     componentDidMount() {
         this.props.fetchStory(this.props.match.params.storyId);
         window.scrollTo(0, 0);
+    }
+
+    handleClick(e) {
+        e.preventDefault();
+        this.setState({ toggled: !this.state.toggled });
+    }
+
+    displayCommentBox() {
+        const { story } = this.props;
+        if (this.state.toggled) {
+            return (
+                <div className='comment-filler'>
+                    <CreateCommentFormContainer story={story} onClick={this.handleClick} />
+                </div>
+            );
+        } else {
+            return null;
+        }
     }
 
     render() {
@@ -47,9 +71,8 @@ class StoryShow extends React.Component {
 
                             <span className='story-show-comment-container'>
                                 <div className='comments-head'>Comments</div>
-                                    <div className='comment-filler'>
-                                        <CreateCommentFormContainer story={story} />
-                                    </div>
+                                <button className='leave-comment-btn' onClick={this.handleClick}>Leave a comment!</button>
+                                {this.displayCommentBox()}
                                 {commentList}
                             </span>
                         </div>
