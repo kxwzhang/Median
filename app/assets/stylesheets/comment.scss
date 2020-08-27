@@ -11,7 +11,7 @@
 .comment-container {
     border-top: 1px solid lightgray;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
 }
 
 .comment-head {
@@ -52,9 +52,9 @@
     width: 450px;
     font-size: 18px;
     color: lightgray;
-    border: 1px solid lightgray;
     margin: 20px auto;
     padding: 15px;
+    border-radius: 10px;
 }
 
 .comment-btns {
@@ -67,7 +67,7 @@
 }
 
 .add-comment-btn {
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 .add-comment-btn:hover {
@@ -110,7 +110,7 @@
 .comment-form-textarea {
     font-size: 16px;
     height: 200px;
-    width: 370px;
+    width: 450px;
     outline: none;
     border: none;
     resize: none;
@@ -118,8 +118,10 @@
 }
 
 .comment-form {
-    // border: 1px solid red;
-    max-width: 480px;
+    max-width: 450px;
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .leave-comment-btn {
