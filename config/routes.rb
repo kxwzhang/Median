@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       member do 
         get :followers, :following
       end
-      resource :relationship, only: [:create, :destroy]
+      resource :follow, only: [:create, :destroy]
     end
     resource :session, only: [:create, :destroy]
     resources :stories, only: [:index, :show, :create, :update, :destroy]
