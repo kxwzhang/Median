@@ -2,12 +2,12 @@ class Api::StoriesController < ApplicationController
     before_action :require_logged_in, only: [:index, :show, :create, :update, :destroy]
 
     def index
-        @stories = Story.includes("photo_attachment": :blob).all
+        @stories = Story.includes(:author, "photo_attachment": :blob).all
         render :index
     end
 
     def show
-        @story = Story.includes("photo_attachment": :blob).find_by(id: params[:id])
+        @story = Story.includes(:author, "photo_attachment": :blob).find_by(id: params[:id])
         render :show
     end
 
