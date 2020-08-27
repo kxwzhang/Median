@@ -7,7 +7,7 @@ class Api::CommentsController < ApplicationController
     end
 
     def show
-        @comment = Comment.find_by(id: params[:id])
+        @comment = Comment.includes(:commenter).find_by(id: params[:id])
         render :show
     end
 

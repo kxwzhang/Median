@@ -2,7 +2,7 @@ class Api::UsersController < ApplicationController
     before_action :require_logged_in, only: [:show, :update]
 
     def show
-        @user = User.find_by(id: params[:id])
+        @user = User.includes(:stories).find_by(id: params[:id])
         render :show
     end
 
