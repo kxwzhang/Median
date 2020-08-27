@@ -1,7 +1,3 @@
-export const fetchFollow = id => ({
-    
-})
-
 export const createFollow = id => ({
     url: `/api/users/${id}/follow`,
     method: 'POST'
