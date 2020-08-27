@@ -29,8 +29,13 @@ class CreateCommentForm extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <div className='current-username-comment'>{this.props.currentUser.username}</div>
+            <form className='comment-form' onSubmit={this.handleSubmit}>
+                <div className='current-comment'>
+                    <i className="fas fa-user-circle"></i>
+                    <div className='current-comment-text'>
+                        {this.props.currentUser.username}
+                    </div>
+                </div>
                 <label className='comment-form-body'>
                     <textarea
                         className='comment-form-textarea'

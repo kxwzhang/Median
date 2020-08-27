@@ -1,5 +1,5 @@
 class Api::CommentsController < ApplicationController
-    # before_action :require_logged_in, only: [:show, :create, :destroy]
+    before_action :require_logged_in, only: [:show, :create, :destroy]
 
     def index
         @comments = Comment.all

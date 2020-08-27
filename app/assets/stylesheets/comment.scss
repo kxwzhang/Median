@@ -29,6 +29,8 @@
 
 .commenter-body {
     padding: 10px;
+    word-wrap: break-word;
+    max-width: 700px;
 }
 
 .nested-comments {
@@ -47,16 +49,12 @@
 
 .comment-filler {
     text-align: center;
-    width: 500px;
+    width: 450px;
     font-size: 18px;
     color: lightgray;
     border: 1px solid lightgray;
     margin: 20px auto;
     padding: 15px;
-}
-
-.comment-filler:hover {
-    background-color: rgb(233, 227, 227);
 }
 
 .comment-btns {
@@ -93,4 +91,31 @@
 
 .comment-form-btn:hover {
     background: #03b485;
+}
+
+.current-comment {
+    display: flex;
+}
+
+.current-comment-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.comment-form-textarea {
+    font-size: 16px;
+    height: 200px;
+    width: 370px;
+    outline: none;
+    border: none;
+    resize: none;
+    margin-top: 5px;
+}
+
+.comment-form {
+    // border: 1px solid red;
+    max-width: 480px;
 }
