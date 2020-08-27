@@ -25,7 +25,7 @@ class StoryShow extends React.Component {
         if (this.state.toggled) {
             return (
                 <div className='comment-filler'>
-                    <CreateCommentFormContainer story={story} onClick={this.handleClick} />
+                    <CreateCommentFormContainer story={story} />
                 </div>
             );
         } else {
@@ -71,7 +71,12 @@ class StoryShow extends React.Component {
 
                             <span className='story-show-comment-container'>
                                 <div className='comments-head'>Comments</div>
-                                <button className='leave-comment-btn' onClick={this.handleClick}>Leave a comment!</button>
+                                <div className='leave-comment-btn-container'>
+                                    <button 
+                                        className='leave-comment-btn' 
+                                        onClick={this.handleClick}>Leave a comment!
+                                    </button>
+                                </div>
                                 {this.displayCommentBox()}
                                 {commentList}
                             </span>

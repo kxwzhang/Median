@@ -59,6 +59,7 @@
 
 .comment-btns {
     display: flex;
+    margin-bottom: 10px;
 }
 
 .add-comment-btn, .delete-comment-btn {
@@ -75,6 +76,7 @@
 
 .delete-comment-btn:hover {
     color: red;
+    cursor: pointer;
 }
 
 .comment-form-btn {
@@ -89,7 +91,7 @@
     font-size: 16px;
 }
 
-.comment-form-btn:hover {
+.comment-form-btn:hover, .leave-comment-btn:hover {
     background: #03b485;
 }
 
@@ -118,4 +120,23 @@
 .comment-form {
     // border: 1px solid red;
     max-width: 480px;
+}
+
+.leave-comment-btn {
+    border: none;
+    background: #029E74;
+    color: white;
+    padding: 4px 8px;
+    width: 200px;
+    height: 40px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border-width: 1px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.leave-comment-btn-container {
+    text-align: center;
 }
