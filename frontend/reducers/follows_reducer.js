@@ -10,10 +10,10 @@ const followsReducer = (oldState = {}, action) => {
     let newState = {...oldState};
     switch (action.type) {
         case RECEIVE_FOLLOWERS:
-            newState[action.id] = action.followers;
+            newState['followers'] = action.followers;
             return newState;
         case RECEIVE_FOLLOWEES:    
-            newState[action.id] = action.followees;
+            newState['followees'] = action.followees;
             return newState;
         // case RECEIVE_FOLLOW:    
         // case REMOVE_FOLLOW:    

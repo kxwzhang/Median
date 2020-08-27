@@ -17,14 +17,14 @@ class Api::UsersController < ApplicationController
     end
 
     def followers
-        # @followers = User.followers.find_by(id: params[:id])
-        @followers = current_user.followers
+        @followers = User.find_by(id: params[:id]).followers
+        # @followers = current_user.followers
         render '/api/users/follows'
     end
 
     def followees
-        # @followees = User.followees.find_by(id: params[:id])
-        @followees = current_user.followees
+        @followees = User.find_by(id: params[:id]).followees
+        # @followees = current_user.followees
         render '/api/users/follows'
     end
 
