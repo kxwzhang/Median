@@ -19,12 +19,12 @@ user1 =User.create!(username: 'kehwin', email: 'kehwin@aa.io', password: '123456
 user2 =User.create!(username: 'winterfred', email: 'freddy@yahoo.com', password: '000000')
 user3 =User.create!(username: 'bokchoy', email: 'bchoy@gmail.com', password: 'lettuceman')
 user4 =User.create!(username: 'elonmusk', email: 'em@tesla.com', password: 'spacexmachine')
-user5 =User.create!(username: 'ashketchum', email: 'pokemongo@pk.co', password: 'pikachu123')
-user6 =User.create!(username: 'fastnfurious', email: 'rushhour@needspeed.com', password: 'slowturtle1')
+user5 =User.create!(username: 'ash', email: 'pokemongo@pk.co', password: 'pikachu123')
+user6 =User.create!(username: 'cereaously', email: 'rushhour@needspeed.com', password: 'slowturtle1')
 user7 =User.create!(username: 'teemo', email: 'devilyordle@lol.com', password: '1v9player')
 user8 =User.create!(username: 'baam', email: 'viole@tog.com', password: 'climbthetower')
-# user9 =User.create!(username: 'madmax', email: 'mmm@gmail.com', password: '101010')
-# user10 =User.create!(username: 'notaname', email: 'notamail@nomail.com', password: 'superlongpassword')
+user9 =User.create!(username: 'zero2', email: 'mmm@gmail.com', password: '101010')
+user10 =User.create!(username: 'notaname', email: 'notamail@nomail.com', password: 'superlongpassword')
 
 file1 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/1.jpg')
 file2 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/2.jpg')
@@ -43,9 +43,9 @@ file14 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/14.jpg')
 file15 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/15.jpg')
 file16 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/16.jpg')
 file17 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/17.jpg')
-# file18 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/18.jpg')
-# file19 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/19.jpg')
-# file20 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/20.jpg')
+file18 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/18.jpg')
+file19 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/19.jpg')
+file20 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/20.jpg')
 # file21 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/21.jp'g)
 # file22 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/22.jpg')
 # file23 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/23.jpg')
@@ -133,26 +133,26 @@ story16 = Story.create!(title: 'How a Buddhist Monk Taught Me to Stop Overthinki
     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
     author_id: user8.id)
 story16.photo.attach(io: file16, filename: '16.jpg')
-# story17 = Story.create!(title: 'How Three College Students Made $600,000 in 24 Hours',
-#     subtitle: 'A simple pricing trick led to thousands of orders',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user9.id)
-# story17.photo.attach(io: file17, filename: '17.jpg')
-# story18 = Story.create!(title: 'Dark Side Of a Reddit Confession',
-#     subtitle: 'A Reddit Confession Nearly Solved a 50-year-old Cold Case',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user9.id)
-# story18.photo.attach(io: file18, filename: '18.jpg')
-# story19 = Story.create!(title: 'From Programmer to Billionaire at Age 20',
-#     subtitle: 'The story of Dio Diva, Indonesia’s youngest tech billionaire',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user10.id)
-# story19.photo.attach(io: file19, filename: '19.jpg')
-# story20 = Story.create!(title: 'Stop Using If-Else Statements',
-#     subtitle: 'Write code without them',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user10.id)
-# story20.photo.attach(io: file20, filename: '20.jpg')
+story17 = Story.create!(title: 'How Three College Students Made $600,000 in 24 Hours',
+    subtitle: 'A simple pricing trick led to thousands of orders',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user9.id)
+story17.photo.attach(io: file17, filename: '17.jpg')
+story18 = Story.create!(title: 'Dark Side Of a Reddit Confession',
+    subtitle: 'A Reddit Confession Nearly Solved a 50-year-old Cold Case',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user9.id)
+story18.photo.attach(io: file18, filename: '18.jpg')
+story19 = Story.create!(title: 'From Programmer to Billionaire at Age 20',
+    subtitle: 'The story of Dio Diva, Indonesia’s youngest tech billionaire',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user10.id)
+story19.photo.attach(io: file19, filename: '19.jpg')
+story20 = Story.create!(title: 'Stop Using If-Else Statements',
+    subtitle: 'Write code without them',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user10.id)
+story20.photo.attach(io: file20, filename: '20.jpg')
 # story21 = Story.create!(title: 'Why You Should Never Send Your CV via Gmail',
 #     subtitle: 'You could be getting your identity stolen.',
 #     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
@@ -200,3 +200,13 @@ comment17 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: 
 comment18 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user4.id, story_id: story16.id, parent_comment_id: comment17.id)
 comment19 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user5.id, story_id: story16.id, parent_comment_id: nil)
 comment20 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user6.id, story_id: story16.id, parent_comment_id: comment19.id)
+
+
+def make_relationships
+    users = User.all
+    user  = users.first
+    followed_users = users[2..8]
+    followers = users[3..8]
+    followed_users.each { |followed| user.follow!(followed) }
+    followers.each { |follower| follower.follow!(user) }
+end
