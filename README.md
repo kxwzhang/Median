@@ -10,7 +10,7 @@ A Medium clone that allows users to publicly publish articles and/or blogs that 
 
 ### User Authentication
 User auth is an important feature that I want to highlight here because requiring a user to be logged in before having access to any of the other functionality on the site is crucial for creating a true user experience. The login and signup portion of the site uses a modal and also allows for quick access between login and signup. There is also a easy access button for individuals who wish to demo the website before committing to their own account.
-![Session Form](https://octodex.github.com/images/yaktocat.png)
+![Session Form](https://github.com/kxwzhang/Median/blob/master/app/assets/images/user_auth.png)
 The following code snippet comes from my `session_form` where I implemented the functionality of closing the modal upon processing a user's session form and then pushing that user to their feed page. Also shown below is how I was able to capture the values using event handling like `e.currentTarget.value` as well as how errors were being rendered by the front end.
 ```javascript
 handleSubmit(e) {
