@@ -41,7 +41,6 @@ handleSubmit(e) {
 Stories are the bread and butter of this project. Any logged in user can publish, view, and delete stories. In particular, stories can be published with images. 
 ![Publishing](https://github.com/kxwzhang/Median/blob/master/app/assets/images/story_form.png)
 Also each user is greeted by a feed upon log in, which are stories that are randomly generated upon each refresh. 
-![Feed](https://github.com/kxwzhang/Median/blob/master/app/assets/images/feed.png)
 ```javascript
 const mDTP = dispatch => ({
     fetchAllStories: () => dispatch(fetchAllStories()),
@@ -59,9 +58,14 @@ const shuffledStories = shuffleStories(stories);
 let storyIndexTop = <StoryIndexTop stories={shuffledStories.slice(0, 5)} />
 let storyIndexPopular = <StoryIndexPopular stories={shuffledStories.slice(5,9)} /> 
 ```
-Clicking on a story, either on the text or image, will take the user to that stories page, where the full story is displayed. Other notable features of the feed include: a "**Editor's Picks**" which is akin to sending the user to a story that is featured, a sticky aside that moves with the user as they scroll up and down the page, deleting stories, and a drop down menu for links to publishing new stories as well as viewing stories published by the current user.
-![Your Stories](https://github.com/kxwzhang/Median/blob/master/app/assets/images/your_stories.png)
+Clicking on a story, either on the text or image, will take the user to that stories page, where the full story is displayed. Other notable features of the feed include: 
+A "**Editor's Picks**" which is akin to sending the user to a story that is featured. 
+![Feed](https://github.com/kxwzhang/Median/blob/master/app/assets/images/feed.png)
+A sticky aside that moves with the user as they scroll up and down the page, deleting stories.
 ![Aide](https://github.com/kxwzhang/Median/blob/master/app/assets/images/aside.png)
+A drop down menu for links to publishing new stories as well as viewing stories published by the current user.
+![Your Stories](https://github.com/kxwzhang/Median/blob/master/app/assets/images/your_stories.png)
+
 
 ### Leaving Comments
 Logged in users can also leave comments on stories. Each user can respond to other users and a user can delete their own comments.
