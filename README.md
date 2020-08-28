@@ -60,7 +60,8 @@ let storyIndexTop = <StoryIndexTop stories={shuffledStories.slice(0, 5)} />
 let storyIndexPopular = <StoryIndexPopular stories={shuffledStories.slice(5,9)} /> 
 ```
 Clicking on a story, either on the text or image, will take the user to that stories page, where the full story is displayed. Other notable features of the feed include: a "**Editor's Picks**" which is akin to sending the user to a story that is featured, a sticky aside that moves with the user as they scroll up and down the page, deleting stories, and a drop down menu for links to publishing new stories as well as viewing stories published by the current user.
-{IMAGES GO HERE}
+![Your Stories](https://github.com/kxwzhang/Median/blob/master/app/assets/images/your_stories.png)
+![Aide](https://github.com/kxwzhang/Median/blob/master/app/assets/images/aside.png)
 
 ### Leaving Comments
 Logged in users can also leave comments on stories. Each user can respond to other users and a user can delete their own comments.
