@@ -79,7 +79,7 @@ A drop down menu for links to publishing new stories as well as viewing stories 
 ### Leaving Comments
 Logged in users can also leave comments on stories. Each user can respond to other users and a user can delete their own comments.
 ![Comments](https://github.com/kxwzhang/Median/blob/master/app/assets/images/comment.png)
-Comments can be nested, which was done by recursive rendering of the comments component
+Comments can be nested, which was done by recursive rendering of the comments component.
 ```javascript
 if (!comment) {
     return null;
@@ -105,6 +105,33 @@ def index
     render :index
 end
 ```  
+Another notable challenge I encountered was figuring out how to properly render the comments React component. At first I ran into the issue of the comments not being rendered at all. But I quickly realized that I needed to use my Comments container component instead of the presentational component to get the props. In addition, I needed to figure out how to clear the comment form and how to automatically close the comments tab when the user submits a comment. I was able to accomplish both of these by setting local state: 
+```javascript
+// Clearing comments form
+handleSubmit(e) {
+    e.preventDefault();
+    if (this.props.handleClick) {
+        this.props.processForm(this.state)
+            .then(() => this.props.handleClick(e))
+            .then(() => this.props.fetchStory(this.props.storyId));
+    } else {
+        this.props.processForm(this.state)
+            .then(() => this.props.fetchStory(this.props.storyId))
+            .then(() => this.setState({ body: ''}));
+    }
+}
+// Conditional rendering of comments form 
+displayCommentBox() {
+    const { story, comment } = this.props;
+    if (this.state.toggled) {
+        return (
+            <CreateCommentFormContainer story={story} comment={comment} handleClick={this.handleClick} />
+        );
+    } else {
+        return null;
+    }
+}
+```
 
 ## Future Functionalities
 Some features to add to the project in the future would be adding the functionality to follow other users and catering the feed based on follows. As well as adding the functionality to like stories and comments.
