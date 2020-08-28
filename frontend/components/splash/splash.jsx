@@ -59,7 +59,7 @@ class Splash extends React.Component {
                 </div>
                 <div className='splash-footer-container'>
                     <span
-                        className='login-option-text'>Already have an account?{otherForm}
+                        className='login-option-text'>Have an account?{otherForm}
                     </span>
                     <div className='splash-footer'>
                         <a href='https://github.com/kxwzhang/Median'><i className="fab fa-github-square splash-github"></i></a>

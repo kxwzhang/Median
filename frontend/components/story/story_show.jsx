@@ -80,6 +80,12 @@ class StoryShow extends React.Component {
                                 {this.displayCommentBox()}
                                 {commentList}
                             </span>
+                            <div className='splash-footer-container'>
+                                <div className='splash-footer'>
+                                    <a href='https://github.com/kxwzhang/Median'><i className="fab fa-github-square splash-github"></i></a>
+                                    <a href='https://www.linkedin.com/in/kevin-zhang-104623191/'><i className="fab fa-linkedin splash-linkedin"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </span>
                 </div>
