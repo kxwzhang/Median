@@ -24,27 +24,27 @@ User auth is an important feature that I want to highlight here because requirin
 The following code snippet comes from my `session_form` where I implemented the functionality of closing the modal upon processing a user's session form and then pushing that user to their feed page. Also shown below is how I was able to capture the values using event handling like `e.currentTarget.value` as well as how errors were being rendered by the front end.
 ```javascript
 handleSubmit(e) {
-        e.preventDefault();
-        const user = {...this.state};
-        this.props.processForm(user)
-            .then(this.props.closeModal)
-            .then(() => this.props.history.push('/feed'));
-    }
+    e.preventDefault();
+    const user = {...this.state};
+    this.props.processForm(user)
+        .then(this.props.closeModal)
+        .then(() => this.props.history.push('/feed'));
+}
 
-    update(field) {
-        return e => this.setState({ [field]: e.currentTarget.value })
-    }
+update(field) {
+    return e => this.setState({ [field]: e.currentTarget.value })
+}
 
-    renderErrors() {
-        const { errors } = this.props;
-        return (
-            <ul className='session-form-errors'>
-                {errors.map((error, idx) => (
-                    <li key={`error-${idx}`}>{error}</li>
-                ))}
-            </ul>
-        );
-    }
+renderErrors() {
+    const { errors } = this.props;
+    return (
+        <ul className='session-form-errors'>
+            {errors.map((error, idx) => (
+                <li key={`error-${idx}`}>{error}</li>
+            ))}
+        </ul>
+    );
+}
 ```
 
 ### Publishing Stories
@@ -82,18 +82,18 @@ Logged in users can also leave comments on stories. Each user can respond to oth
 Comments can be nested, which was done by recursive rendering of the comments component
 ```javascript
 if (!comment) {
-            return null;
-        } else {
-            const nestedComments = (commentsByParent[comment.id] || []).map(comment => {
-                return (
-                    <CommentShowContainer
-                        key={comment.id}
-                        story={story}
-                        comment={comment}
-                        commenters={commenters}
-                        commentsByParent={commentsByParent} />
-                );
-            });
+    return null;
+} else {
+    const nestedComments = (commentsByParent[comment.id] || []).map(comment => {
+        return (
+            <CommentShowContainer
+                key={comment.id}
+                story={story}
+                comment={comment}
+                commenters={commenters}
+                commentsByParent={commentsByParent} />
+        );
+    });
 ```
 
 ## Technical Challenges
