@@ -81,13 +81,18 @@
 }
 
 .splash-categories-item {
-    display: block;
+    display: flex;
     margin: 20px;
     padding: 10px 20px;
     background: rgba(242, 242, 242, 1);
     border-radius: 30px;
     font-size: 24px;
     color: rgba(117, 117, 117, 1);
+}
+
+.splash-categories-item img {
+    font-size: 24px;
+    margin-right: 7px;
 }
 
 .splash-categories-item:focus {
@@ -117,4 +122,13 @@
 .splash-github, .splash-linkedin {
     font-size: 40px;
     margin-top: 5px;
+}
+
+.attribution {
+    margin-top: 5px;
+}
+
+.fa-hashtag {
+    font-size: 24px;
+    margin-right: 7px;
 }
