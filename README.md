@@ -66,10 +66,9 @@ A sticky aside that moves with the user as they scroll up and down the page, del
 A drop down menu for links to publishing new stories as well as viewing stories published by the current user.
 ![Your Stories](https://github.com/kxwzhang/Median/blob/master/app/assets/images/your_stories.png)
 
-
 ### Leaving Comments
 Logged in users can also leave comments on stories. Each user can respond to other users and a user can delete their own comments.
-{IMAGES GO HERE}
+![Comments](https://github.com/kxwzhang/Median/blob/master/app/assets/images/comment.png)
 Comments can be nested, which was done by recursive rendering of the comments component
 ```javascript
 if (!comment) {
