@@ -6,6 +6,16 @@ A Medium clone that allows users to publicly publish articles and/or blogs that 
 
 [Median Live Demo](https://a-median.herokuapp.com/ "Median Live Demo")
 
+## Technologies Used
+* Heroku
+* Ruby on Rails
+* Postgresql
+* ActiveRecord
+* AWS S3
+* React
+* Redux
+* Sass CSS
+
 ## Main Features
 
 ### User Authentication
@@ -87,7 +97,7 @@ if (!comment) {
 ```
 
 ## Technical Challenges
-This project had its ups and downs, and some of the downs were bigg than others. One notable challenge that I came across was figuring out how to load the feed page more efficiently because it had to fetch a lot of information on each load of the page. To fix that issue, I had to resolve some N+1 queries in my controllers as well as resizing the images that were being sent to the frontend so that the frontend did not have to render big images before resizing it at the same time. 
+This project had its ups and downs, and some of the downs were greater than others. One notable challenge that I came across was figuring out how to load the feed page more efficiently because it had to fetch a lot of information on each load of the page. To fix that issue, I had to resolve some N+1 queries in my controllers as well as resizing the images that were being sent to the frontend so that the frontend did not have to render big images before resizing it at the same time. 
 Below is a code snippet of how I accomplished that using `.includes()` as well as using the Active Storage `mini_magiick` gem.
 ```javascript
 def index
