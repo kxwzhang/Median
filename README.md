@@ -1,5 +1,3 @@
-# README
-
 # ![Favicon](https://github.com/kxwzhang/Median/blob/master/app/assets/images/favicon.ico) Median
 
 A Medium clone that allows users to publicly publish articles and/or blogs that can be viewed and commented on by others.
