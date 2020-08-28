@@ -48,11 +48,11 @@ file17 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/17.jpg')
 file18 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/18.jpg')
 file19 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/19.jpg')
 file20 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/20.jpg')
-file21 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/21.jpg')
-file22 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/22.jpg')
-file23 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/23.jpg')
-file24 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/24.jpg')
-file25 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/25.jpg')
+# file21 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/21.jpg')
+# file22 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/22.jpg')
+# file23 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/23.jpg')
+# file24 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/24.jpg')
+# file25 = open('https://median-stories-dev.s3-us-west-1.amazonaws.com/25.jpg')
 
 # Stories
 story1 = Story.create!(title: 'I Drank A Gallon Of Water A Day For Better Skin', 
@@ -155,31 +155,31 @@ story20 = Story.create!(title: 'Stop Using If-Else Statements',
     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
     author_id: user10.id)
 story20.photo.attach(io: file20, filename: '20.jpg')
-story21 = Story.create!(title: 'Why You Should Never Send Your CV via Gmail',
-    subtitle: 'You could be getting your identity stolen.',
-    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-    author_id: user2.id)
-story21.photo.attach(io: file21, filename: '21.jpg')
-story22 = Story.create!(title: 'New iPhone 24 Leaks',
-    subtitle: 'Some details to hold you over until September!',
-    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-    author_id: user2.id)
-story22.photo.attach(io: file22, filename: '22.jpg')
-story23 = Story.create!(title: 'Fanstagram Turned a User’s Chirp Into a Feature Overnight',
-    subtitle: 'It moved fast and didn’t break anything',
-    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-    author_id: user3.id)
-story23.photo.attach(io: file23, filename: '23.jpg')
-story24 = Story.create!(title: '5 VS Code Extensions That Make You Want To Keep Coding Forever',
-    subtitle: 'Coding made simple.',
-    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-    author_id: user3.id)
-story24.photo.attach(io: file24, filename: '24.jpg')
-story25 = Story.create!(title: 'How To Respond To Recruiters On Linkedin',
-    subtitle: 'A how-to guide that will ensure you will be attending the next interview session.',
-    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-    author_id: user4.id)
-story25.photo.attach(io: file25, filename: '25.jpg')
+# story21 = Story.create!(title: 'Why You Should Never Send Your CV via Gmail',
+#     subtitle: 'You could be getting your identity stolen.',
+#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+#     author_id: user2.id)
+# story21.photo.attach(io: file21, filename: '21.jpg')
+# story22 = Story.create!(title: 'New iPhone 24 Leaks',
+#     subtitle: 'Some details to hold you over until September!',
+#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+#     author_id: user2.id)
+# story22.photo.attach(io: file22, filename: '22.jpg')
+# story23 = Story.create!(title: 'Fanstagram Turned a User’s Chirp Into a Feature Overnight',
+#     subtitle: 'It moved fast and didn’t break anything',
+#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+#     author_id: user3.id)
+# story23.photo.attach(io: file23, filename: '23.jpg')
+# story24 = Story.create!(title: '5 VS Code Extensions That Make You Want To Keep Coding Forever',
+#     subtitle: 'Coding made simple.',
+#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+#     author_id: user3.id)
+# story24.photo.attach(io: file24, filename: '24.jpg')
+# story25 = Story.create!(title: 'How To Respond To Recruiters On Linkedin',
+#     subtitle: 'A how-to guide that will ensure you will be attending the next interview session.',
+#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+#     author_id: user4.id)
+# story25.photo.attach(io: file25, filename: '25.jpg')
 
 # Comments
 comment1 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user1.id, story_id: story2.id, parent_comment_id: nil)
