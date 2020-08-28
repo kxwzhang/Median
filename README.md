@@ -105,7 +105,7 @@ def index
     render :index
 end
 ```  
-Another notable challenge I encountered was figuring out how to properly render the comments React component. At first I ran into the issue of the comments not being rendered at all. But I quickly realized that I needed to use my Comments container component instead of the presentational component to get the props. In addition, I needed to figure out how to clear the comment form and how to automatically close the comments tab when the user submits a comment. I was able to accomplish both of these by setting local state: 
+Another notable challenge I encountered was figuring out how to properly render the comments React component. At first I ran into the issue of the comments not being rendered at all. But I quickly realized that I needed to use my Comments container component instead of the presentational component to get the props. In addition, I needed to figure out how to clear the comment form and how to automatically close the comments form when the user submits a comment. I was able to accomplish both of these by setting local state: 
 ```javascript
 // Clearing comments form
 handleSubmit(e) {
