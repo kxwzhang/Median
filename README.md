@@ -101,9 +101,9 @@ This project had its ups and downs, and some of the downs were greater than othe
 Below is a code snippet of how I accomplished that using `.includes()` as well as using the Active Storage `mini_magiick` gem.
 ```javascript
 def index
-        @stories = Story.includes(:author, "photo_attachment": :blob).all
-        render :index
-    end
+    @stories = Story.includes(:author, "photo_attachment": :blob).all
+    render :index
+end
 ```  
 
 ## Future Functionalities
