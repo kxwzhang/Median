@@ -11,6 +11,7 @@ A Medium clone that allows users to publicly publish articles and/or blogs that 
 * Ruby on Rails
 * Postgresql
 * ActiveRecord
+* Webpack
 * AWS S3
 * React
 * Redux
