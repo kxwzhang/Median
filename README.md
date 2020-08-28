@@ -107,4 +107,4 @@ def index
 ```  
 
 ## Future Functionalities
-Some features that this project would benefit from would be implementing the ability to follow other users and catering the feed based on follows. As well as adding the ability to like stories and comments.
+Some features to add to the project in the future would be adding the functionality to follow other users and catering the feed based on follows. As well as adding the functionality to like stories and comments.
