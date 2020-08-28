@@ -38,7 +38,10 @@ handleSubmit(e) {
 ```
 
 ### Publishing Stories
-Stories are the bread and butter of this project. Any logged in user can publish, view, and delete stories. In particular, stories can be published with images. Also each user is greeted by a feed upon log in, which are stories that are randomly generated upon each refresh. 
+Stories are the bread and butter of this project. Any logged in user can publish, view, and delete stories. In particular, stories can be published with images. 
+![Publishing](https://github.com/kxwzhang/Median/blob/master/app/assets/images/story_form.png)
+Also each user is greeted by a feed upon log in, which are stories that are randomly generated upon each refresh. 
+![Feed](https://github.com/kxwzhang/Median/blob/master/app/assets/images/feed.png)
 ```javascript
 const mDTP = dispatch => ({
     fetchAllStories: () => dispatch(fetchAllStories()),
