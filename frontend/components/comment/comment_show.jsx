@@ -71,19 +71,22 @@ class CommentShow extends React.Component {
             return (
                 <div className='comment-container'>
                     <div>
-                        <div className='comment-head'>
-                            <div className='commenter-name'>{commenters[comment.commenter_id]}</div>
-                        </div>
-                        <div className='comment-text'>
-                            <div className='commenter-body'>{comment.body}</div>
-                        </div>
-                        <div className='comment-btns'>
-                            <div className='add-comment-btn'>
-                                <i onClick={this.handleClick} className="far fa-comment"></i>
+                        <div className='parent-comments'>
+
+                            <div className='comment-head'>
+                                <div className='commenter-name'>{commenters[comment.commenter_id]}</div>
                             </div>
-                            {this.displayDeleteComment()}
+                            <div className='comment-text'>
+                                <div className='commenter-body'>{comment.body}</div>
+                            </div>
+                            <div className='comment-btns'>
+                                <div className='add-comment-btn'>
+                                    <i onClick={this.handleClick} className="far fa-comment"></i>
+                                </div>
+                                {this.displayDeleteComment()}
+                            </div>
+                            {this.displayCommentBox()}
                         </div>
-                        {this.displayCommentBox()}
                         <div className='nested-comments'>
                             {nestedComments}
                         </div>
