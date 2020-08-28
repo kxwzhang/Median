@@ -105,3 +105,6 @@ def index
         render :index
     end
 ```  
+
+## Future Functionalities
+Some features that this project would benefit from would be implementing the ability to follow other users and catering the feed based on follows. As well as adding the ability to like stories and comments.
