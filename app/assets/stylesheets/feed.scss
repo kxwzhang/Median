@@ -179,7 +179,15 @@
 
 .footer a {
     color: gray;
-    font-size: 14px;
+    font-size: 30px;
+}
+
+.fa-github-square, .fa-linkedin {
+    margin-right: 10px;
+}
+
+.fa-github-square:hover, .fa-linkedin:hover {
+    color: green;
 }
 
 .footer-divider {
