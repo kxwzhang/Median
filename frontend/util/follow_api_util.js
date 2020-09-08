@@ -1,3 +1,5 @@
+// To be handled in it's own actions
+
 export const fetchFollowers = userId => (
     $.ajax({
         url: `/api/users/${userId}/followers`,
