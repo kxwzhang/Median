@@ -4,10 +4,10 @@
     <title>Median</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <meta name='image' property='og:image' content='https://github.com/kxwzhang/Median/blob/master/app/assets/images/og_image.png'/>
     <%= favicon_link_tag "favicon.ico" %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <meta name='image' property='og:image' content='../assets/images/og_image.png'/>
     <link 
       rel="stylesheet" 
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
@@ -38,7 +38,6 @@
       window.advice = '<%= image_url('advice.png') %>'
     </script>
   </head>
-
   <body>
     <%= yield %>
   </body>
