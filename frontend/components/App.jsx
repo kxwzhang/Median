@@ -9,8 +9,8 @@ import SplashContainer from './splash/splash_container';
 import CreateStoryFormContainer from './story/create_story_form_container';
 import EditStoryFormContainer from './story/edit_story_form_container';
 import UserStoryContainer from './user/user_story_container';
+import UserShowContainer from './user/user_show_container';
 
-// switch to app
 const App = () => (
     <div>
         <Modal />
@@ -20,6 +20,7 @@ const App = () => (
 
         <div className='main-content'>
             <Switch>
+                <ProtectedRoute exact path='/users/:userId/profile' component={UserShowContainer} />
                 <ProtectedRoute exact path='/users/:userId' component={UserStoryContainer} />
                 <ProtectedRoute exact path='/stories/new' component={CreateStoryFormContainer} />
                 <ProtectedRoute exact path='/stories/:storyId/edit' component={EditStoryFormContainer} />
