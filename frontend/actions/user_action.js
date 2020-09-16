@@ -42,21 +42,23 @@ export const fetchUser = userId => dispatch => (
 );
 
 export const followUser = id => dispatch => (
-    FollowApiUtil.followUser(id).then(() => (
-        dispatch(receiveFollow(id))))
+    FollowApiUtil.followUser(id)
+        .then(() => (dispatch(receiveFollow(id))))
+        .then(id => fetchUser(id))
 );
 
 export const unfollowUser = id => dispatch => (
-    FollowApiUtil.unfollowUser(id).then(() => (
-        dispatch(removeFollow(id))))
+    FollowApiUtil.unfollowUser(id)
+        .then(() => (dispatch(removeFollow(id))))
+        .then(id => fetchUser(id))
 );
 
 export const fetchFollowers = id => dispatch => (
-    FollowApiUtil.fetchFollowers(id).then(details => (
-        dispatch(receiveFollowers(details))))
+    FollowApiUtil.fetchFollowers(id)
+        .then(details => (dispatch(receiveFollowers(details))))
 );
 
 export const fetchFollowees = id => dispatch => (
-    FollowApiUtil.fetchFollowees(id).then(details => (
-        dispatch(receiveFollowees(details))))
+    FollowApiUtil.fetchFollowees(id)
+        .then(details => (dispatch(receiveFollowees(details))))
 );

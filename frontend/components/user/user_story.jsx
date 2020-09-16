@@ -45,7 +45,9 @@ class UserStory extends React.Component {
                 <div className='user-story-container'>
                     <div className='your-stories-container'>
                         <div className='your-stories'>{pronoun} Stories</div>
-                        {viewProfile}
+                        <div>
+                            {viewProfile}
+                        </div>
                         <Link to={'/stories/new'}>
                             <button className='write-a-story-btn'>Write a story</button>
                         </Link>

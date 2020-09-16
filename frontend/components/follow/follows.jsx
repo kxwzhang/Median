@@ -19,6 +19,7 @@ class Follows extends React.Component {
   }
 
   handleFollow(e) {
+    console.log(this.props.user.following);
     e.stopPropagation();
     if (this.props.user.following) {
       this.props.unfollowUser(this.props.user.id);
@@ -40,7 +41,7 @@ class Follows extends React.Component {
     } else {
       return (
         <button
-          className={this.status()}
+          className='follow-btn'
           onClick={this.handleFollow}>
           {this.status()}
         </button>

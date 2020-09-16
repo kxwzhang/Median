@@ -11,17 +11,8 @@ class UserShow extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.match.params.userId != this.props.match.params.userId) {
+    if (prevProps.user !== this.props.user) {
       this.props.fetchUser(this.props.match.params.userId)
-        .then(() => this.props.fetchStories());
-    }
-    window.scrollTo(0, 0);
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.value !== this.props.value) {
-      this.props.fetchUser(nextProps.match.params.userId)
-        .then(() => this.props.fetchStories());
     }
     window.scrollTo(0, 0);
   }
@@ -30,7 +21,7 @@ class UserShow extends React.Component {
     const { user, stories, currentUser } = this.props;
     const userStories = [];
     stories.reverse().forEach(story => {
-      if (!user) {
+      if (!user.id) {
         return null;
       }
       if (user.id === story.author_id) {
@@ -38,7 +29,7 @@ class UserShow extends React.Component {
       }
     })
     console.log(userStories);
-    if (userStories.length > 0 && userStories.every(story => typeof story !== 'undefined')) {
+    if (userStories.length > 0 && userStories.every(story => story)) {
       console.log("hitting userStories.length > 0");
       return (
         <div className='user-show-content'>
@@ -58,45 +49,49 @@ class UserShow extends React.Component {
 
   render() {
     const { user, currentUser, fetchUser } = this.props;
-    const publishButton = currentUser && currentUser.id === user.id ?
-      <div className='user-show-publish-container'>
-        <Link to='/stories/new'><button className='user-show-publish-btn'>Publish</button></Link>
-      </div> : null;
+    if (!user) {
+      return null;
+    } else {
+      const publishButton = currentUser && currentUser.id === user.id ?
+        <div className='user-show-publish-container'>
+          <Link to='/stories/new'><button className='user-show-publish-btn'>Publish</button></Link>
+        </div> : null;
 
-    const followButton = currentUser && currentUser.id !== user.id ?
-      <div>
-        <Follows user={user} fetchUser={fetchUser} />
-      </div> : null;
-
-    return (
-      <div>
-        {publishButton}
-        <div className='user-show-container'>
-          <header className='user-show-header'>
-            <div className='user-show-header-left'>
-              <div className='user-show-header-left-content'>
-                <h1 className='user-show-author'>{user.username}</h1>
-                {followButton}
+      const followButton = currentUser && currentUser.id !== user.id ?
+        <div>
+          <Follows user={user} fetchUser={fetchUser} />
+        </div> : null;
+      return (
+        <div>
+          {publishButton}
+          <div className='user-show-container'>
+            <header className='user-show-header'>
+              <div className='user-show-header-left'>
+                <div className='user-show-header-left-content'>
+                  <h1 className='user-show-author'>{user.username}</h1>
+                  {followButton}
+                </div>
+                <div className='user-show-header-container'>
+                  <small className='user-show-followers'>
+                    {user.subscriptionCount || '0'} 
+                    Following&nbsp;&nbsp;&#183;&nbsp;&nbsp;{user.subscriberCount || '0'} 
+                    Followers&nbsp;&nbsp;&nbsp;
+                  </small>
+                </div>
               </div>
-              <div className='user-show-header-container'>
-                <small className='user-show-followers'>
-                  {user.subscriptionCount || '0'} 
-                  Following&nbsp;&nbsp;&#183;&nbsp;&nbsp;{user.subscriberCount || '0'} 
-                  Followers&nbsp;&nbsp;&nbsp;
-                </small>
+  
+              <div className='user-show-header-right'>
+                img goes here
               </div>
-            </div>
-
-            <div className='user-show-header-right'>
-              img goes here
-            </div>
-          </header>
-
-          <h4 className='user-show-divider'>Profile</h4>
-          {this.details()}
+            </header>
+  
+            <h4 className='user-show-divider'>Profile</h4>
+            {this.details()}
+          </div>
         </div>
-      </div>
-    );
+      );
+    }
+
   }
 }
 
