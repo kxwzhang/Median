@@ -22,7 +22,7 @@ class UserStory extends React.Component {
 
     render() {
         const { stories, user, currentUser, deleteStory } = this.props;
-        if (!currentUser) {
+        if (!user) {
             return null;
         } else {
             const myStories = [];
@@ -31,10 +31,21 @@ class UserStory extends React.Component {
                     myStories.push(story);
                 }
             })
+            let pronoun;
+            let viewProfile;
+            if (this.props.match.params.userId !== currentUser.id) {
+                pronoun = user.username
+                viewProfile = <Link to={`/users/${user.id}/profile`}>
+                    <button classname='view-profile-btn'>View Profile</button>
+                </Link>
+            } else {
+                pronoun = "Your"
+            }
             return (
                 <div className='user-story-container'>
                     <div className='your-stories-container'>
-                        <div className='your-stories'>Your Stories</div>
+                        <div className='your-stories'>{pronoun} Stories</div>
+                        {viewProfile}
                         <Link to={'/stories/new'}>
                             <button className='write-a-story-btn'>Write a story</button>
                         </Link>
