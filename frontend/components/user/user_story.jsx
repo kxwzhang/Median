@@ -36,7 +36,7 @@ class UserStory extends React.Component {
             if (this.props.match.params.userId !== currentUser.id) {
                 pronoun = user.username
                 viewProfile = <Link to={`/users/${user.id}/profile`}>
-                    <button classname='view-profile-btn'>View Profile</button>
+                    <button className='view-profile-btn'>View Profile</button>
                 </Link>
             } else {
                 pronoun = "Your"

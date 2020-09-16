@@ -12,51 +12,67 @@ const StoryIndexPopular = ({ stories }) => {
                 <ul>
                     <li className='popular-story'>
                         <div className='popular-num'>01</div>
-                        <Link to={`/stories/${stories[0].id}`}>
                             <span>
+                        <Link to={`/stories/${stories[0].id}`}>
                                 <h2 className='popular-story-title'>{stories[0].title}</h2>
+                        </Link>
                                 <div>
-                                    <h3 className='popular-story-author'>{stories[0].author}</h3>
-                                    <h4 className='index-min-read'>{stories[0].id % 7 + 4} min read</h4>
+                                    <Link to={`/users/${stories[0].author_id}`}>
+                                        <h3 className='popular-story-author'>{stories[0].author}</h3>
+                                    </Link>
+                                    <Link to={`/stories/${stories[0].id}`}>
+                                        <h4 className='index-min-read'>{stories[0].id % 7 + 4} min read</h4>
+                                    </Link>
                                 </div>
                             </span>
-                        </Link>
                     </li>
                     <li className='popular-story'>
                         <div className='popular-num'>02</div>
-                        <Link to={`/stories/${stories[1].id}`}>
                             <span>
+                        <Link to={`/stories/${stories[1].id}`}>
                                 <h2 className='popular-story-title'>{stories[1].title}</h2>
+                        </Link>
                                 <div>
-                                    <h3 className='popular-story-author'>{stories[1].author}</h3>
-                                    <h4 className='index-min-read'>{stories[1].id % 7 + 4} min read</h4>
+                                    <Link to={`/users/${stories[1].author_id}`}>
+                                        <h3 className='popular-story-author'>{stories[1].author}</h3>
+                                    </Link>
+                                    <Link to={`/stories/${stories[1].id}`}>
+                                        <h4 className='index-min-read'>{stories[1].id % 7 + 4} min read</h4>
+                                    </Link>
                                 </div>
                             </span>
-                        </Link>
                     </li>
                     <li className='popular-story'>
                         <div className='popular-num'>03</div>
-                        <Link to={`/stories/${stories[2].id}`}>
                             <span>
+                        <Link to={`/stories/${stories[2].id}`}>
                                 <h2 className='popular-story-title'>{stories[2].title}</h2>
+                        </Link>
                                 <div>
-                                    <h3 className='popular-story-author'>{stories[2].author}</h3>
-                                    <h4 className='index-min-read'>{stories[2].id % 7 + 4} min read</h4>
+                                    <Link to={`/users/${stories[2].author_id}`}> 
+                                        <h3 className='popular-story-author'>{stories[2].author}</h3>
+                                    </Link>
+                                    <Link to={`/stories/${stories[2].id}`}>
+                                        <h4 className='index-min-read'>{stories[2].id % 7 + 4} min read</h4>
+                                    </Link>
                                 </div>
                             </span>
-                        </Link>
                     </li>
                     <li className='popular-story'>
                         <div className='popular-num'>04</div>
-                        <Link to={`/stories/${stories[3].id}`}>
                             <span>
+                        <Link to={`/stories/${stories[3].id}`}>
                                 <h2 className='popular-story-title'>{stories[3].title}</h2>
+                        </Link>
                                 <div>
-                                    <h3 className='popular-story-author'>{stories[3].author}</h3>
-                                    <h4 className='index-min-read'>{stories[3].id % 7 + 4} min read</h4>
+                                    <Link to={`/users/${stories[3].author_id}`}>
+                                        <h3 className='popular-story-author'>{stories[3].author}</h3>
+                                    </Link>
+                                    <Link to={`/stories/${stories[3].id}`}>
+                                        <h4 className='index-min-read'>{stories[3].id % 7 + 4} min read</h4>
+                                    </Link>
                                 </div>
                             </span>
-                        </Link>
                     </li>
                 </ul>
                 <div className='footer'>
