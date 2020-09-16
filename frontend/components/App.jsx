@@ -20,8 +20,8 @@ const App = () => (
 
         <div className='main-content'>
             <Switch>
-                <ProtectedRoute exact path='/users/:userId/profile' component={UserShowContainer} />
-                <ProtectedRoute exact path='/users/:userId' component={UserStoryContainer} />
+                <Route exact path='/users/:userId/profile' component={UserShowContainer} />
+                <Route exact path='/users/:userId' component={UserStoryContainer} />
                 <ProtectedRoute exact path='/stories/new' component={CreateStoryFormContainer} />
                 <ProtectedRoute exact path='/stories/:storyId/edit' component={EditStoryFormContainer} />
                 <ProtectedRoute exact path='/stories/:storyId' component={StoryShowContainer} />
