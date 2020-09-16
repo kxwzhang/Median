@@ -34,7 +34,9 @@ class Follows extends React.Component {
   render() {
     const { currentUser, user } = this.props;
     if (!currentUser || user.id === currentUser.id) {
-      return <div></div>;
+      return (
+        <div></div>
+      );
     } else {
       return (
         <button
