@@ -61,7 +61,9 @@ class StoryShow extends React.Component {
                             <h1 className='show-title'>{story.title}</h1>
                             <h2 className='show-subtitle'>{story.subtitle}</h2>
                             <span className='show-author'>
-                                <div className='show-author-name'>By {story.author}</div>
+                                <Link to={`/users/${story.author_id}/profile`}>
+                                    <div className='show-author-name'>By {story.author}</div>
+                                </Link>
                                 <div className='show-read-time'>{story.id % 7 + 4} min read</div>
                             </span>
                             <img className='show-image' src={story.photoUrl} />

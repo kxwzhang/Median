@@ -20,14 +20,14 @@ class Splash extends React.Component {
                     </span>
                     <span className='splash-categories-sub'>
                         <div className='splash-categories-item' tabIndex='5'><img src={window.culture} />Culture</div>
-                        <div className='splash-categories-item' tabIndex='6'><i class="fas fa-hashtag"></i>Health</div>
+                        <div className='splash-categories-item' tabIndex='6'><i className="fas fa-hashtag"></i>Health</div>
                         <div className='splash-categories-item' tabIndex='7'><img src={window.programming} />Programming</div>
                         <div className='splash-categories-item' tabIndex='8'><img src={window.car} />Cars</div>
                     </span>
                     <span className='splash-categories-sub'>
                         <div className='splash-categories-item' tabIndex='9'><img src={window.relationships} />Relationships</div>
                         <div className='splash-categories-item' tabIndex='10'><img src={window.advice} />Advice</div>
-                        <div className='splash-categories-item' tabIndex='11'><i class="fas fa-hashtag"></i>Comedy</div>
+                        <div className='splash-categories-item' tabIndex='11'><i className="fas fa-hashtag"></i>Comedy</div>
                         <div className='splash-categories-item' tabIndex='12'><img src={window.design} />Design</div>
                     </span>
                 </div>

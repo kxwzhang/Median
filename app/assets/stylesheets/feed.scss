@@ -71,7 +71,12 @@
 }
 
 .story-top-author {
+    display: inline;
     font-size: 14px;
+}
+
+.story-top-author:hover {
+    border-bottom: 1px solid black;
 }
 
 .center-top-title {
@@ -144,8 +149,14 @@
 }
 
 .popular-story-author {
+    display: inline;
     font-size: 14px;
     margin-bottom: 3px;
+}
+
+.popular-story-author:hover {
+    border-bottom: 1px solid black;
+    width: 100%;
 }
 
 .story-index-item {
@@ -163,8 +174,12 @@
 }
 
 .story-index-author {
+    display: inline;
     font-size: 14px;
-    margin-bottom: 3px;
+}
+
+.story-index-author:hover {
+    border-bottom: 1px solid black;
 }
 
 .reading-history {

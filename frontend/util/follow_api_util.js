@@ -1,29 +1,13 @@
-// To be handled in it's own actions
-
-export const fetchFollowers = userId => (
+export const followUser = id => (
     $.ajax({
-        url: `/api/users/${userId}/followers`,
-        method: 'GET'
+        url: `/api/users/${id}/follow`,
+        method: 'POST',
     })
 );
 
-export const fetchFollowees = userId => (
+export const unfollowUser = id => (
     $.ajax({
-        url: `/api/users/${userId}/followees`,
-        method: 'GET'
-    })
-);
-
-export const createFollow = userId => (
-    $.ajax({
-        url: `/api/users/${userId}/follow`,
-        method: 'POST'
-    })
-);
-
-export const deleteFollow = userId => (
-    $.ajax({
-        url: `/api/users/${userId}/follow`,
-        method: 'DELETE'
+        url: `/api/users/${id}/follow`,
+        method: 'DELETE',
     })
 );

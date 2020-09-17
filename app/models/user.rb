@@ -29,21 +29,44 @@ class User < ApplicationRecord
         class_name: :Comment,
         inverse_of: :commenter
 
-    has_many :in_follows,
-        foreign_key: :followee_id,
-        class_name: :Follow
+    # has_many :in_follows,
+    #     foreign_key: :followee_id,
+    #     class_name: :Follow
 
-    has_many :out_follows,
+    # has_many :out_follows,
+    #     foreign_key: :follower_id,
+    #     class_name: :Follow
+
+    # has_many :followers,
+    #     through: :in_follows,
+    #     source: :follower
+
+    # has_many :followees,
+    #     through: :out_follows,
+    #     source: :followee
+
+    has_many :follows,
+        primary_key: :id,
         foreign_key: :follower_id,
-        class_name: :Follow
+        class_name: 'Follow',
+        dependent: :destroy
 
-    has_many :followers,
-        through: :in_follows,
-        source: :follower
+    has_many :followings,
+        primary_key: :id,
+        foreign_key: :followee_id,
+        class_name: 'Follow',
+        dependent: :destroy
 
-    has_many :followees,
-        through: :out_follows,
-        source: :followee
+    has_many :subscriptions,
+        through: :follows,
+        source: :followee,
+        dependent: :destroy
+
+
+    has_many :subscribers,
+        through: :followings,
+        source: :follower,
+        dependent: :destroy
 
     # ASPIRE
     def self.find_by_credentials(username, password)
