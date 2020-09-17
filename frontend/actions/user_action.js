@@ -22,20 +22,6 @@ const removeFollow = id => ({
     id
 });
 
-const receiveFollowers = details => ({
-    type: RECEIVE_FOLLOWERS,
-    follows: details.follows,
-    users: details.users,
-    id: details.id
-});
-
-const receiveFollowees = details => ({
-    type: RECEIVE_FOLLOWEES,
-    follows: details.follows,
-    user: details.users,
-    id: details.id
-});
-
 export const fetchUser = userId => dispatch => (
     UserApiUtil.fetchUser(userId)
         .then(user => dispatch(receiveUser(user)))
@@ -51,14 +37,4 @@ export const unfollowUser = id => dispatch => (
     FollowApiUtil.unfollowUser(id)
         .then(() => (dispatch(removeFollow(id))))
         .then(id => fetchUser(id))
-);
-
-export const fetchFollowers = id => dispatch => (
-    FollowApiUtil.fetchFollowers(id)
-        .then(details => (dispatch(receiveFollowers(details))))
-);
-
-export const fetchFollowees = id => dispatch => (
-    FollowApiUtil.fetchFollowees(id)
-        .then(details => (dispatch(receiveFollowees(details))))
 );

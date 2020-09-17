@@ -87,10 +87,23 @@
 }
 .user-item-profile-pic-container {
   display: flex;
+  margin-bottom: 15px;
 }
 
 .user-item-info {
+  display: inline;
+  font-size: 14px;
   margin-left: 10px;
+}
+
+.user-item-title {
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+
+.user-item-subtitle {
+  font-size: 18px;
+  color: gray;
 }
 
 .user-item-image {
@@ -108,6 +121,10 @@
   border-radius: 5px;
   box-shadow: 1px -1px 14px -2px rgba(0,0,0,0.25);
   padding: 30px;
+}
+
+.user-item-time {
+  margin-left: 7px;
 }
 
 .user-show-publish-container {
@@ -153,4 +170,14 @@
   padding-top: 30px;
   font-size: 22px;
   font-weight: bold;
+}
+
+.user-show-circle-top {
+  color: green;
+  font-size: 100px;
+}
+
+.user-show-circle {
+  color: green;
+  font-size: 40px;
 }

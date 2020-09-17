@@ -81,7 +81,7 @@ class UserShow extends React.Component {
               </div>
   
               <div className='user-show-span-right'>
-                img goes here
+                <i className="fas fa-user-circle user-show-circle-top"></i>
               </div>
             </span>
             <h4 className='user-show-divider'></h4>
