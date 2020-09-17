@@ -41,7 +41,7 @@ class Follows extends React.Component {
     } else {
       return (
         <button
-          className='follow-btn'
+          className={this.status()}
           onClick={this.handleFollow}>
           {this.status()}
         </button>

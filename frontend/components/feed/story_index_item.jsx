@@ -9,7 +9,7 @@ const StoryIndexItem = ({ story }) => (
                 <h1 className='story-index-title'>{story.title}</h1>
                 <h2 className='story-index-subtitle'>{story.subtitle}</h2>
             </Link>
-            <Link to={`/users/${story.author_id}`}>
+            <Link to={`/users/${story.author_id}/profile`}>
                 <h3 className='story-index-author'>{story.author}</h3>
             </Link>
             <Link to={`/stories/${story.id}`}>

@@ -14,11 +14,10 @@ class UserShow extends React.Component {
     if (prevProps.user !== this.props.user) {
       this.props.fetchUser(this.props.match.params.userId)
     }
-    window.scrollTo(0, 0);
   }
 
   details() {
-    const { user, stories, currentUser } = this.props;
+    const { user, stories } = this.props;
     const userStories = [];
     stories.reverse().forEach(story => {
       if (!user.id) {

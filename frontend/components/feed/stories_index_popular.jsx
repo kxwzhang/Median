@@ -17,7 +17,7 @@ const StoryIndexPopular = ({ stories }) => {
                                 <h2 className='popular-story-title'>{stories[0].title}</h2>
                         </Link>
                                 <div>
-                                    <Link to={`/users/${stories[0].author_id}`}>
+                                    <Link to={`/users/${stories[0].author_id}/profile`}>
                                         <h3 className='popular-story-author'>{stories[0].author}</h3>
                                     </Link>
                                     <Link to={`/stories/${stories[0].id}`}>
@@ -33,7 +33,7 @@ const StoryIndexPopular = ({ stories }) => {
                                 <h2 className='popular-story-title'>{stories[1].title}</h2>
                         </Link>
                                 <div>
-                                    <Link to={`/users/${stories[1].author_id}`}>
+                                    <Link to={`/users/${stories[1].author_id}/profile`}>
                                         <h3 className='popular-story-author'>{stories[1].author}</h3>
                                     </Link>
                                     <Link to={`/stories/${stories[1].id}`}>
@@ -49,7 +49,7 @@ const StoryIndexPopular = ({ stories }) => {
                                 <h2 className='popular-story-title'>{stories[2].title}</h2>
                         </Link>
                                 <div>
-                                    <Link to={`/users/${stories[2].author_id}`}> 
+                                    <Link to={`/users/${stories[2].author_id}/profile`}> 
                                         <h3 className='popular-story-author'>{stories[2].author}</h3>
                                     </Link>
                                     <Link to={`/stories/${stories[2].id}`}>
@@ -65,7 +65,7 @@ const StoryIndexPopular = ({ stories }) => {
                                 <h2 className='popular-story-title'>{stories[3].title}</h2>
                         </Link>
                                 <div>
-                                    <Link to={`/users/${stories[3].author_id}`}>
+                                    <Link to={`/users/${stories[3].author_id}/profile`}>
                                         <h3 className='popular-story-author'>{stories[3].author}</h3>
                                     </Link>
                                     <Link to={`/stories/${stories[3].id}`}>

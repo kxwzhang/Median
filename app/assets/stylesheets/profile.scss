@@ -15,3 +15,34 @@
   cursor: pointer;
 }
 
+.Follow {
+  border: 1px solid;
+  border-radius: 4px;
+  background: white;
+  outline: none;
+  padding: 2px 6px;
+  border-color: #029E74;
+  color: #029E74;
+}
+
+.Follow:hover {
+  background: lightgreen;
+  cursor: pointer;
+}
+
+.Unfollow {
+  border: 1px solid;
+  border-radius: 4px;
+  // background: white;
+  background: #029E74;
+  outline: none;
+  padding: 2px 6px;
+  border-color: #029E74;
+  color: white;
+}
+
+.Unfollow:hover {
+  background: red;
+  cursor: pointer;
+  border-color: red;
+}
