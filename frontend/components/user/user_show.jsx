@@ -64,27 +64,27 @@ class UserShow extends React.Component {
         <div>
           {publishButton}
           <div className='user-show-container'>
-            <header className='user-show-header'>
-              <div className='user-show-header-left'>
-                <div className='user-show-header-left-content'>
+            <span className='user-show-span'>
+              <div className='user-show-span-left'>
+                <div className='user-show-span-left-content'>
                   <h1 className='user-show-author'>{user.username}</h1>
                   {followButton}
                 </div>
-                <div className='user-show-header-container'>
-                  <small className='user-show-followers'>
-                    {user.subscriptionCount || '0'} 
-                    Following&nbsp;&nbsp;&#183;&nbsp;&nbsp;{user.subscriberCount || '0'} 
-                    Followers&nbsp;&nbsp;&nbsp;
-                  </small>
+                <div className='user-show-span-container'>
+                  <div className='user-show-followers'>
+                    <div className='user-show-counts'>{(user.subscriptionCount) || '0'}</div> 
+                    <div className='user-show-text'>Following</div>
+                    <div className='user-show-counts'>{(user.subscriberCount) || '0'}</div> 
+                    <div className='user-show-text'>Followers</div>
+                  </div>
                 </div>
               </div>
   
-              <div className='user-show-header-right'>
+              <div className='user-show-span-right'>
                 img goes here
               </div>
-            </header>
-  
-            <h4 className='user-show-divider'>Profile</h4>
+            </span>
+            <h4 className='user-show-divider'></h4>
             {this.details()}
           </div>
         </div>
