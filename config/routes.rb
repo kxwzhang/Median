@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   post 'api/users/:id/follow', to: 'api/users#follow', defaults: {format: :json}
   delete 'api/users/:id/follow', to: 'api/users#unfollow', defaults: {format: :json}
 
-  get 'api/stories/:id/likes', to: 'api/stories#likes', defaults: {format: :json}
-  post 'api/stories/:id/like', to: 'api/stories#like', defaults: {format: :json}
-  delete 'api/stories/:id/like', to: 'api/stories#unlike', defaults: {format: :json}
+  # get 'api/stories/:id/likes', to: 'api/stories#likes', defaults: {format: :json}
+  # post 'api/stories/:id/like', to: 'api/stories#like', defaults: {format: :json}
+  # delete 'api/stories/:id/like', to: 'api/stories#unlike', defaults: {format: :json}
 end
