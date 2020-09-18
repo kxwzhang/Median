@@ -24,6 +24,10 @@ class Story < ApplicationRecord
         class_name: :Comment,
         inverse_of: :story
 
+    has_many :likes,
+        foreign_key: :story_id,
+        class_name: :Like
+
     def comments_by_parent
         comments_by_parent = Hash.new { |hash, key| hash[key] = [] }
 
