@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 // Testing:
-import { likeStory, unlikeStory } from './util/like_api_util';
+// import { likeStory, unlikeStory } from './util/like_api_util';
+import { likeStory, unlikeStory } from './actions/like_action';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;

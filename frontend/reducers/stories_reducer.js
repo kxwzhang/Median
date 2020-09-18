@@ -4,6 +4,11 @@ import {
     REMOVE_STORY 
 } from '../actions/story_action';
 
+// import {
+//     RECEIVE_LIKE,
+//     REMOVE_LIKE
+// } from '../actions/like_action';
+
 const storiesReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
     let newState = {...oldState};

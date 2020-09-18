@@ -15,7 +15,7 @@ const removeLike = id => ({
 
 export const likeStory = like => dispatch => (
   likeApiUtil.likeStory(like)
-    .then(like => dispatch(receiveLike))
+    .then(like => dispatch(receiveLike(like)))
 );
 
 export const unlikeStory = id => dispatch => (
