@@ -139,4 +139,7 @@ displayCommentBox() {
 ```
 
 ## Future Functionalities
-Some features to add to the project in the future would be adding the functionality like stories.
+Some features to add to the project in the future:
+ * Liking stories
+ * Sort by categories
+ * Editting user profile
