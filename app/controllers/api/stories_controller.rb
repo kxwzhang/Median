@@ -39,6 +39,26 @@ class Api::StoriesController < ApplicationController
         @story.destroy
     end
 
+    def likes
+        @user = User.find(params[:id])
+        @likes = @user.likes
+        render "api/stories/likes"
+    end
+
+    def like
+        @like = current_user.likes.new
+        @like.story_id = params[:id]
+        @liked = Story.find(params[:id])
+        @liked.likes << @like if @liked
+    end
+
+    def unlike
+        @like = Like.find_by(id: current_user.id)
+        @like.story_id = params[:id]
+        @liked = Story.find_by(id: params[:id])
+        @liked.likes.delete(@like) if (@liked && @like)
+    end
+
     private
     def story_params
         params.require(:story).permit(:title, :subtitle, :body, :photo)

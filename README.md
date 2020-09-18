@@ -139,4 +139,7 @@ displayCommentBox() {
 ```
 
 ## Future Functionalities
-Some features to add to the project in the future would be adding the functionality to follow other users and catering the feed based on follows. As well as adding the functionality to like stories and comments.
+Some features to add to the project in the future:
+ * Liking stories
+ * Sort by categories
+ * Editting user profile
