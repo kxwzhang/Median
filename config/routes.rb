@@ -9,9 +9,12 @@ Rails.application.routes.draw do
       # end
       # resource :follow, only: [:create, :destroy]
     end
-    resource :session, only: [:create, :destroy]
-    resources :stories, only: [:index, :show, :create, :update, :destroy]
+    resource :session, only: [:create, :destroy] 
+    resources :stories, only: [:index, :show, :create, :update, :destroy] do
+      # resources :likes, only: [:show, :create, :destroy]
+    end
     resources :comments, only: [:index, :show, :create, :destroy]
+    resources :likes, only: [:create, :destroy]
   end
   
   get 'api/users/:id/subscribers', to: 'api/users#subscribers', defaults: {format: :json}

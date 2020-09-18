@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 // Testing:
-import { fetchUser } from './actions/user_action';
+import { fetchLikes, likeStory, unlikeStory } from './util/like_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
@@ -25,5 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Testing:
     window.getState = store.getState;
     window.dispatch = store.dispatch;
-    window.fetchUser = fetchUser;
+    window.fetchLikes = fetchLikes;
+    window.likeStory = likeStory;
+    window.unlikeStory = unlikeStory;
 });
