@@ -9,7 +9,7 @@
 #  updated_at :datetime         not null
 #
 class Like < ApplicationRecord
-  validate :liker_id, :story_id, presence: true, uniqueness: true
+  validates :liker_id, :story_id, presence: true
 
   belongs_to :liker,
     foreign_key: :liker_id,
