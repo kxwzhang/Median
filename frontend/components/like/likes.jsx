@@ -20,7 +20,7 @@ class Likes extends React.Component {
 
   status() {
     const { story } = this.props;
-    return story.likedByCurrentUser ? "Unliked" : "Liked";
+    return story.likedByCurrentUser ? "Unlike" : "Like";
   }
 
   render() {

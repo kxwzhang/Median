@@ -4,26 +4,15 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     resources :users, only: [:show, :create] do 
-      # member do 
-      #   get :followers, :followees
-      # end
-      # resource :follow, only: [:create, :destroy]
     end
     resource :session, only: [:create, :destroy] 
-    resources :stories, only: [:index, :show, :create, :update, :destroy] do
-      # resources :likes, only: [:show, :create, :destroy]
-    end
+    resources :stories, only: [:index, :show, :create, :update, :destroy]
     resources :comments, only: [:index, :show, :create, :destroy]
     resources :likes, only: [:create]
     delete "/likes", to: 'likes#destroy'
   end
-  
   get 'api/users/:id/subscribers', to: 'api/users#subscribers', defaults: {format: :json}
   get 'api/users/:id/subscriptions', to: 'api/users#subscriptions', defaults: {format: :json}
   post 'api/users/:id/follow', to: 'api/users#follow', defaults: {format: :json}
   delete 'api/users/:id/follow', to: 'api/users#unfollow', defaults: {format: :json}
-
-  # get 'api/stories/:id/likes', to: 'api/stories#likes', defaults: {format: :json}
-  # post 'api/stories/:id/like', to: 'api/stories#like', defaults: {format: :json}
-  # delete 'api/stories/:id/like', to: 'api/stories#unlike', defaults: {format: :json}
 end
