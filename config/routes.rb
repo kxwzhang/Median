@@ -14,7 +14,8 @@ Rails.application.routes.draw do
       # resources :likes, only: [:show, :create, :destroy]
     end
     resources :comments, only: [:index, :show, :create, :destroy]
-    resources :likes, only: [:create, :destroy]
+    resources :likes, only: [:create]
+    delete "/likes", to: 'likes#destroy'
   end
   
   get 'api/users/:id/subscribers', to: 'api/users#subscribers', defaults: {format: :json}

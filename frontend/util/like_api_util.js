@@ -19,18 +19,34 @@
 //   })
 // );
 
-export const likeStory = like => {
-  console.log(like) 
-  return $.ajax({
+// export const likeStory = like => {
+//   console.log(like) 
+//   return $.ajax({
+//     url: '/api/likes',
+//     data: { like },
+//     method: 'POST'
+//   })
+// };
+
+// export const unlikeStory = id => (
+//   $.ajax({
+//     url: `/api/likes/${id}`,
+//     method: 'DELETE'
+//   })
+// );
+
+export const likeStory = id => (
+  $.ajax({
     url: '/api/likes',
-    data: { like },
-    method: 'POST'
+    method: 'POST',
+    data: { id },
   })
-};
+)
 
 export const unlikeStory = id => (
   $.ajax({
-    url: `/api/likes/${id}`,
-    method: 'DELETE'
+    url: '/api/likes',
+    method: 'DELETE',
+    data: { id },
   })
 );
