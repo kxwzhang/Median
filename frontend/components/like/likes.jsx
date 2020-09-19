@@ -8,14 +8,9 @@ class Likes extends React.Component {
     this.state = this.status.bind(this);
   }
 
-  componentDidMount() {
-    // this.props.fetchAllStories();
-  }
-
   handleLike(e) {
     const { story, likeStory, unlikeStory } = this.props;
     e.preventDefault();
-    e.stopPropagation();
     if (story.likedByCurrentUser) {
       unlikeStory(story.id);
     } else {
@@ -29,7 +24,6 @@ class Likes extends React.Component {
   }
 
   render() {
-    const { story } = this.props;
     return (
       <div>
         <button className={this.status()} onClick={this.handleLike}>

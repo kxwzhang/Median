@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import StoryShow from './story_show';
-import { fetchStory } from '../../actions/story_action';
+import { fetchStory, likeStory, unlikeStory } from '../../actions/story_action';
 
 const mSTP = (state, ownProps) => ({
     story: state.entities.stories[ownProps.match.params.storyId],
@@ -8,7 +8,9 @@ const mSTP = (state, ownProps) => ({
 });
 
 const mDTP = dispatch => ({
-    fetchStory: storyId => dispatch(fetchStory(storyId))
+    fetchStory: storyId => dispatch(fetchStory(storyId)),
+    likeStory: id => dispatch(likeStory(id)),
+    unlikeStory: id => dispatch(unlikeStory(id))
 });
 
 export default connect(mSTP, mDTP)(StoryShow);

@@ -5,7 +5,7 @@ class Api::LikesController < ApplicationController
     @like.story_id = params[:id]
     if @like.save
       @story = @like.story
-      render 'api/stories/index'
+      render 'api/stories/likes'
     else
       render json: @like.errors.full_messages, status: 422
     end
@@ -16,11 +16,6 @@ class Api::LikesController < ApplicationController
     @like = Like.find_by(liker_id: current_user.id, story_id: params[:id])
     @story = @like.story
     @like.destroy
-    render 'api/stories/index'
-  end
-
-  private
-  def like_params
-    self.params.require(:like).permit(:liker_id, :story_id)
+    render 'api/stories/likes'
   end
 end
