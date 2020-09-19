@@ -19,7 +19,7 @@ class Follows extends React.Component {
   }
 
   handleFollow(e) {
-    const { user } = this.props;
+    const { user, unfollowUser, followUser } = this.props;
     e.stopPropagation();
     if (user.following) {
       unfollowUser(user.id);

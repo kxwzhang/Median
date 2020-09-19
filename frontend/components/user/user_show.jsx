@@ -11,8 +11,10 @@ class UserShow extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.user !== this.props.user) {
-      this.props.fetchUser(this.props.match.params.userId)
+    if (this.props.user && prevProps.user) {
+      if (prevProps.user.following !== this.props.user.following) {
+        this.props.fetchUser(this.props.match.params.userId);
+      }
     }
   }
 
@@ -27,9 +29,7 @@ class UserShow extends React.Component {
         userStories.push(<UserShowItem key={story.id} story={story} />)
       }
     })
-    console.log(userStories);
     if (userStories.length > 0 && userStories.every(story => story)) {
-      console.log("hitting userStories.length > 0");
       return (
         <div className='user-show-content'>
           <h1 className='user-show-content-featured'>Featured</h1>
@@ -37,7 +37,6 @@ class UserShow extends React.Component {
         </div>
       );
     } else {
-      console.log("hitting story === undefined");
       return (
         <div className='user-show-content'>
           <h1 className='user-show-content-featured'>There is nothing to show at the moment.</h1>
