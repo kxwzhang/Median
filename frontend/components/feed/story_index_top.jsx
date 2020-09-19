@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const StoryIndexTop = ({ stories }) => {
-  if (stories) {
+  if (!stories.length) {
+    return null;
+  } else {
     return (
       <div className="story-index-top">
         <div className="left-top">

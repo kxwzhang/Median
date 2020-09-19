@@ -7,12 +7,6 @@ import StoryIndexPopular from './stories_index_popular';
 class StoriesIndex extends React.Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            storyIndexTop: null,
-            storyIndexPopular: null,
-            storyIndexItem: null
-        }
     }
 
     componentDidMount() {
@@ -21,25 +15,21 @@ class StoriesIndex extends React.Component {
     }
 
     render() {
-        const { stories, shuffleStories, likeStory, unlikeStory } = this.props;
-
+        const { stories, shuffleStories } = this.props;
         if (!stories.length) {
             return null;
         } else {
             const shuffledStories = shuffleStories(stories);
             let storyIndexTop = <StoryIndexTop 
                 stories={shuffledStories.slice(0, 5)}
-                likeStory={likeStory}
-                unlikeStory={unlikeStory} />
+               />
             let storyIndexPopular = <StoryIndexPopular 
                 stories={shuffledStories.slice(5,9)}
-                likeStory={likeStory}
-                unlikeStory={unlikeStory} /> 
+                /> 
             let storyIndexItem = shuffledStories.slice(9).map(story => <StoryIndexItem 
                 key={story.id} 
                 story={story}
-                likeStory={likeStory}
-                unlikeStory={unlikeStory} />)
+                />)
             return (
                 <div className='feed-container'>
                    {storyIndexTop}

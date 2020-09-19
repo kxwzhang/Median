@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const StoryIndexItem = ({ story, likeStory, unlikeStory }) => (
+const StoryIndexItem = ({ story }) => (
     <div className='story-index-item'>
         <div className='story-index-details'>
             <Link to={`/stories/${story.id}`}>
