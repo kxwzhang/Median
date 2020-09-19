@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CommentShowContainer from '../comment/comment_show_container';
 import CreateCommentFormContainer from '../comment/create_comment_form_container';
+import Likes from '../like/likes';
 
 class StoryShow extends React.Component {
     constructor(props) {
@@ -34,7 +35,7 @@ class StoryShow extends React.Component {
     }
 
     render() {
-        const { story } = this.props;
+        const { story, likeStory, unlikeStory } = this.props;
         if (!story) {
             return null;
         } else {
@@ -55,42 +56,70 @@ class StoryShow extends React.Component {
             }
             
             return (
-                <div className='story-show-page'>
-                    <span className='story-show-container'>
-                        <div className='story-show-details'>
-                            <h1 className='show-title'>{story.title}</h1>
-                            <h2 className='show-subtitle'>{story.subtitle}</h2>
-                            <span className='show-author'>
-                                <Link to={`/users/${story.author_id}/profile`}>
-                                    <div className='show-author-name'>By {story.author}</div>
-                                </Link>
-                                <div className='show-read-time'>{story.id % 7 + 4} min read</div>
-                            </span>
-                            <img className='show-image' src={story.photoUrl} />
-                            <p className='show-body'>
-                                {story.body}
-                            </p>
-
-                            <span className='story-show-comment-container'>
-                                <div className='comments-head'>Comments</div>
-                                <div className='leave-comment-btn-container'>
-                                    <button 
-                                        className='leave-comment-btn' 
-                                        onClick={this.handleClick}>Leave a comment!
-                                    </button>
-                                </div>
-                                {this.displayCommentBox()}
-                                {commentList}
-                            </span>
-                            <div className='splash-footer-container'>
-                                <div className='splash-footer'>
-                                    <a href='https://github.com/kxwzhang/Median'><i className="fab fa-github-square splash-github"></i></a>
-                                    <a href='https://www.linkedin.com/in/kevin-zhang-104623191/'><i className="fab fa-linkedin splash-linkedin"></i></a>
-                                </div>
-                            </div>
+              <div className="story-show-page">
+                <span className="story-show-container">
+                  <div className="story-show-details">
+                    <h1 className="show-title">{story.title}</h1>
+                    <h2 className="show-subtitle">{story.subtitle}</h2>
+                    <span className="show-author">
+                      <Link to={`/users/${story.author_id}/profile`}>
+                        <div className="show-author-name">
+                          By {story.author}
                         </div>
+                      </Link>
+                      <div className="show-read-time">
+                        {(story.id % 7) + 4} min read
+                      </div>
+                      <div className="likes-container">
+                        <Likes
+                          story={story}
+                          likeStory={likeStory}
+                          unlikeStory={unlikeStory}
+                        />
+                        <div className="show-num-likes">{story.numLikes}</div>
+                      </div>
                     </span>
-                </div>
+                    <img className="show-image" src={story.photoUrl} />
+                    <p className="show-body">{story.body}</p>
+
+                    <span className="story-show-comment-container">
+                      <div className="comments-head">Comments</div>
+                      <div className="leave-comment-btn-container">
+                        <button
+                          className="leave-comment-btn"
+                          onClick={this.handleClick}
+                        >
+                          Leave a comment!
+                        </button>
+                      </div>
+                      {this.displayCommentBox()}
+                      {commentList}
+                    </span>
+                    <div className="splash-footer-container">
+                      <div className="splash-footer">
+                        <a
+                          href="https://github.com/kxwzhang/Median"
+                          target="_blank"
+                        >
+                          <i className="fab fa-github-square splash-github"></i>
+                        </a>
+                        <a
+                          href="https://www.linkedin.com/in/kevinxzhang/"
+                          target="_blank"
+                        >
+                          <i className="fab fa-linkedin splash-linkedin"></i>
+                        </a>
+                        <a
+                          href="https://angel.co/u/kevinxzhang"
+                          target="_blank"
+                        >
+                          <i className="fab fa-angellist splash-angellist"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
             );
         }
     }

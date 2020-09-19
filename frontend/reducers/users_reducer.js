@@ -24,10 +24,18 @@ const usersReducer = (oldState = {}, action) => {
             newState[action.id] = {...oldState[action.id], following: false};
             return newState;
         case RECEIVE_FOLLOWERS:
-            newState = {...oldState, ...action.users, ...{[action.id]: { followersIndex: action.follows}}};
+            newState = {
+                ...oldState, 
+                ...action.users, 
+                ...{[action.id]: { followersIndex: action.follows}}
+            };
             return newState;
         case RECEIVE_FOLLOWEES:
-            newState = {...oldState, ...action.users, ...{[action.id]: {followeesIndex: action.follows}}};
+            newState = {
+                ...oldState, 
+                ...action.users, 
+                ...{[action.id]: {followeesIndex: action.follows}}
+            };
             return newState;
         default:
             return oldState;

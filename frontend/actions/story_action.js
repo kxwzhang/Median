@@ -1,5 +1,6 @@
 import * as StoryApiUtil from '../util/story_api_util';
 import { receiveErrors } from './error_action';
+import * as LikeApiUtil from '../util/like_api_util';
 
 export const RECEIVE_ALL_STORIES = 'RECEIVE_ALL_STORIES';
 export const RECEIVE_STORY = 'RECEIVE_STORY';
@@ -30,14 +31,12 @@ export const fetchStory = storyId => dispatch => (
         .then(story => dispatch(receiveStory(story)))
 );
 
-export const createStory = story => dispatch => {
-    return (
+export const createStory = story => dispatch => (
         StoryApiUtil.createStory(story)
             .then(
                 story => dispatch(receiveStory(story)),
                 errors => dispatch(receiveErrors(errors.responseJSON)))
-    )
-};
+);
 
 export const updateStory = story => dispatch => (
     StoryApiUtil.updateStory(story)
@@ -49,4 +48,14 @@ export const updateStory = story => dispatch => (
 export const deleteStory = storyId => dispatch => (
     StoryApiUtil.deleteStory(storyId)
         .then(() => dispatch(removeStory(storyId)))
+);
+
+export const likeStory = id => dispatch => (
+    LikeApiUtil.likeStory(id)
+        .then((story) => dispatch(receiveStory(story)))
+);
+
+export const unlikeStory = id => dispatch => (
+    LikeApiUtil.unlikeStory(id)
+        .then((story) => dispatch(receiveStory(story)))
 );

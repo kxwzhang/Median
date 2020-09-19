@@ -8,13 +8,10 @@
     width: 700px;
 }
 
-.story-show-details {
-    // margin-bottom: 100px;
-}
-
 .show-image {
     width: 700px;
-    height: 500px;
+    height: 450px;
+    object-fit: cover;
     margin: 30px auto;
 }
 
@@ -42,7 +39,6 @@
 .show-body {
     display: block;
     margin-bottom: 30px;
-    // font-family: 'Open Sans', sans-serif;
     font-size: 20px;
 }
 
@@ -165,3 +161,38 @@
 .show-author-name:hover {
     border-bottom: 1px solid black;
 }
+
+.likes-container {
+    display: flex;
+}
+
+.show-num-likes {
+    padding: 5px 0;
+    font-size: 20px;
+}
+
+.fa-sign-language {
+    font-size: 20px;
+    padding: 5px 0;
+    padding-right: 10px;
+}
+
+#Like {
+    color: gray;
+}
+
+#Like:hover {
+    color:#03A87C;
+    cursor: pointer;
+}
+
+#Unlike {
+    color: green;
+}
+
+#Unlike:hover {
+    color: red;
+    cursor: pointer;
+}
+
+
