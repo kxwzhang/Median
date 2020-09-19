@@ -26,9 +26,10 @@ class Likes extends React.Component {
   render() {
     return (
       <div>
-        <button className={this.status()} onClick={this.handleLike}>
+        <i id={this.status()} onClick={this.handleLike} className="fas fa-sign-language"></i>
+        {/* <button className={this.status()} onClick={this.handleLike}>
           {this.status()}
-        </button>
+        </button> */}
       </div>
     );
   }

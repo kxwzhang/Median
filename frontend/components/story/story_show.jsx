@@ -70,14 +70,14 @@ class StoryShow extends React.Component {
                       <div className="show-read-time">
                         {(story.id % 7) + 4} min read
                       </div>
-                      <div className="show-num-likes">
-                        {story.numLikes}
+                      <div className="likes-container">
+                        <Likes
+                          story={story}
+                          likeStory={likeStory}
+                          unlikeStory={unlikeStory}
+                        />
+                        <div className="show-num-likes">{story.numLikes}</div>
                       </div>
-                      <Likes
-                        story={story}
-                        likeStory={likeStory}
-                        unlikeStory={unlikeStory}
-                      />
                     </span>
                     <img className="show-image" src={story.photoUrl} />
                     <p className="show-body">{story.body}</p>
