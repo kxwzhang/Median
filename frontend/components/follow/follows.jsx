@@ -19,17 +19,18 @@ class Follows extends React.Component {
   }
 
   handleFollow(e) {
-    console.log(this.props.user.following);
+    const { user } = this.props;
     e.stopPropagation();
-    if (this.props.user.following) {
-      this.props.unfollowUser(this.props.user.id);
+    if (user.following) {
+      unfollowUser(user.id);
     } else {
-      this.props.followUser(this.props.user.id);
+      followUser(user.id);
     }
   }
 
   status() {
-    return this.props.user.following ? 'Unfollow' : 'Follow';
+    const { user } = this.props;
+    return user.following ? 'Unfollow' : 'Follow';
   }
 
   render() {
@@ -40,9 +41,7 @@ class Follows extends React.Component {
       );
     } else {
       return (
-        <button
-          className={this.status()}
-          onClick={this.handleFollow}>
+        <button className={this.status()} onClick={this.handleFollow}>
           {this.status()}
         </button>
       );
