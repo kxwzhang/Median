@@ -162,5 +162,6 @@ displayCommentBox() {
 
 ## Future Functionalities
 Some features to add to the project in the future:
-heroku run rails db:migrate * Sort by categories
- * Editing user profile
+heroku run rails db:migrate 
+* Sort by categories
+* Editing user profile
