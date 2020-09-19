@@ -2,7 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const StoryIndexPopular = ({ stories }) => {
-  if (stories) {
+  if (!stories) {
+    return null;
+  } else {
+
     return (
       <div className="story-index-popular">
         <h1 className="popular-title">Popular on Median</h1>
