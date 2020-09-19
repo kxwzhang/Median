@@ -5,7 +5,7 @@ class Likes extends React.Component {
     super(props);
     
     this.handleLike = this.handleLike.bind(this);
-    this.state = this.status.bind(this);
+    this.status = this.status.bind(this);
   }
 
   handleLike(e) {
