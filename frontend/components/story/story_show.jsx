@@ -97,11 +97,23 @@ class StoryShow extends React.Component {
                     </span>
                     <div className="splash-footer-container">
                       <div className="splash-footer">
-                        <a href="https://github.com/kxwzhang/Median">
+                        <a
+                          href="https://github.com/kxwzhang/Median"
+                          target="_blank"
+                        >
                           <i className="fab fa-github-square splash-github"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/kevin-zhang-104623191/">
+                        <a
+                          href="https://www.linkedin.com/in/kevinxzhang/"
+                          target="_blank"
+                        >
                           <i className="fab fa-linkedin splash-linkedin"></i>
+                        </a>
+                        <a
+                          href="https://angel.co/u/kevinxzhang"
+                          target="_blank"
+                        >
+                          <i className="fab fa-angellist splash-angellist"></i>
                         </a>
                       </div>
                     </div>

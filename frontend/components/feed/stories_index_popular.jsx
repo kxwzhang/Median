@@ -83,11 +83,14 @@ const StoryIndexPopular = ({ stories }) => {
         </ul>
         <div className="footer">
           <div className="footer-divider"></div>
-          <a href="https://github.com/kxwzhang/Median">
+          <a href="https://github.com/kxwzhang/Median" target="_blank">
             <i className="fab fa-github-square"></i>
           </a>
-          <a href="https://www.linkedin.com/in/kevinxzhang/">
+          <a href="https://www.linkedin.com/in/kevinxzhang/" target="_blank">
             <i className="fab fa-linkedin"></i>
+          </a>
+          <a href="https://angel.co/u/kevinxzhang" target="_blank">
+            <i className="fab fa-angellist"></i>
           </a>
         </div>
       </div>
