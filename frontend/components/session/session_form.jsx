@@ -23,7 +23,6 @@ class SessionForm extends React.Component {
         };
         this.props.processForm(demoUser)
             .then(this.props.closeModal)
-            .then(() => this.props.history.push('/feed'));
     }
 
     handleSubmit(e) {
