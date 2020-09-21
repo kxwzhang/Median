@@ -95,7 +95,7 @@
 
 .story-form-body-input::placeholder {
     color: lightgray;
-    font-size: 20px;
+    font-size: 23px;
     display: block;
 }
 
@@ -152,6 +152,10 @@
 
 .fa-plus {
     font-size: 20px;
+}
+
+.fa-plus:hover {
+    color: green;
 }
 
 .show-author-name {
