@@ -59,9 +59,9 @@ class StoryForm extends React.Component {
 
     render() {
         const { formType } = this.props;
-        console.log('this.state', this.state);
-        console.log('this.props ', this.props);
-        const preview = this.state.photoUrl ? <img src={this.state.photoUrl} className='image-preview'/> : null;
+        const preview = this.state.photoUrl ? (
+            <img src={this.state.photoUrl} className='image-preview'/>
+         ) : null;
         return (
             <div className='story-form-container'>
                 <form className='story-form' onSubmit={this.handleSubmit}>
