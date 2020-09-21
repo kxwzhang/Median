@@ -4,8 +4,15 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 
 // Have logger for development
-const configureStore = (preloadedState = {}) => (
-    createStore(rootReducer, preloadedState, applyMiddleware(thunk, logger))
-);
+let configureStore;
+if (process.env.NODE_ENV === "production") {
+    configureStore = (preloadedState = {}) => {
+        return createStore(rootReducer, preloadedState, applyMiddleware(thunk));
+    }
+} else {
+    configureStore = (preloadedState = {}) => {
+        return createStore(rootReducer, preloadedState, applyMiddleware(thunk, logger));
+    }
+}
 
 export default configureStore;

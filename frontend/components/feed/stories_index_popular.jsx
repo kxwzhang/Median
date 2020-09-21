@@ -21,9 +21,12 @@ const StoryIndexPopular = ({ stories }) => {
                   <h3 className="popular-story-author">{stories[0].author}</h3>
                 </Link>
                 <Link to={`/stories/${stories[0].id}`}>
-                  <h4 className="index-min-read">
-                    {(stories[0].id % 7) + 4} min read
-                  </h4>
+                  <div className='index-min-read-container'>
+                    <h4 className="index-min-read">
+                      {(stories[0].id % 7) + 4} min read
+                    </h4>
+                    <i className="fas fa-star"></i>
+                  </div>
                 </Link>
               </div>
             </span>
@@ -39,9 +42,12 @@ const StoryIndexPopular = ({ stories }) => {
                   <h3 className="popular-story-author">{stories[1].author}</h3>
                 </Link>
                 <Link to={`/stories/${stories[1].id}`}>
-                  <h4 className="index-min-read">
-                    {(stories[1].id % 7) + 4} min read
-                  </h4>
+                  <div className='index-min-read-container'>
+                    <h4 className="index-min-read">
+                      {(stories[1].id % 7) + 4} min read
+                    </h4>
+                    <i className="fas fa-star"></i>
+                  </div>
                 </Link>
               </div>
             </span>
@@ -57,9 +63,12 @@ const StoryIndexPopular = ({ stories }) => {
                   <h3 className="popular-story-author">{stories[2].author}</h3>
                 </Link>
                 <Link to={`/stories/${stories[2].id}`}>
-                  <h4 className="index-min-read">
-                    {(stories[2].id % 7) + 4} min read
-                  </h4>
+                  <div className='index-min-read-container'>
+                    <h4 className="index-min-read">
+                      {(stories[2].id % 7) + 4} min read
+                    </h4>
+                    <i className="fas fa-star"></i>
+                  </div>
                 </Link>
               </div>
             </span>
@@ -75,9 +84,12 @@ const StoryIndexPopular = ({ stories }) => {
                   <h3 className="popular-story-author">{stories[3].author}</h3>
                 </Link>
                 <Link to={`/stories/${stories[3].id}`}>
-                  <h4 className="index-min-read">
-                    {(stories[3].id % 7) + 4} min read
-                  </h4>
+                  <div className='index-min-read-container'>
+                    <h4 className="index-min-read">
+                      {(stories[3].id % 7) + 4} min read
+                    </h4>
+                    <i className="fas fa-star"></i>
+                  </div>
                 </Link>
               </div>
             </span>

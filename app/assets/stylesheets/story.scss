@@ -15,7 +15,9 @@
     margin: 30px auto;
 }
 
-.show-title, .show-subtitle, .show-body {
+.show-title, 
+.show-subtitle, 
+.show-body {
     width: 700px;
     overflow-wrap: break-word;
 }
@@ -32,8 +34,18 @@
     margin-bottom: 10px;
 }
 
+.show-read-time-container {
+    display: flex;
+}
+
 .show-read-time {
+    font-size: 16px;
     color: gray;
+    margin-right: 5px;
+}
+
+.story-star {
+    font-size: 15px;
 }
 
 .show-body {
@@ -144,7 +156,7 @@
     display: none;
 }
 
-.image-preview {
+.image-preview, .image-preview > img {
     width: 700px;
     height: 450px;
     margin-bottom: 70px;

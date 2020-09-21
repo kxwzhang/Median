@@ -5,8 +5,12 @@ class StoryForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = this.props.story;
+        if (this.props.formType === 'Edit story') {
+            this.state['photoUrl'] = this.props.story.photoUrl;
+        } else {
+            this.state['photoUrl'] = null;
+        }
         this.state['photoFile'] = null;
-        this.state['photoUrl'] = null;
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
@@ -55,7 +59,9 @@ class StoryForm extends React.Component {
 
     render() {
         const { formType } = this.props;
-        const preview = this.state.photoUrl ? <img src={this.state.photoUrl} className='image-preview'/> : null;
+        const preview = this.state.photoUrl ? (
+            <img src={this.state.photoUrl} className='image-preview'/>
+         ) : null;
         return (
             <div className='story-form-container'>
                 <form className='story-form' onSubmit={this.handleSubmit}>
