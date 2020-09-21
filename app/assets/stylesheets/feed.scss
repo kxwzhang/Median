@@ -17,10 +17,10 @@
     width: 100%;
 }
 
-.index-min-read {
-    font-size: 12px;
-    color: gray;
-}
+// .index-min-read {
+//     font-size: 12px;
+//     color: gray;
+// }
 
 // .top-min-read {
 //     font-size: 12px;
@@ -28,11 +28,11 @@
 //     margin-right: 5px;
 // }
 
-.item-min-read-container, .top-min-read-container {
+.item-min-read-container, .top-min-read-container, .index-min-read-container {
     display: flex;
 }
 
-.item-min-read, .top-min-read {
+.item-min-read, .top-min-read, .index-min-read {
     font-size: 12px;
     color: gray;
     margin-right: 5px;
