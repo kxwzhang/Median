@@ -27,9 +27,19 @@
     color: gray;
 }
 
+.item-min-read-container {
+    display: flex;
+}
+
 .item-min-read {
     font-size: 12px;
     color: gray;
+    margin-right: 5px;
+}
+
+.fa-star {
+    font-size: 11px;
+    color: lightgray;
 }
 
 .story-index-top {

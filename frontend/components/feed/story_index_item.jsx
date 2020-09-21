@@ -13,8 +13,10 @@ const StoryIndexItem = ({ story }) => (
                 <h3 className='story-index-author'>{story.author}</h3>
             </Link>
             <Link to={`/stories/${story.id}`}>
-                <h4 className='item-min-read'>{story.id % 7 + 4} min read 
-                <i className="fas fa-star"></i></h4> 
+                <div className='item-min-read-container'>
+                    <h4 className='item-min-read'>{story.id % 7 + 4} min read </h4>
+                    <i className="fas fa-star"></i> 
+                </div>
             </Link>
         </div>
         <div className='story-index-image'>
