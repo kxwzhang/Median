@@ -21,9 +21,11 @@ const StoryIndexPopular = ({ stories }) => {
                   <h3 className="popular-story-author">{stories[0].author}</h3>
                 </Link>
                 <Link to={`/stories/${stories[0].id}`}>
-                  <h4 className="index-min-read">
-                    {(stories[0].id % 7) + 4} min read
-                  </h4>
+                  <div>
+                    <h4 className="index-min-read">
+                      {(stories[0].id % 7) + 4} min read
+                    </h4>
+                  </div>
                 </Link>
               </div>
             </span>

@@ -20,7 +20,10 @@ const StoryIndexTop = ({ stories }) => {
             <h3 className="story-top-author">By {stories[0].author}</h3>
           </Link>
           <Link to={`/stories/${stories[0].id}`}>
-            <h4 className="top-min-read">{(stories[0].id % 7) + 4} min read</h4>
+            <div className='top-min-read-container'>
+              <h4 className="top-min-read">{(stories[0].id % 7) + 4} min read</h4>
+              <i className="fas fa-star"></i> 
+            </div>
           </Link>
         </div>
 
@@ -39,9 +42,10 @@ const StoryIndexTop = ({ stories }) => {
                   <h3 className="story-top-author">{stories[1].author}</h3>
                 </Link>
                 <Link to={`/stories/${stories[1].id}`}>
-                  <h4 className="top-min-read">
-                    {(stories[1].id % 7) + 4} min read
-                  </h4>
+                  <div className='top-min-read-container'>
+                    <h4 className="top-min-read">{(stories[1].id % 7) + 4} min read</h4>
+                    <i className="fas fa-star"></i>
+                  </div>
                 </Link>
               </div>
             </div>
@@ -60,9 +64,10 @@ const StoryIndexTop = ({ stories }) => {
                   <h3 className="story-top-author">{stories[2].author}</h3>
                 </Link>
                 <Link to={`/stories/${stories[2].id}`}>
-                  <h4 className="top-min-read">
-                    {(stories[2].id % 7) + 4} min read
-                  </h4>
+                  <div className='top-min-read-container'>
+                    <h4 className="top-min-read">{(stories[2].id % 7) + 4} min read</h4>
+                    <i className="fas fa-star"></i>
+                  </div>
                 </Link>
               </div>
             </div>
@@ -81,9 +86,10 @@ const StoryIndexTop = ({ stories }) => {
                   <h3 className="story-top-author">{stories[3].author}</h3>
                 </Link>
                 <Link to={`/stories/${stories[3].id}`}>
-                  <h4 className="top-min-read">
-                    {(stories[3].id % 7) + 4} min read
-                  </h4>
+                  <div className='top-min-read-container'>
+                    <h4 className="top-min-read">{(stories[3].id % 7) + 4} min read</h4>
+                    <i className="fas fa-star"></i>
+                  </div>
                 </Link>
               </div>
             </div>
@@ -103,7 +109,10 @@ const StoryIndexTop = ({ stories }) => {
             <h3 className="story-top-author">{stories[4].author}</h3>
           </Link>
           <Link to={`/stories/${stories[4].id}`}>
-            <h4 className="top-min-read">{(stories[4].id % 7) + 4} min read</h4>
+            <div className='top-min-read-container'>
+              <h4 className="top-min-read">{(stories[4].id % 7) + 4} min read</h4>
+              <i className="fas fa-star"></i>
+            </div>
           </Link>
         </div>
       </div>

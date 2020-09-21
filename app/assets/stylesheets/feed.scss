@@ -22,16 +22,17 @@
     color: gray;
 }
 
-.top-min-read {
-    font-size: 12px;
-    color: gray;
-}
+// .top-min-read {
+//     font-size: 12px;
+//     color: gray;
+//     margin-right: 5px;
+// }
 
-.item-min-read-container {
+.item-min-read-container, .top-min-read-container {
     display: flex;
 }
 
-.item-min-read {
+.item-min-read, .top-min-read {
     font-size: 12px;
     color: gray;
     margin-right: 5px;
