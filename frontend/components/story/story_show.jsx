@@ -70,7 +70,7 @@ class StoryShow extends React.Component {
                         <div className="show-read-time">
                           {(story.id % 7) + 4} min read
                         </div>
-                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star story-star"></i>
                       </div>
                       <div className="likes-container">
                         <Likes
