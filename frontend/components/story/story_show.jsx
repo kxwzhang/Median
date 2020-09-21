@@ -54,7 +54,6 @@ class StoryShow extends React.Component {
                     })
                 }
             }
-            
             return (
               <div className="story-show-page">
                 <span className="story-show-container">
@@ -67,8 +66,11 @@ class StoryShow extends React.Component {
                           By {story.author}
                         </div>
                       </Link>
-                      <div className="show-read-time">
-                        {(story.id % 7) + 4} min read
+                      <div className='show-read-time-container'>
+                        <div className="show-read-time">
+                          {(story.id % 7) + 4} min read
+                        </div>
+                        <i className="fas fa-star"></i>
                       </div>
                       <div className="likes-container">
                         <Likes
