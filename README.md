@@ -9,13 +9,13 @@ A Medium clone that allows users to publicly publish articles and/or blogs that 
 ## Technologies Used
 * Heroku
 * Ruby on Rails
-* Postgresql
+* PostgreSQL
 * ActiveRecord
 * Webpack
 * AWS S3
 * React
 * Redux
-* Sass CSS
+* SCSS
 
 ## Main Features
 
@@ -80,8 +80,9 @@ A drop down menu for links to publishing new stories as well as viewing stories 
 ### Leaving Comments
 Logged in users can also leave comments on stories. Each user can respond to other users and a user can delete their own comments.
 ![Comments](https://github.com/kxwzhang/Median/blob/master/app/assets/images/comment.png)
-Comments can be nested, which was done by recursive rendering of the comments component.
+Comments can be nested, which was done by recursive rendering of the comments container component.
 ```javascript
+// comment_show.jsx
 if (!comment) {
     return null;
 } else {
