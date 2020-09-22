@@ -4,6 +4,8 @@ A Medium clone that allows users to publicly publish articles and/or blogs that 
 
 [Median Live Demo](https://a-median.herokuapp.com/ "Median Live Demo")
 
+![Median Gif](https://github.com/kxwzhang/Median/blob/master/app/assets/images/median_demo.gif)
+
 ## Technologies Used
 * Heroku
 * Ruby on Rails
