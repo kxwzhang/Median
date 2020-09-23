@@ -16,7 +16,10 @@ const UserShowItem = ({ story }) => (
           </div>
         </div>
         <div className='user-item-time'> 
-          <h4 className='index-min-read'>{story.id % 7 + 4} min read</h4>
+          <div className='user-item-time-container'>
+            <h4 className='index-min-read'>{story.id % 7 + 4} min read</h4>
+            <i className="fas fa-star user-item-star"></i>
+          </div>
         </div>
       </div>
 

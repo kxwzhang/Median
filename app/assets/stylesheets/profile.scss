@@ -33,7 +33,6 @@
 .Unfollow {
   border: 1px solid;
   border-radius: 4px;
-  // background: white;
   background: #029E74;
   outline: none;
   padding: 2px 6px;
@@ -106,10 +105,22 @@
   color: gray;
 }
 
+.user-item-author {
+  font-size: 12px;
+}
+
+.user-item-author:hover {
+  color: gray;
+}
+
 .user-item-image {
   width: 600px;
   height: 400px;
   object-fit: cover;
+}
+
+.user-item-time-container {
+  display: flex;
 }
 
 .user-item-image-container {
