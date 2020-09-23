@@ -1,7 +1,7 @@
 import React from 'react';
 import CommentShowContainer from './comment_show_container';
 import CreateCommentFormContainer from './create_comment_form_container';
-import { deleteStory } from '../../util/story_api_util';
+import { Link } from 'react-router-dom';
 
 class CommentShow extends React.Component {
     constructor(props) {
@@ -14,7 +14,7 @@ class CommentShow extends React.Component {
     }
 
     componentDidMount() {
-        const {story, fetchComment, fetchStory } = this.props;
+        const { story, fetchComment, fetchStory } = this.props;
         Object.values(story.commentsByParent).forEach(array => {
             array.forEach(comment => {
                 fetchComment(comment.id);
@@ -22,7 +22,7 @@ class CommentShow extends React.Component {
         });
         fetchStory(story.id);
     }
-    
+
     handleClick(e) {
         e.preventDefault();
         this.setState({ toggled: !this.state.toggled });
@@ -91,7 +91,7 @@ class CommentShow extends React.Component {
                             {nestedComments}
                         </div>
                     </div>
-               </div>
+                </div>
             );
         }
     }
