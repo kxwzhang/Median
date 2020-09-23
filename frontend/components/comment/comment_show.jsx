@@ -74,7 +74,9 @@ class CommentShow extends React.Component {
                         <div className='parent-comments'>
 
                             <div className='comment-head'>
-                                <div className='commenter-name'>{commenters[comment.commenter_id]}</div>
+                                <Link to={`/users/${comment.commenter_id}/profile`}>
+                                    <div className='commenter-name'>{commenters[comment.commenter_id]}</div>
+                                </Link>
                             </div>
                             <div className='comment-text'>
                                 <div className='commenter-body'>{comment.body}</div>
