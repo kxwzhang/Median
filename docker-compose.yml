@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: median
+      POSTGRES_USER: my_user
+      POSTGRES_PASSWORD: postgres_password
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: sh -c "rm -f tmp/pids/server.pid && bundle exec rake db:create db:migrate db:seed && bundle exec rails server -b 0.0.0.0"
+    environment:
+      DB_HOST: db
+      DB_NAME: median
+      DB_USERNAME: my_user
+      DB_PASSWORD: postgres_password
+    volumes:
+      - ".:/myapp"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    command: npm start
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "5000:5000"
+
+volumes:
+  postgres_data:
