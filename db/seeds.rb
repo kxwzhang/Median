@@ -60,102 +60,102 @@ story1 = Story.create!(title: 'I Drank A Gallon Of Water A Day For Better Skin',
     subtitle: 'Here is what happened...',
     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
     author_id: user1.id)
-# story1.photo.attach(io: file1, filename: '1.jpg')
-# story2 = Story.create!(title: '9 Things I Wish I Knew Before I Got a Tesla Model 3', 
-#     subtitle: 'No one tells you about these!',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user1.id)
-# story2.photo.attach(io: file2, filename: '2.jpg')
-# story3 = Story.create!(title: 'How to Avoid a Deadly Mix of Coronavirus and the Flu',
-#     subtitle: 'There’s some potentially good news for the United States',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user2.id)
-# story3.photo.attach(io: file3, filename: '3.jpg')
-# story4 = Story.create!(title: 'Understanding Javascript Selectors With and Without Reselect',
-#     subtitle: 'These tricks can save you hours',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user2.id)
-# story4.photo.attach(io: file4, filename: '4.jpg')
-# story5 = Story.create!(title: '8 Life Lessons I’ve Learned at 50-Something That I Wish I’d Known at 20-Something',
-#     subtitle: 'These tricks can save you hours',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user3.id)
-# story5.photo.attach(io: file5, filename: '5.jpg')
-# story6 = Story.create!(title: 'My Summer Internship in Silicon Valley',
-#     subtitle: 'The Valley is here to stay',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user3.id)
-# story6.photo.attach(io: file6, filename: '6.jpg')
-# story7 = Story.create!(title: 'Mastering data structures for interviews — Doubly linked lists',
-#     subtitle: 'Impress recruiters with this one computer science concept',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user4.id)
-# story7.photo.attach(io: file7, filename: '7.jpg')
-# story8 = Story.create!(title: 'How to Identify a Smart Person in 3 Minutes',
-#     subtitle: 'These two-question combo can help you look past the validation-seekers',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user4.id)
-# story8.photo.attach(io: file8, filename: '8.jpg')
-# story9 = Story.create!(title: 'To Become Extremely Productive, Be like Elon Musk',
-#     subtitle: 'If you want to work more efficiently, here’s what you need to do.',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user5.id)
-# story9.photo.attach(io: file9, filename: '9.jpg')
-# story10 = Story.create!(title: 'Understanding Currying in JavaScript',
-#     subtitle: 'Short Guide to Currying',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user5.id)
-# story10.photo.attach(io: file10, filename: '10.jpg')
-# story11 = Story.create!(title: 'How Arcades Have Evolved To Survive',
-#     subtitle: 'You’d be forgiven for thinking arcades went the way of payphones.',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user6.id)
-# story11.photo.attach(io: file11, filename: '11.jpg')
-# story12 = Story.create!(title: 'Eliminating Superfluous Elements in Worldbuilding',
-#     subtitle: 'Or, How to Ensure Your Setting is as Focused as it is Awesome',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user6.id)
-# story12.photo.attach(io: file12, filename: '12.jpg')
-# story13 = Story.create!(title: 'Do All Things with Joy',
-#     subtitle: 'I just felt like writing about guitarist today, so what the heck. Let’s do this.',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user7.id)
-# story13.photo.attach(io: file13, filename: '13.jpg')
-# story14 = Story.create!(title: 'Hamilton Saved Me From My Grief',
-#     subtitle: 'More than just a musical, Hamilton helped me to emerge from the darkness of my life.',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user7.id)
-# story14.photo.attach(io: file14, filename: '14.jpg')
-# story15 = Story.create!(title: 'This Is Your Brain On Music',
-#     subtitle: 'Music is an emotive language that moves us through time and space',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user8.id)
-# story15.photo.attach(io: file15, filename: '15.jpg')
-# story16 = Story.create!(title: 'How a Buddhist Monk Taught Me to Stop Overthinking',
-#     subtitle: 'It all comes down to a simple two-word question',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user8.id)
-# story16.photo.attach(io: file16, filename: '16.jpg')
-# story17 = Story.create!(title: 'How Three College Students Made $600,000 in 24 Hours',
-#     subtitle: 'A simple pricing trick led to thousands of orders',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user9.id)
-# story17.photo.attach(io: file17, filename: '17.jpg')
-# story18 = Story.create!(title: 'Dark Side Of a Reddit Confession',
-#     subtitle: 'A Reddit Confession Nearly Solved a 50-year-old Cold Case',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user9.id)
-# story18.photo.attach(io: file18, filename: '18.jpg')
-# story19 = Story.create!(title: 'From Programmer to Billionaire at Age 20',
-#     subtitle: 'The story of Dio Diva, Indonesia’s youngest tech billionaire',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user10.id)
-# story19.photo.attach(io: file19, filename: '19.jpg')
-# story20 = Story.create!(title: 'Stop Using If-Else Statements',
-#     subtitle: 'Write code without them',
-#     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
-#     author_id: user10.id)
-# story20.photo.attach(io: file20, filename: '20.jpg')
+story1.photo.attach(io: file1, filename: '1.jpg')
+story2 = Story.create!(title: '9 Things I Wish I Knew Before I Got a Tesla Model 3', 
+    subtitle: 'No one tells you about these!',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user1.id)
+story2.photo.attach(io: file2, filename: '2.jpg')
+story3 = Story.create!(title: 'How to Avoid a Deadly Mix of Coronavirus and the Flu',
+    subtitle: 'There’s some potentially good news for the United States',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user2.id)
+story3.photo.attach(io: file3, filename: '3.jpg')
+story4 = Story.create!(title: 'Understanding Javascript Selectors With and Without Reselect',
+    subtitle: 'These tricks can save you hours',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user2.id)
+story4.photo.attach(io: file4, filename: '4.jpg')
+story5 = Story.create!(title: '8 Life Lessons I’ve Learned at 50-Something That I Wish I’d Known at 20-Something',
+    subtitle: 'These tricks can save you hours',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user3.id)
+story5.photo.attach(io: file5, filename: '5.jpg')
+story6 = Story.create!(title: 'My Summer Internship in Silicon Valley',
+    subtitle: 'The Valley is here to stay',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user3.id)
+story6.photo.attach(io: file6, filename: '6.jpg')
+story7 = Story.create!(title: 'Mastering data structures for interviews — Doubly linked lists',
+    subtitle: 'Impress recruiters with this one computer science concept',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user4.id)
+story7.photo.attach(io: file7, filename: '7.jpg')
+story8 = Story.create!(title: 'How to Identify a Smart Person in 3 Minutes',
+    subtitle: 'These two-question combo can help you look past the validation-seekers',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user4.id)
+story8.photo.attach(io: file8, filename: '8.jpg')
+story9 = Story.create!(title: 'To Become Extremely Productive, Be like Elon Musk',
+    subtitle: 'If you want to work more efficiently, here’s what you need to do.',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user5.id)
+story9.photo.attach(io: file9, filename: '9.jpg')
+story10 = Story.create!(title: 'Understanding Currying in JavaScript',
+    subtitle: 'Short Guide to Currying',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user5.id)
+story10.photo.attach(io: file10, filename: '10.jpg')
+story11 = Story.create!(title: 'How Arcades Have Evolved To Survive',
+    subtitle: 'You’d be forgiven for thinking arcades went the way of payphones.',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user6.id)
+story11.photo.attach(io: file11, filename: '11.jpg')
+story12 = Story.create!(title: 'Eliminating Superfluous Elements in Worldbuilding',
+    subtitle: 'Or, How to Ensure Your Setting is as Focused as it is Awesome',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user6.id)
+story12.photo.attach(io: file12, filename: '12.jpg')
+story13 = Story.create!(title: 'Do All Things with Joy',
+    subtitle: 'I just felt like writing about guitarist today, so what the heck. Let’s do this.',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user7.id)
+story13.photo.attach(io: file13, filename: '13.jpg')
+story14 = Story.create!(title: 'Hamilton Saved Me From My Grief',
+    subtitle: 'More than just a musical, Hamilton helped me to emerge from the darkness of my life.',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user7.id)
+story14.photo.attach(io: file14, filename: '14.jpg')
+story15 = Story.create!(title: 'This Is Your Brain On Music',
+    subtitle: 'Music is an emotive language that moves us through time and space',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user8.id)
+story15.photo.attach(io: file15, filename: '15.jpg')
+story16 = Story.create!(title: 'How a Buddhist Monk Taught Me to Stop Overthinking',
+    subtitle: 'It all comes down to a simple two-word question',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user8.id)
+story16.photo.attach(io: file16, filename: '16.jpg')
+story17 = Story.create!(title: 'How Three College Students Made $600,000 in 24 Hours',
+    subtitle: 'A simple pricing trick led to thousands of orders',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user9.id)
+story17.photo.attach(io: file17, filename: '17.jpg')
+story18 = Story.create!(title: 'Dark Side Of a Reddit Confession',
+    subtitle: 'A Reddit Confession Nearly Solved a 50-year-old Cold Case',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user9.id)
+story18.photo.attach(io: file18, filename: '18.jpg')
+story19 = Story.create!(title: 'From Programmer to Billionaire at Age 20',
+    subtitle: 'The story of Dio Diva, Indonesia’s youngest tech billionaire',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user10.id)
+story19.photo.attach(io: file19, filename: '19.jpg')
+story20 = Story.create!(title: 'Stop Using If-Else Statements',
+    subtitle: 'Write code without them',
+    body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
+    author_id: user10.id)
+story20.photo.attach(io: file20, filename: '20.jpg')
 # story21 = Story.create!(title: 'Why You Should Never Send Your CV via Gmail',
 #     subtitle: 'You could be getting your identity stolen.',
 #     body: Faker::Lorem.paragraph(sentence_count: 60, supplemental: false, random_sentences_to_add: 60),
@@ -183,169 +183,169 @@ story1 = Story.create!(title: 'I Drank A Gallon Of Water A Day For Better Skin',
 # story25.photo.attach(io: file25, filename: '25.jpg')
 
 # Comments
-# comment1 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user1.id, story_id: story2.id, parent_comment_id: nil)
-# comment2 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user2.id, story_id: story1.id, parent_comment_id: nil)
-# comment3 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user3.id, story_id: story1.id, parent_comment_id: comment2.id)
-# comment4 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user4.id, story_id: story3.id, parent_comment_id: nil)
-# comment5 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user5.id, story_id: story4.id, parent_comment_id: nil)
-# comment6 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user1.id, story_id: story5.id, parent_comment_id: nil)
-# comment7 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user2.id, story_id: story6.id, parent_comment_id: nil)
-# comment8 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user3.id, story_id: story7.id, parent_comment_id: nil)
-# comment9 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user4.id, story_id: story8.id, parent_comment_id: nil)
-# comment10 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user5.id, story_id: story9.id, parent_comment_id: nil)
-# comment11 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user6.id, story_id: story10.id, parent_comment_id: nil)
-# comment12 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user7.id, story_id: story11.id, parent_comment_id: nil)
-# comment13 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user8.id, story_id: story12.id, parent_comment_id: nil)
-# comment14 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user8.id, story_id: story13.id, parent_comment_id: nil)
-# comment15 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user1.id, story_id: story14.id, parent_comment_id: nil)
-# comment16 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user2.id, story_id: story15.id, parent_comment_id: nil)
-# comment17 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user3.id, story_id: story16.id, parent_comment_id: nil)
-# comment18 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user4.id, story_id: story16.id, parent_comment_id: comment17.id)
-# comment19 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user5.id, story_id: story16.id, parent_comment_id: nil)
-# comment20 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user6.id, story_id: story16.id, parent_comment_id: comment19.id)
+comment1 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user1.id, story_id: story2.id, parent_comment_id: nil)
+comment2 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user2.id, story_id: story1.id, parent_comment_id: nil)
+comment3 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user3.id, story_id: story1.id, parent_comment_id: comment2.id)
+comment4 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user4.id, story_id: story3.id, parent_comment_id: nil)
+comment5 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user5.id, story_id: story4.id, parent_comment_id: nil)
+comment6 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user1.id, story_id: story5.id, parent_comment_id: nil)
+comment7 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user2.id, story_id: story6.id, parent_comment_id: nil)
+comment8 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user3.id, story_id: story7.id, parent_comment_id: nil)
+comment9 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user4.id, story_id: story8.id, parent_comment_id: nil)
+comment10 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user5.id, story_id: story9.id, parent_comment_id: nil)
+comment11 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user6.id, story_id: story10.id, parent_comment_id: nil)
+comment12 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user7.id, story_id: story11.id, parent_comment_id: nil)
+comment13 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user8.id, story_id: story12.id, parent_comment_id: nil)
+comment14 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user8.id, story_id: story13.id, parent_comment_id: nil)
+comment15 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user1.id, story_id: story14.id, parent_comment_id: nil)
+comment16 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user2.id, story_id: story15.id, parent_comment_id: nil)
+comment17 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user3.id, story_id: story16.id, parent_comment_id: nil)
+comment18 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user4.id, story_id: story16.id, parent_comment_id: comment17.id)
+comment19 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user5.id, story_id: story16.id, parent_comment_id: nil)
+comment20 = Comment.create!(body: Faker::Quote.famous_last_words, commenter_id: user6.id, story_id: story16.id, parent_comment_id: comment19.id)
 
-# # Relationships
-# Follow.create!(follower_id: user1.id, followee_id: user2.id)
-# Follow.create!(follower_id: user1.id, followee_id: user3.id)
-# Follow.create!(follower_id: user1.id, followee_id: user4.id)
-# Follow.create!(follower_id: user1.id, followee_id: user5.id)
-# Follow.create!(follower_id: user1.id, followee_id: user6.id)
-# Follow.create!(follower_id: user1.id, followee_id: user7.id)
-# Follow.create!(follower_id: user1.id, followee_id: user8.id)
-# Follow.create!(follower_id: user1.id, followee_id: user9.id)
-# Follow.create!(follower_id: user1.id, followee_id: user10.id)
-# Follow.create!(follower_id: user2.id, followee_id: user1.id)
-# Follow.create!(follower_id: user2.id, followee_id: user3.id)
-# Follow.create!(follower_id: user2.id, followee_id: user4.id)
-# Follow.create!(follower_id: user2.id, followee_id: user5.id)
-# Follow.create!(follower_id: user2.id, followee_id: user6.id)
-# Follow.create!(follower_id: user3.id, followee_id: user1.id)
-# Follow.create!(follower_id: user3.id, followee_id: user2.id)
-# Follow.create!(follower_id: user3.id, followee_id: user4.id)
-# Follow.create!(follower_id: user4.id, followee_id: user2.id)
-# Follow.create!(follower_id: user4.id, followee_id: user3.id)
-# Follow.create!(follower_id: user4.id, followee_id: user5.id)
-# Follow.create!(follower_id: user4.id, followee_id: user6.id)
-# Follow.create!(follower_id: user4.id, followee_id: user7.id)
-# Follow.create!(follower_id: user4.id, followee_id: user8.id)
-# Follow.create!(follower_id: user4.id, followee_id: user9.id)
-# Follow.create!(follower_id: user4.id, followee_id: user10.id)
-# Follow.create!(follower_id: user5.id, followee_id: user1.id)
-# Follow.create!(follower_id: user5.id, followee_id: user2.id)
-# Follow.create!(follower_id: user5.id, followee_id: user3.id)
-# Follow.create!(follower_id: user5.id, followee_id: user4.id)
-# Follow.create!(follower_id: user5.id, followee_id: user6.id)
-# Follow.create!(follower_id: user6.id, followee_id: user7.id)
-# Follow.create!(follower_id: user6.id, followee_id: user8.id)
-# Follow.create!(follower_id: user6.id, followee_id: user9.id)
-# Follow.create!(follower_id: user6.id, followee_id: user10.id)
-# Follow.create!(follower_id: user7.id, followee_id: user1.id)
-# Follow.create!(follower_id: user7.id, followee_id: user2.id)
-# Follow.create!(follower_id: user7.id, followee_id: user3.id)
-# Follow.create!(follower_id: user7.id, followee_id: user4.id)
-# Follow.create!(follower_id: user7.id, followee_id: user5.id)
-# Follow.create!(follower_id: user8.id, followee_id: user1.id)
-# Follow.create!(follower_id: user8.id, followee_id: user2.id)
-# Follow.create!(follower_id: user8.id, followee_id: user3.id)
-# Follow.create!(follower_id: user8.id, followee_id: user4.id)
-# Follow.create!(follower_id: user8.id, followee_id: user5.id)
-# Follow.create!(follower_id: user8.id, followee_id: user6.id)
-# Follow.create!(follower_id: user8.id, followee_id: user7.id)
-# Follow.create!(follower_id: user9.id, followee_id: user7.id)
-# Follow.create!(follower_id: user10.id, followee_id: user7.id)
+# Relationships
+Follow.create!(follower_id: user1.id, followee_id: user2.id)
+Follow.create!(follower_id: user1.id, followee_id: user3.id)
+Follow.create!(follower_id: user1.id, followee_id: user4.id)
+Follow.create!(follower_id: user1.id, followee_id: user5.id)
+Follow.create!(follower_id: user1.id, followee_id: user6.id)
+Follow.create!(follower_id: user1.id, followee_id: user7.id)
+Follow.create!(follower_id: user1.id, followee_id: user8.id)
+Follow.create!(follower_id: user1.id, followee_id: user9.id)
+Follow.create!(follower_id: user1.id, followee_id: user10.id)
+Follow.create!(follower_id: user2.id, followee_id: user1.id)
+Follow.create!(follower_id: user2.id, followee_id: user3.id)
+Follow.create!(follower_id: user2.id, followee_id: user4.id)
+Follow.create!(follower_id: user2.id, followee_id: user5.id)
+Follow.create!(follower_id: user2.id, followee_id: user6.id)
+Follow.create!(follower_id: user3.id, followee_id: user1.id)
+Follow.create!(follower_id: user3.id, followee_id: user2.id)
+Follow.create!(follower_id: user3.id, followee_id: user4.id)
+Follow.create!(follower_id: user4.id, followee_id: user2.id)
+Follow.create!(follower_id: user4.id, followee_id: user3.id)
+Follow.create!(follower_id: user4.id, followee_id: user5.id)
+Follow.create!(follower_id: user4.id, followee_id: user6.id)
+Follow.create!(follower_id: user4.id, followee_id: user7.id)
+Follow.create!(follower_id: user4.id, followee_id: user8.id)
+Follow.create!(follower_id: user4.id, followee_id: user9.id)
+Follow.create!(follower_id: user4.id, followee_id: user10.id)
+Follow.create!(follower_id: user5.id, followee_id: user1.id)
+Follow.create!(follower_id: user5.id, followee_id: user2.id)
+Follow.create!(follower_id: user5.id, followee_id: user3.id)
+Follow.create!(follower_id: user5.id, followee_id: user4.id)
+Follow.create!(follower_id: user5.id, followee_id: user6.id)
+Follow.create!(follower_id: user6.id, followee_id: user7.id)
+Follow.create!(follower_id: user6.id, followee_id: user8.id)
+Follow.create!(follower_id: user6.id, followee_id: user9.id)
+Follow.create!(follower_id: user6.id, followee_id: user10.id)
+Follow.create!(follower_id: user7.id, followee_id: user1.id)
+Follow.create!(follower_id: user7.id, followee_id: user2.id)
+Follow.create!(follower_id: user7.id, followee_id: user3.id)
+Follow.create!(follower_id: user7.id, followee_id: user4.id)
+Follow.create!(follower_id: user7.id, followee_id: user5.id)
+Follow.create!(follower_id: user8.id, followee_id: user1.id)
+Follow.create!(follower_id: user8.id, followee_id: user2.id)
+Follow.create!(follower_id: user8.id, followee_id: user3.id)
+Follow.create!(follower_id: user8.id, followee_id: user4.id)
+Follow.create!(follower_id: user8.id, followee_id: user5.id)
+Follow.create!(follower_id: user8.id, followee_id: user6.id)
+Follow.create!(follower_id: user8.id, followee_id: user7.id)
+Follow.create!(follower_id: user9.id, followee_id: user7.id)
+Follow.create!(follower_id: user10.id, followee_id: user7.id)
 
-# # Likes
-# Like.create!(liker_id: user1.id, story_id: story2.id)
-# Like.create!(liker_id: user1.id, story_id: story3.id)
-# Like.create!(liker_id: user1.id, story_id: story4.id)
-# Like.create!(liker_id: user1.id, story_id: story5.id)
-# Like.create!(liker_id: user1.id, story_id: story6.id)
-# Like.create!(liker_id: user2.id, story_id: story6.id)
-# Like.create!(liker_id: user2.id, story_id: story7.id)
-# Like.create!(liker_id: user2.id, story_id: story8.id)
-# Like.create!(liker_id: user2.id, story_id: story9.id)
-# Like.create!(liker_id: user2.id, story_id: story10.id)
-# Like.create!(liker_id: user2.id, story_id: story11.id)
-# Like.create!(liker_id: user2.id, story_id: story12.id)
-# Like.create!(liker_id: user3.id, story_id: story1.id)
-# Like.create!(liker_id: user3.id, story_id: story2.id)
-# Like.create!(liker_id: user3.id, story_id: story3.id)
-# Like.create!(liker_id: user3.id, story_id: story4.id)
-# Like.create!(liker_id: user3.id, story_id: story5.id)
-# Like.create!(liker_id: user3.id, story_id: story13.id)
-# Like.create!(liker_id: user3.id, story_id: story14.id)
-# Like.create!(liker_id: user3.id, story_id: story15.id)
-# Like.create!(liker_id: user4.id, story_id: story1.id)
-# Like.create!(liker_id: user4.id, story_id: story2.id)
-# Like.create!(liker_id: user4.id, story_id: story3.id)
-# Like.create!(liker_id: user4.id, story_id: story14.id)
-# Like.create!(liker_id: user4.id, story_id: story15.id)
-# Like.create!(liker_id: user4.id, story_id: story16.id)
-# Like.create!(liker_id: user4.id, story_id: story17.id)
-# Like.create!(liker_id: user4.id, story_id: story18.id)
-# Like.create!(liker_id: user4.id, story_id: story19.id)
-# Like.create!(liker_id: user4.id, story_id: story20.id)
-# Like.create!(liker_id: user5.id, story_id: story2.id)
-# Like.create!(liker_id: user5.id, story_id: story3.id)
-# Like.create!(liker_id: user5.id, story_id: story4.id)
-# Like.create!(liker_id: user5.id, story_id: story5.id)
-# Like.create!(liker_id: user5.id, story_id: story6.id)
-# Like.create!(liker_id: user5.id, story_id: story7.id)
-# Like.create!(liker_id: user5.id, story_id: story16.id)
-# Like.create!(liker_id: user5.id, story_id: story17.id)
-# Like.create!(liker_id: user5.id, story_id: story18.id)
-# Like.create!(liker_id: user5.id, story_id: story19.id)
-# Like.create!(liker_id: user5.id, story_id: story20.id)
-# Like.create!(liker_id: user6.id, story_id: story1.id)
-# Like.create!(liker_id: user6.id, story_id: story2.id)
-# Like.create!(liker_id: user6.id, story_id: story3.id)
-# Like.create!(liker_id: user6.id, story_id: story4.id)
-# Like.create!(liker_id: user6.id, story_id: story5.id)
-# Like.create!(liker_id: user6.id, story_id: story6.id)
-# Like.create!(liker_id: user6.id, story_id: story7.id)
-# Like.create!(liker_id: user6.id, story_id: story8.id)
-# Like.create!(liker_id: user6.id, story_id: story9.id)
-# Like.create!(liker_id: user6.id, story_id: story10.id)
-# Like.create!(liker_id: user6.id, story_id: story11.id)
-# Like.create!(liker_id: user6.id, story_id: story12.id)
-# Like.create!(liker_id: user6.id, story_id: story13.id)
-# Like.create!(liker_id: user6.id, story_id: story18.id)
-# Like.create!(liker_id: user6.id, story_id: story19.id)
-# Like.create!(liker_id: user6.id, story_id: story20.id)
-# Like.create!(liker_id: user7.id, story_id: story2.id)
-# Like.create!(liker_id: user7.id, story_id: story4.id)
-# Like.create!(liker_id: user7.id, story_id: story6.id)
-# Like.create!(liker_id: user7.id, story_id: story8.id)
-# Like.create!(liker_id: user7.id, story_id: story10.id)
-# Like.create!(liker_id: user7.id, story_id: story12.id)
-# Like.create!(liker_id: user7.id, story_id: story14.id)
-# Like.create!(liker_id: user7.id, story_id: story16.id)
-# Like.create!(liker_id: user7.id, story_id: story20.id)
-# Like.create!(liker_id: user8.id, story_id: story2.id)
-# Like.create!(liker_id: user8.id, story_id: story4.id)
-# Like.create!(liker_id: user8.id, story_id: story6.id)
-# Like.create!(liker_id: user8.id, story_id: story8.id)
-# Like.create!(liker_id: user8.id, story_id: story10.id)
-# Like.create!(liker_id: user8.id, story_id: story12.id)
-# Like.create!(liker_id: user8.id, story_id: story14.id)
-# Like.create!(liker_id: user8.id, story_id: story16.id)
-# Like.create!(liker_id: user8.id, story_id: story18.id)
-# Like.create!(liker_id: user8.id, story_id: story20.id)
-# Like.create!(liker_id: user9.id, story_id: story1.id)
-# Like.create!(liker_id: user9.id, story_id: story3.id)
-# Like.create!(liker_id: user9.id, story_id: story5.id)
-# Like.create!(liker_id: user9.id, story_id: story7.id)
-# Like.create!(liker_id: user9.id, story_id: story9.id)
-# Like.create!(liker_id: user9.id, story_id: story11.id)
-# Like.create!(liker_id: user9.id, story_id: story13.id)
-# Like.create!(liker_id: user9.id, story_id: story15.id)
-# Like.create!(liker_id: user9.id, story_id: story17.id)
-# Like.create!(liker_id: user9.id, story_id: story19.id)
-# Like.create!(liker_id: user10.id, story_id: story5.id)
-# Like.create!(liker_id: user10.id, story_id: story7.id)
-# Like.create!(liker_id: user10.id, story_id: story8.id)
-# Like.create!(liker_id: user10.id, story_id: story11.id)
-# Like.create!(liker_id: user10.id, story_id: story13.id)
-# Like.create!(liker_id: user10.id, story_id: story16.id)
-# Like.create!(liker_id: user10.id, story_id: story17.id)
-# Like.create!(liker_id: user10.id, story_id: story20.id)
+# Likes
+Like.create!(liker_id: user1.id, story_id: story2.id)
+Like.create!(liker_id: user1.id, story_id: story3.id)
+Like.create!(liker_id: user1.id, story_id: story4.id)
+Like.create!(liker_id: user1.id, story_id: story5.id)
+Like.create!(liker_id: user1.id, story_id: story6.id)
+Like.create!(liker_id: user2.id, story_id: story6.id)
+Like.create!(liker_id: user2.id, story_id: story7.id)
+Like.create!(liker_id: user2.id, story_id: story8.id)
+Like.create!(liker_id: user2.id, story_id: story9.id)
+Like.create!(liker_id: user2.id, story_id: story10.id)
+Like.create!(liker_id: user2.id, story_id: story11.id)
+Like.create!(liker_id: user2.id, story_id: story12.id)
+Like.create!(liker_id: user3.id, story_id: story1.id)
+Like.create!(liker_id: user3.id, story_id: story2.id)
+Like.create!(liker_id: user3.id, story_id: story3.id)
+Like.create!(liker_id: user3.id, story_id: story4.id)
+Like.create!(liker_id: user3.id, story_id: story5.id)
+Like.create!(liker_id: user3.id, story_id: story13.id)
+Like.create!(liker_id: user3.id, story_id: story14.id)
+Like.create!(liker_id: user3.id, story_id: story15.id)
+Like.create!(liker_id: user4.id, story_id: story1.id)
+Like.create!(liker_id: user4.id, story_id: story2.id)
+Like.create!(liker_id: user4.id, story_id: story3.id)
+Like.create!(liker_id: user4.id, story_id: story14.id)
+Like.create!(liker_id: user4.id, story_id: story15.id)
+Like.create!(liker_id: user4.id, story_id: story16.id)
+Like.create!(liker_id: user4.id, story_id: story17.id)
+Like.create!(liker_id: user4.id, story_id: story18.id)
+Like.create!(liker_id: user4.id, story_id: story19.id)
+Like.create!(liker_id: user4.id, story_id: story20.id)
+Like.create!(liker_id: user5.id, story_id: story2.id)
+Like.create!(liker_id: user5.id, story_id: story3.id)
+Like.create!(liker_id: user5.id, story_id: story4.id)
+Like.create!(liker_id: user5.id, story_id: story5.id)
+Like.create!(liker_id: user5.id, story_id: story6.id)
+Like.create!(liker_id: user5.id, story_id: story7.id)
+Like.create!(liker_id: user5.id, story_id: story16.id)
+Like.create!(liker_id: user5.id, story_id: story17.id)
+Like.create!(liker_id: user5.id, story_id: story18.id)
+Like.create!(liker_id: user5.id, story_id: story19.id)
+Like.create!(liker_id: user5.id, story_id: story20.id)
+Like.create!(liker_id: user6.id, story_id: story1.id)
+Like.create!(liker_id: user6.id, story_id: story2.id)
+Like.create!(liker_id: user6.id, story_id: story3.id)
+Like.create!(liker_id: user6.id, story_id: story4.id)
+Like.create!(liker_id: user6.id, story_id: story5.id)
+Like.create!(liker_id: user6.id, story_id: story6.id)
+Like.create!(liker_id: user6.id, story_id: story7.id)
+Like.create!(liker_id: user6.id, story_id: story8.id)
+Like.create!(liker_id: user6.id, story_id: story9.id)
+Like.create!(liker_id: user6.id, story_id: story10.id)
+Like.create!(liker_id: user6.id, story_id: story11.id)
+Like.create!(liker_id: user6.id, story_id: story12.id)
+Like.create!(liker_id: user6.id, story_id: story13.id)
+Like.create!(liker_id: user6.id, story_id: story18.id)
+Like.create!(liker_id: user6.id, story_id: story19.id)
+Like.create!(liker_id: user6.id, story_id: story20.id)
+Like.create!(liker_id: user7.id, story_id: story2.id)
+Like.create!(liker_id: user7.id, story_id: story4.id)
+Like.create!(liker_id: user7.id, story_id: story6.id)
+Like.create!(liker_id: user7.id, story_id: story8.id)
+Like.create!(liker_id: user7.id, story_id: story10.id)
+Like.create!(liker_id: user7.id, story_id: story12.id)
+Like.create!(liker_id: user7.id, story_id: story14.id)
+Like.create!(liker_id: user7.id, story_id: story16.id)
+Like.create!(liker_id: user7.id, story_id: story20.id)
+Like.create!(liker_id: user8.id, story_id: story2.id)
+Like.create!(liker_id: user8.id, story_id: story4.id)
+Like.create!(liker_id: user8.id, story_id: story6.id)
+Like.create!(liker_id: user8.id, story_id: story8.id)
+Like.create!(liker_id: user8.id, story_id: story10.id)
+Like.create!(liker_id: user8.id, story_id: story12.id)
+Like.create!(liker_id: user8.id, story_id: story14.id)
+Like.create!(liker_id: user8.id, story_id: story16.id)
+Like.create!(liker_id: user8.id, story_id: story18.id)
+Like.create!(liker_id: user8.id, story_id: story20.id)
+Like.create!(liker_id: user9.id, story_id: story1.id)
+Like.create!(liker_id: user9.id, story_id: story3.id)
+Like.create!(liker_id: user9.id, story_id: story5.id)
+Like.create!(liker_id: user9.id, story_id: story7.id)
+Like.create!(liker_id: user9.id, story_id: story9.id)
+Like.create!(liker_id: user9.id, story_id: story11.id)
+Like.create!(liker_id: user9.id, story_id: story13.id)
+Like.create!(liker_id: user9.id, story_id: story15.id)
+Like.create!(liker_id: user9.id, story_id: story17.id)
+Like.create!(liker_id: user9.id, story_id: story19.id)
+Like.create!(liker_id: user10.id, story_id: story5.id)
+Like.create!(liker_id: user10.id, story_id: story7.id)
+Like.create!(liker_id: user10.id, story_id: story8.id)
+Like.create!(liker_id: user10.id, story_id: story11.id)
+Like.create!(liker_id: user10.id, story_id: story13.id)
+Like.create!(liker_id: user10.id, story_id: story16.id)
+Like.create!(liker_id: user10.id, story_id: story17.id)
+Like.create!(liker_id: user10.id, story_id: story20.id)
