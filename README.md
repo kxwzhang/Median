@@ -1,10 +1,10 @@
-# ![Favicon](https://github.com/kxwzhang/Median/blob/master/app/assets/images/favicon.ico) Median
+# ![Favicon](https://github.com/kxwzhang/Median/blob/main/app/assets/images/favicon.ico) Median
 
 A Medium clone that allows users to publicly publish articles and/or blogs that can be viewed and commented on by others.
 
 [Median Live Demo](https://a-median.herokuapp.com/ "Median Live Demo")
 
-![Median Gif](https://github.com/kxwzhang/Median/blob/master/app/assets/images/median_demo.gif)
+![Median Gif](https://github.com/kxwzhang/Median/blob/main/app/assets/images/median_demo.gif)
 
 ## Running the Project Locally
 Make sure to have brew installed.
@@ -36,7 +36,7 @@ Then you can start the server with `rails s`.
 
 ### User Authentication
 User auth is an important feature that I want to highlight here because requiring a user to be logged in before having access to any of the other functionality on the site is crucial for creating a true user experience. The login and signup portion of the site uses a modal and also allows for quick access between login and signup. There is also a easy access button for individuals who wish to demo the website before committing to their own account.
-![Session Form](https://github.com/kxwzhang/Median/blob/master/app/assets/images/user_auth.png)
+![Session Form](https://github.com/kxwzhang/Median/blob/main/app/assets/images/user_auth.png)
 The following code snippet comes from my `session_form` where I implemented the functionality of closing the modal upon processing a user's session form and then pushing that user to their feed page. Also shown below is how I was able to capture the values using event handling like `e.currentTarget.value` as well as how errors were being rendered by the front end.
 ```javascript
 handleSubmit(e) {
@@ -65,7 +65,7 @@ renderErrors() {
 
 ### Publishing Stories
 Stories are the bread and butter of this project. Any logged in user can publish, view, and delete stories. In particular, stories can be published with images. 
-![Publishing](https://github.com/kxwzhang/Median/blob/master/app/assets/images/story_form.png)
+![Publishing](https://github.com/kxwzhang/Median/blob/main/app/assets/images/story_form.png)
 Also each user is greeted by a feed upon log in, which are stories that are randomly generated upon each refresh. 
 ```javascript
 const mDTP = dispatch => ({
@@ -86,15 +86,15 @@ let storyIndexPopular = <StoryIndexPopular stories={shuffledStories.slice(5,9)} 
 ```
 Clicking on a story, either on the text or image, will take the user to that stories page, where the full story is displayed. Other notable features of the feed include: 
 A "**Editor's Picks**" which is akin to sending the user to a story that is featured. 
-![Feed](https://github.com/kxwzhang/Median/blob/master/app/assets/images/feed.png)
+![Feed](https://github.com/kxwzhang/Median/blob/main/app/assets/images/feed.png)
 A sticky aside that moves with the user as they scroll up and down the page, deleting stories.
-![Aide](https://github.com/kxwzhang/Median/blob/master/app/assets/images/aside.png)
+![Aide](https://github.com/kxwzhang/Median/blob/main/app/assets/images/aside.png)
 A drop down menu for links to publishing new stories as well as viewing stories published by the current user.
-![Your Stories](https://github.com/kxwzhang/Median/blob/master/app/assets/images/your_stories.png)
+![Your Stories](https://github.com/kxwzhang/Median/blob/main/app/assets/images/your_stories.png)
 
 ### Leaving Comments
 Logged in users can also leave comments on stories. Each user can respond to other users and a user can delete their own comments.
-![Comments](https://github.com/kxwzhang/Median/blob/master/app/assets/images/comment.png)
+![Comments](https://github.com/kxwzhang/Median/blob/main/app/assets/images/comment.png)
 Comments can be nested, which was done by recursive rendering of the comments container component.
 ```javascript
 // comment_show.jsx
@@ -117,11 +117,11 @@ if (!comment) {
 Logged in users can follow and unfollow other users. The users profile page will also display all the 
 stories written by that user and clicking on any of the stories will take the user
 directly to the story show page.
-![User Show](https://github.com/kxwzhang/Median/blob/master/app/assets/images/user_profile.png)
+![User Show](https://github.com/kxwzhang/Median/blob/main/app/assets/images/user_profile.png)
 
 ### Liking Stories
 Logged in users can like and unlike stories. A story displays the number of likes it has.
-![Story Likes](https://github.com/kxwzhang/Median/blob/master/app/assets/images/story_likes.png)
+![Story Likes](https://github.com/kxwzhang/Median/blob/main/app/assets/images/story_likes.png)
 Liking a story will change how the button looks depending on the story's liked status.
 The following code snippet demonstrates how I was able to achieve that: 
 ```javascript
