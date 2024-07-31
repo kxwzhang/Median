@@ -6,6 +6,21 @@ A Medium clone that allows users to publicly publish articles and/or blogs that 
 
 ![Median Gif](https://github.com/kxwzhang/Median/blob/master/app/assets/images/median_demo.gif)
 
+## Running the Project Locally
+Make sure to have brew installed.
+Brew install the following:
+```
+brew install rbenv
+brew install postgresql@14
+```
+
+Once rbenv is installed, run `rbenv install 3.1.0` to install the ruby version specified in the gemfile and `rbenv local 3.1.0` to set it as the local ruby version. Verify that the ruby version is properly installed by running `ruby -v`
+
+If rails is not yet installed on your machine, run `gem install rails` then `bundle install` the gems. You may need to update your bundler so in that case, run `gem install bundler` before running `bundle install` again.
+
+Once installed the gems, run `rails db:create` and `rails db:migrate` to create and migrate the database.
+Then you can start the server with `rails s`.
+
 ## Technologies Used
 * Heroku
 * Ruby on Rails
